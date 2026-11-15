@@ -31,10 +31,37 @@ def _fmt_h(h) -> str | None:
     return f"{int(h):02d}:{int(round((h % 1) * 60)):02d}"
 
 
+def access_tips(grade: str, offday: bool, evs: pd.DataFrame, elev_text: str, full_h: float) -> list[str]:
+    """그날 교통약자·동행자에게 보여줄 짧은 안내 문장들."""
+    tips = []
+    if grade == "높음":
+        tips.append(f"자가용은 권하지 않습니다. 비슷한 조건의 날에는 대개 {int(full_h)}시 전후부터 주차장이 찼습니다.")
+    elif grade == "보통" and offday:
+        tips.append(f"자가용이라면 {int(full_h)}시 이전 도착을 권합니다. 이후에는 장애인 구역까지 들어가기 어려울 수 있습니다.")
+    else:
+        tips.append("평일이라 주차 여유가 있는 편입니다." if not offday else "공연이 없는 날이라 비교적 여유가 있을 것으로 보입니다(기록 적음).")
+    seen = set()
+    for e in evs.itertuples():
+        if e.venue in seen:
+            continue
+        seen.add(e.venue)
+        v = VENUE_ACCESS[e.venue]
+        spaces = f"장애인 주차 {v['disabled_spaces']}면" if v["disabled_spaces"] else "지정 장애인 주차 안내 없음"
+        start = f" {_fmt_h(e.start_h)}" if _fmt_h(e.start_h) else ""
+        tips.append(f"{VENUE_KO[e.venue]}{start}: 가까운 주차장 {v['lot']}, {spaces}")
+    tips.append(f"지하철 엘리베이터 출구: {elev_text}")
+    if any((h or 0) >= 16 for h in evs.start_h.tolist()):
+        tips.append("공원 휠체어 대여는 19시에 끝나고 3시간 한도라 저녁 공연 중에는 쓰기 어렵습니다. 개인 휠체어를 권합니다.")
+    return tips
+
+
 def build(days_ahead: int = 60) -> dict:
     u, stats = upcoming(days_ahead)
     ed = event_days()
     ed = ed[ed.date.isin(u.date)]
+    acc0 = json.loads((PROCESSED / "accessibility.json").read_text(encoding="utf-8"))
+    elev_text = ", ".join(f"{x['lineNm']} {x['stnNm']}역 {x.get('vcntEntrcNo')}번"
+                          for x in acc0["elevators"] if "외부" in x["fcltNm"]) or "정보 없음"
     days = []
     for _, r in u.iterrows():
         evs = ed[ed.date == r.date].sort_values("start_h")
@@ -48,6 +75,7 @@ def build(days_ahead: int = 60) -> dict:
             "rain_pop": None if pd.isna(r.pop_max) else int(r.pop_max),
             "events": [{"title": e.title, "venue": VENUE_KO[e.venue], "venue_key": e.venue,
                         "start": _fmt_h(e.start_h)} for e in evs.itertuples()],
+            "tips": access_tips(r.grade, r.offday, evs, elev_text, stats["first_full_h_median"]),
         })
     acc = json.loads((PROCESSED / "accessibility.json").read_text(encoding="utf-8"))
     st = acc["agency_static"]

@@ -16,9 +16,22 @@
 </header>
 
 <main>
+  <section class="howto" aria-label="이용 방법">
+    <ol>
+      <li>가려는 날짜를 찾아 <strong>만차 위험</strong>을 확인하세요.</li>
+      <li>휠체어·유모차와 함께라면 <strong>교통약자 안내 보기</strong>를 눌러 주차·지하철 출구를 확인하세요.</li>
+      <li>위험이 높은 날은 지하철 엘리베이터 출구로 오시는 것이 편합니다.</li>
+    </ol>
+  </section>
+
   <section id="days" aria-labelledby="days-h">
     <h2 id="days-h">다가오는 주말·공연일 주차 혼잡 위험</h2>
     <p id="days-summary" class="lead"></p>
+    <p class="legend" aria-label="등급 설명">
+      <span class="badge g-높음">높음</span> 같은 조건 날의 70% 이상 만차
+      <span class="badge g-보통">보통</span> 35~70%
+      <span class="badge g-낮음">낮음</span> 35% 미만
+    </p>
     <ul id="day-list" class="days" aria-live="polite"><li>불러오는 중…</li></ul>
   </section>
 

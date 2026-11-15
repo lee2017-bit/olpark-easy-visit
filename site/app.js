@@ -31,7 +31,15 @@
       } else {
         li.append(el("p", { class: "basis" }, "대형 공연장 공연 없음"));
       }
-      li.append(el("p", { class: "basis" }, day.basis));
+      li.append(el("p", { class: "basis" }, "근거: " + day.basis));
+      if (day.tips && day.tips.length) {
+        const det = el("details", { class: "tips" });
+        det.append(el("summary", {}, "교통약자 안내 보기"));
+        const tl = el("ul");
+        for (const t of day.tips) tl.append(el("li", {}, t));
+        det.append(tl);
+        li.append(det);
+      }
       list.append(li);
     }
   }
