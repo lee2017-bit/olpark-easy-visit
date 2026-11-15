@@ -1,0 +1,236 @@
+{
+ "elevators": [
+  {
+   "fcltNo": "1310763",
+   "fcltNm": "승강기)엘리베이터-올림픽공원 내부1",
+   "lineNm": "5호선",
+   "stnCd": "2556",
+   "stnNm": "올림픽공원",
+   "stnNo": "P550",
+   "crtrYmd": "20210527",
+   "mngNo": "1",
+   "vcntEntrcNo": "내부",
+   "dtlPstn": "둔촌동 방면3-2",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B2",
+   "endFlrGrndUdgdSe": "지하",
+   "endFlr": "B3",
+   "pscpNope": 15,
+   "pscpWht": "1000",
+   "elvtrSn": "0077-287",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1310764",
+   "fcltNm": "승강기)엘리베이터-올림픽공원 내부2",
+   "lineNm": "5호선",
+   "stnCd": "2556",
+   "stnNm": "올림픽공원",
+   "stnNo": "P550",
+   "crtrYmd": "20210527",
+   "mngNo": "2",
+   "vcntEntrcNo": "내부",
+   "dtlPstn": "방이 방면6-3",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B2",
+   "endFlrGrndUdgdSe": "지하",
+   "endFlr": "B3",
+   "pscpNope": 15,
+   "pscpWht": "1000",
+   "elvtrSn": "0077-288",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1310765",
+   "fcltNm": "승강기)엘리베이터-올림픽공원 외부4",
+   "lineNm": "5호선",
+   "stnCd": "2556",
+   "stnNm": "올림픽공원",
+   "stnNo": "P550",
+   "crtrYmd": "20210527",
+   "mngNo": "4",
+   "vcntEntrcNo": "2",
+   "dtlPstn": "2번 출입구",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B2",
+   "endFlrGrndUdgdSe": "지상",
+   "endFlr": "1",
+   "pscpNope": 15,
+   "pscpWht": "1000",
+   "elvtrSn": "0087-506",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1311963",
+   "fcltNm": "승강기)엘리베이터-몽촌토성 내부 1호기",
+   "lineNm": "8호선",
+   "stnCd": "2814",
+   "stnNm": "몽촌토성",
+   "stnNo": "813",
+   "crtrYmd": "20210527",
+   "mngNo": "1",
+   "vcntEntrcNo": "내부",
+   "dtlPstn": "강동구청 방면3-4",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B3",
+   "endFlrGrndUdgdSe": "지하",
+   "endFlr": "B2",
+   "pscpNope": 15,
+   "pscpWht": "1000",
+   "elvtrSn": "0011-276",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1311964",
+   "fcltNm": "승강기)엘리베이터-몽촌토성 내부 2호기",
+   "lineNm": "8호선",
+   "stnCd": "2814",
+   "stnNm": "몽촌토성",
+   "stnNo": "813",
+   "crtrYmd": "20210527",
+   "mngNo": "2",
+   "vcntEntrcNo": "내부",
+   "dtlPstn": "잠실 방면3-4",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B3",
+   "endFlrGrndUdgdSe": "지하",
+   "endFlr": "B2",
+   "pscpNope": 11,
+   "pscpWht": "750",
+   "elvtrSn": "0011-277",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1311965",
+   "fcltNm": "승강기)엘리베이터-몽촌토성 내부 3호기",
+   "lineNm": "8호선",
+   "stnCd": "2814",
+   "stnNm": "몽촌토성",
+   "stnNo": "813",
+   "crtrYmd": "20210527",
+   "mngNo": "3",
+   "vcntEntrcNo": "내부",
+   "dtlPstn": "대합실",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B2",
+   "endFlrGrndUdgdSe": "지하",
+   "endFlr": "B1",
+   "pscpNope": 11,
+   "pscpWht": "750",
+   "elvtrSn": "0011-278",
+   "oprtngSitu": "M"
+  },
+  {
+   "fcltNo": "1311966",
+   "fcltNm": "승강기)엘리베이터-몽촌토성 외부 4호기",
+   "lineNm": "8호선",
+   "stnCd": "2814",
+   "stnNm": "몽촌토성",
+   "stnNo": "813",
+   "crtrYmd": "20210527",
+   "mngNo": "4",
+   "vcntEntrcNo": "4",
+   "dtlPstn": "대합실(B1, 4번 출입구 화장실 앞)",
+   "bgngFlrGrndUdgdSe": "지하",
+   "bgngFlr": "B1",
+   "endFlrGrndUdgdSe": "지상",
+   "endFlr": "1",
+   "pscpNope": 15,
+   "pscpWht": "1000",
+   "elvtrSn": "0075-711",
+   "oprtngSitu": "M"
+  }
+ ],
+ "wheelchair_lifts": [],
+ "barrier_free_knto": {
+  "contentid": "126532",
+  "parking": "장애인 주차장 140칸 있음_무장애 편의시설",
+  "route": "출입구까지 턱이 없어 휠체어 접근 가능함",
+  "wheelchair": "대여가능(평화의광장 앞 공원안내센터, 만남의 광장내 동1문 안내센터)",
+  "exit": "주출입구는 턱이 없어 휠체어 접근 가능함",
+  "restroom": "장애인 화장실 있음",
+  "handicapetc": "공원 내 시설에 장애인 주출입구 접근로 경사로 있음",
+  "brailepromotion": "점자안내판 있음(우리금융아트홀, 핸드볼 경기장, 테니스 경기장, 실내 테니스 경기장)",
+  "stroller": "대여가능(평화의 광장 안내센터 4대, 동1문 안내센터3대)",
+  "lactationroom": "수유실 있음(안내센터, 한성백제박물관 1층)"
+ },
+ "agency_static": {
+  "disabled_parking_by_spot": {
+   "source": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&list_no=82568&act=view",
+   "as_of": "2025-12-09",
+   "spots": {
+    "남2문 대형주차장 P1A": 6,
+    "남2문 대형주차장 P1B": 6,
+    "올림픽홀": 5,
+    "테니스장": 10,
+    "수영장": 7,
+    "체조경기장(KSPO DOME)": 10,
+    "티켓링크 라이브아레나": 3,
+    "역도경기장": 6,
+    "남3문": 6,
+    "남4문": 12,
+    "서1문": 3,
+    "서2문": 11
+   }
+  },
+  "wheelchair_rental": {
+   "source": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+   "places": {
+    "평화의광장 안내센터": 3,
+    "만남의광장 안내센터": 3
+   },
+   "hours": "09:00~19:00 (휴게 12:00~13:00)",
+   "rule": "무상, 신분증 맡기고 3시간"
+  },
+  "wheelchair_entry_route": {
+   "source": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+   "text": "만남의광장: 동2문 입차 → 그래피티의 벽 주차장 → 올림픽공원역 쪽 경사로"
+  },
+  "subway_exit_guidance": {
+   "source": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20109000000",
+   "text": "5·9호선 올림픽공원역 3·4번 출구, 8호선 몽촌토성역 1번 출구, 9호선 한성백제역 2번 출구"
+  },
+  "venue_nearest_parking": {
+   "source": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+   "KSPO DOME": {
+    "lot": "P5",
+    "spaces": 176,
+    "walk_min": "1"
+   },
+   "핸드볼경기장": {
+    "lot": "P6",
+    "spaces": 167,
+    "walk_min": "1~2"
+   },
+   "올림픽홀": {
+    "lot": "P2·올림픽홀 지하",
+    "spaces": 320,
+    "walk_min": "1~2"
+   },
+   "우리금융아트홀": {
+    "lot": "P7",
+    "spaces": 137,
+    "walk_min": "1~2"
+   },
+   "K-아트홀": {
+    "lot": "P1",
+    "spaces": 562,
+    "walk_min": "3~4"
+   },
+   "올림픽수영장": {
+    "lot": "P4",
+    "spaces": 117,
+    "walk_min": "1"
+   },
+   "올림픽테니스경기장": {
+    "lot": "P11",
+    "spaces": 190,
+    "walk_min": "1~2"
+   },
+   "gate_area_capacity": {
+    "동2문·남2문·북2문": 2200,
+    "source": "https://www.ksponco.or.kr/online/main/parking.do"
+   }
+  }
+ }
+}

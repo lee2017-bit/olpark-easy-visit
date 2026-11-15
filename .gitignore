@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.key
+# raw downloads are re-creatable with collectors/; large
+data/raw/

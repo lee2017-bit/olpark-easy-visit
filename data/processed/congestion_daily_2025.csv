@@ -1,0 +1,324 @@
+date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_venues,first_start_h,titles,full_lots,first_full_h,any_full,ev_cat
+2025-02-12,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-13,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-14,4,False,False,0,1,1,0,2,19.0,2025 TWS 1ST FANMEETING 〈42:CLUB〉 IN SEOUL / 2025 윤하 앵콜 콘서트 〈GROWTH THEORY : Final Edition〉,0.0,,False,2곳 이상
+2025-02-15,5,False,True,1,1,1,0,3,17.0,2025 TWS 1ST FANMEETING 〈42:CLUB〉 IN SEOUL / 2025 박지현 콘서트 쇼맨쉽 ‘SHOWMANSHIP’ / 2025 윤하 앵콜 콘서트 〈GROWTH THEORY : Final Edition〉,3.0,11.0,True,2곳 이상
+2025-02-16,6,False,True,1,1,1,0,3,17.0,2025 TWS 1ST FANMEETING 〈42:CLUB〉 IN SEOUL / 2025 박지현 콘서트 쇼맨쉽 ‘SHOWMANSHIP’ / 2025 윤하 앵콜 콘서트 〈GROWTH THEORY : Final Edition〉,0.0,,False,2곳 이상
+2025-02-17,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-18,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-19,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-20,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-21,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-22,5,False,True,1,1,0,0,2,15.0,2025 ONEW CONCERT [ONEW THE LIVE : CONNECTION] IN SEOUL / 2025 영탁 단독 콘서트 “TAK SHOW3” - 앙코르,1.0,10.0,True,2곳 이상
+2025-02-23,6,False,True,1,1,0,0,2,15.0,2025 ONEW CONCERT [ONEW THE LIVE : CONNECTION] IN SEOUL / 2025 영탁 단독 콘서트 “TAK SHOW3” - 앙코르,0.0,,False,2곳 이상
+2025-02-24,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-25,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-26,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-27,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-02-28,4,False,False,0,1,0,0,1,19.0,j-hope Tour ‘HOPE ON THE STAGE’ in SEOUL,0.0,,False,1곳
+2025-03-01,5,True,True,1,1,0,0,2,18.0,j-hope Tour ‘HOPE ON THE STAGE’ in SEOUL / keshi: REQUIEM TOUR IN SEOUL,4.0,14.0,True,2곳 이상
+2025-03-02,6,False,True,0,1,0,0,1,17.0,j-hope Tour ‘HOPE ON THE STAGE’ in SEOUL,1.0,10.0,True,1곳
+2025-03-03,0,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-04,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-05,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-06,3,False,False,1,0,0,0,1,20.0,KEHLANI - CRASH WORLD TOUR in Seoul,0.0,,False,1곳
+2025-03-07,4,False,False,0,1,0,0,1,20.0,TAEYEON CONCERT - The TENSE,0.0,,False,1곳
+2025-03-08,5,False,True,1,1,0,0,2,18.0,2025 LEE MINHO ASIA FANMEETING TOUR ‘MINHOVERSE’ IN SEOUL / TAEYEON CONCERT - The TENSE,4.0,10.0,True,2곳 이상
+2025-03-09,6,False,True,0,1,0,0,1,17.0,TAEYEON CONCERT - The TENSE,5.0,13.0,True,1곳
+2025-03-10,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-11,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-12,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-13,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-14,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-15,5,False,True,1,1,1,0,3,18.0,2024-25 aespa LIVE TOUR－SYNK：PARALLEL LINE－ENCORE / 2025년 이승환 콘서트 〈HEAVEN〉 - 서울 / 보이위드우크 첫 단독 내한공연 BoyWithUke BURNOUT WORLD TOUR 2025,3.0,11.0,True,2곳 이상
+2025-03-16,6,False,True,0,1,1,0,2,17.0,2024-25 aespa LIVE TOUR－SYNK：PARALLEL LINE－ENCORE / 2025년 이승환 콘서트 〈HEAVEN〉 - 서울,6.0,16.0,True,2곳 이상
+2025-03-17,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-18,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-19,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-20,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-21,4,False,False,1,0,1,0,2,20.0,"2025 BTOB FAN-CON ‘3,2,1 GO! MELympic’ / 2025 NCT WISH ASIA TOUR LOG in SEOUL",0.0,,False,2곳 이상
+2025-03-22,5,False,True,1,1,1,0,3,17.0,"2025 ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] FINALE IN SEOUL / 2025 BTOB FAN-CON ‘3,2,1 GO! MELympic’ / 2025 NCT WISH ASIA TOUR LOG in SEOUL",8.0,11.0,True,2곳 이상
+2025-03-23,6,False,True,1,1,1,0,3,16.0,"2025 ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] FINALE IN SEOUL / 2025 BTOB FAN-CON ‘3,2,1 GO! MELympic’ / 2025 NCT WISH ASIA TOUR LOG in SEOUL",0.0,,False,2곳 이상
+2025-03-24,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-25,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-26,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-27,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-03-28,4,False,False,1,0,0,0,1,19.0,정동원棟동 이야기話화 3rd 전국투어 콘서트 - 서울,0.0,,False,1곳
+2025-03-29,5,False,True,1,0,1,0,2,13.0,〈미스터트롯3〉 전국투어 콘서트 / 정동원棟동 이야기話화 3rd 전국투어 콘서트 - 서울,4.0,12.0,True,2곳 이상
+2025-03-30,6,False,True,1,0,1,0,2,13.0,〈미스터트롯3〉 전국투어 콘서트 / 정동원棟동 이야기話화 3rd 전국투어 콘서트 - 서울,3.0,13.0,True,2곳 이상
+2025-03-31,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-01,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-02,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-03,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-04,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-05,5,False,True,1,1,0,0,2,18.0,2025 IVE THE 3RD FAN CONCERT 〈IVE SCOUT〉 / EUNHYUK LIVE TOUR 2025 -Limitless: Time- Special in SEOUL,5.0,13.0,True,2곳 이상
+2025-04-06,6,False,True,1,1,0,0,2,16.0,2025 IVE THE 3RD FAN CONCERT 〈IVE SCOUT〉 / EUNHYUK LIVE TOUR 2025 -Limitless: Time- Special in SEOUL,6.0,15.0,True,2곳 이상
+2025-04-07,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-08,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-09,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-10,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-11,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-12,5,False,True,1,1,0,0,2,18.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL / 2025 STAYC TOUR ‘STAY TUNED’,7.0,9.0,True,2곳 이상
+2025-04-13,6,False,True,1,1,0,0,2,17.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL / 2025 STAYC TOUR ‘STAY TUNED’,5.0,13.0,True,2곳 이상
+2025-04-14,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-15,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-16,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-17,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-18,4,False,False,0,1,0,0,1,7.5,2025 ZEROBASEONE FAN-CON［BLUE MANSION］,0.0,,False,1곳
+2025-04-19,5,False,True,1,1,0,0,2,6.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,3.0,13.0,True,2곳 이상
+2025-04-20,6,False,True,1,1,0,0,2,5.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,5.0,15.0,True,2곳 이상
+2025-04-21,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-22,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-23,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-24,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-25,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-26,5,False,True,1,1,0,0,2,17.0,2024-25 TAEMIN WORLD TOUR [Ephemeral Gaze] Finale / DAESUNG 2025 ASIA TOUR：D’s WAVE IN SEOUL,7.0,14.0,True,2곳 이상
+2025-04-27,6,False,True,1,1,0,0,2,16.0,2024-25 TAEMIN WORLD TOUR [Ephemeral Gaze] Finale / DAESUNG 2025 ASIA TOUR：D’s WAVE IN SEOUL,1.0,14.0,True,2곳 이상
+2025-04-28,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-29,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-04-30,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-01,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-02,4,False,False,1,0,0,0,1,19.0,Xdinary Heroes〈Beautiful Mind〉World Tour in SEOUL,0.0,,False,1곳
+2025-05-03,5,False,True,1,1,0,0,2,18.0,Xdinary Heroes〈Beautiful Mind〉World Tour in SEOUL / YUURI ARENA LIVE 2025 at SEOUL,2.0,10.0,True,2곳 이상
+2025-05-04,6,False,True,1,1,0,0,2,17.0,Xdinary Heroes〈Beautiful Mind〉World Tour in SEOUL / YUURI ARENA LIVE 2025 at SEOUL,5.0,15.0,True,2곳 이상
+2025-05-05,0,True,True,1,0,0,0,1,17.0,Xdinary Heroes〈Beautiful Mind〉World Tour in SEOUL,0.0,,False,1곳
+2025-05-06,1,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-07,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-08,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-09,4,False,False,1,1,0,0,2,19.0,2025 N.Flying LIVE ‘＆CON4 : FULL CIRCLE’ / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,2곳 이상
+2025-05-10,5,False,True,1,1,0,0,2,18.0,2025 N.Flying LIVE ‘＆CON4 : FULL CIRCLE’ / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,5.0,13.0,True,2곳 이상
+2025-05-11,6,False,True,1,1,0,0,2,16.0,2025 N.Flying LIVE ‘＆CON4 : FULL CIRCLE’ / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,4.0,13.0,True,2곳 이상
+2025-05-12,0,False,False,0,1,0,0,1,17.0,DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,1곳
+2025-05-13,1,False,False,0,1,0,0,1,17.0,DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,1곳
+2025-05-14,2,False,False,0,1,0,0,1,17.0,DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,1곳
+2025-05-15,3,False,False,0,1,0,0,1,17.0,DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,1곳
+2025-05-16,4,False,False,1,1,0,0,2,19.0,2025 BIBI 1st WORLD TOUR ［EVE］ IN SEOUL / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,0.0,,False,2곳 이상
+2025-05-17,5,False,True,1,1,1,0,3,18.0,2025 BIBI 1st WORLD TOUR ［EVE］ IN SEOUL / 2025 KAI SOLO CONCERT TOUR 〈KAION〉 IN SEOUL / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,5.0,11.0,True,2곳 이상
+2025-05-18,6,False,True,1,1,1,0,3,16.0,2025 BIBI 1st WORLD TOUR ［EVE］ IN SEOUL / 2025 KAI SOLO CONCERT TOUR 〈KAION〉 IN SEOUL / DAY6 3RD WORLD TOUR〈FOREVER YOUNG〉FINALE in SEOUL,9.0,14.0,True,2곳 이상
+2025-05-19,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-20,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-21,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-22,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-23,4,False,False,1,1,0,0,2,19.0,SHINee WORLD Ⅶ [E.S.S.A.Y] (Every Stage Shines Around You) / [서울] 2025 멜로망스 전국투어 콘서트 〈Romance Station〉,0.0,,False,2곳 이상
+2025-05-24,5,False,True,1,1,1,0,3,18.0,2025 Jay Park World Tour [Serenades & Body Rolls] / SHINee WORLD Ⅶ [E.S.S.A.Y] (Every Stage Shines Around You) / [서울] 2025 멜로망스 전국투어 콘서트 〈Romance Station〉,4.0,13.0,True,2곳 이상
+2025-05-25,6,False,True,1,1,1,0,3,17.0,2025 Jay Park World Tour [Serenades & Body Rolls] / SHINee WORLD Ⅶ [E.S.S.A.Y] (Every Stage Shines Around You) / [서울] 2025 멜로망스 전국투어 콘서트 〈Romance Station〉,4.0,15.0,True,2곳 이상
+2025-05-26,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-27,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-28,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-29,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-05-30,4,False,False,0,1,0,0,1,11.0,제17회 서울재즈페스티벌 2025,0.0,,False,1곳
+2025-05-31,5,False,True,0,1,0,0,1,11.0,제17회 서울재즈페스티벌 2025,3.0,12.0,True,1곳
+2025-06-01,6,False,True,0,1,0,0,1,11.0,제17회 서울재즈페스티벌 2025,1.0,14.0,True,1곳
+2025-06-02,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-03,1,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-04,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-05,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-06,4,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-07,5,False,True,1,1,0,0,2,18.0,2025 BAEKHYUN WORLD TOUR 〈Reverie〉 in SEOUL / 2025 ILLIT GLITTER DAY IN SEOUL,8.0,13.0,True,2곳 이상
+2025-06-08,6,False,True,1,1,0,0,2,16.0,2025 BAEKHYUN WORLD TOUR 〈Reverie〉 in SEOUL / 2025 ILLIT GLITTER DAY IN SEOUL,0.0,,False,2곳 이상
+2025-06-09,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-10,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-11,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-12,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-13,4,False,False,0,0,0,1,1,12.0,뷰티풀 민트 라이프 2025,0.0,,False,1곳
+2025-06-14,5,False,True,1,0,0,1,2,12.0,2025 IRENE & SEULGI Concert Tour [ BALANCE ] in SEOUL / 뷰티풀 민트 라이프 2025,3.0,15.0,True,2곳 이상
+2025-06-15,6,False,True,1,0,0,1,2,12.0,2025 IRENE & SEULGI Concert Tour [ BALANCE ] in SEOUL / 뷰티풀 민트 라이프 2025,3.0,13.0,True,2곳 이상
+2025-06-16,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-17,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-18,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-19,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-20,4,False,False,1,0,0,0,1,19.0,[서울 앵콜] 2025 박지현 콘서트 쇼맨쉽 ‘SHOWMANSHIP’,0.0,,False,1곳
+2025-06-21,5,False,True,1,0,0,0,1,16.0,[서울 앵콜] 2025 박지현 콘서트 쇼맨쉽 ‘SHOWMANSHIP’,2.0,17.0,True,1곳
+2025-06-22,6,False,True,1,0,0,0,1,16.0,[서울 앵콜] 2025 박지현 콘서트 쇼맨쉽 ‘SHOWMANSHIP’,3.0,16.0,True,1곳
+2025-06-23,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-24,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-25,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-26,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-06-27,4,False,False,1,0,0,0,1,19.0,2025 PALMTREE ISLAND 3rd GALA CONCERT,0.0,,False,1곳
+2025-06-28,5,False,True,1,1,0,0,2,14.0,2025 PALMTREE ISLAND 3rd GALA CONCERT / 2025 서울파크뮤직페스티벌,5.0,15.0,True,2곳 이상
+2025-06-29,6,False,True,1,1,0,0,2,14.0,2025 PALMTREE ISLAND 3rd GALA CONCERT / 2025 서울파크뮤직페스티벌,0.0,,False,2곳 이상
+2025-06-30,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-01,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-02,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-03,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-04,4,False,False,0,1,0,0,1,20.0,2025 RIIZE CONCERT TOUR [RIIZING LOUD] IN SEOUL,0.0,,False,1곳
+2025-07-05,5,False,True,0,1,0,0,1,18.0,2025 RIIZE CONCERT TOUR [RIIZING LOUD] IN SEOUL,0.0,,False,1곳
+2025-07-06,6,False,True,0,1,0,0,1,16.0,2025 RIIZE CONCERT TOUR [RIIZING LOUD] IN SEOUL,0.0,,False,1곳
+2025-07-07,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-08,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-09,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-10,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-11,4,False,False,0,1,0,0,1,19.0,HIGHLIGHT LIVE 2025 [RIDE OR DIE],0.0,,False,1곳
+2025-07-12,5,False,True,1,1,0,0,2,17.0,2025 FIVE O ONE : 20th Anniversary World Tour In Seoul / HIGHLIGHT LIVE 2025 [RIDE OR DIE],0.0,,False,2곳 이상
+2025-07-13,6,False,True,1,1,0,0,2,17.0,2025 FIVE O ONE : 20th Anniversary World Tour In Seoul / HIGHLIGHT LIVE 2025 [RIDE OR DIE],1.0,14.0,True,2곳 이상
+2025-07-14,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-15,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-16,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-17,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-18,4,False,False,1,1,0,0,2,19.0,2025 JUNG YONG HWA LIVE ‘Director’s Cut : Our Fine Days’ / 2025 MONSTA X CONNECT X,0.0,,False,2곳 이상
+2025-07-19,5,False,True,1,1,0,0,2,18.0,2025 JUNG YONG HWA LIVE ‘Director’s Cut : Our Fine Days’ / 2025 MONSTA X CONNECT X,2.0,13.0,True,2곳 이상
+2025-07-20,6,False,True,1,1,0,0,2,16.0,2025 JUNG YONG HWA LIVE ‘Director’s Cut : Our Fine Days’ / 2025 MONSTA X CONNECT X,1.0,14.0,True,2곳 이상
+2025-07-21,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-22,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-23,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-24,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-25,4,False,False,1,1,0,0,2,19.0,2025 WINNER CONCERT ［IN OUR CIRCLE］ / BOYNEXTDOOR TOUR ‘KNOCK ON Vol.1’ FINAL,0.0,,False,2곳 이상
+2025-07-26,5,False,True,1,1,0,0,2,18.0,2025 WINNER CONCERT ［IN OUR CIRCLE］ / BOYNEXTDOOR TOUR ‘KNOCK ON Vol.1’ FINAL,0.0,,False,2곳 이상
+2025-07-27,6,False,True,1,1,0,0,2,17.0,2025 WINNER CONCERT ［IN OUR CIRCLE］ / BOYNEXTDOOR TOUR ‘KNOCK ON Vol.1’ FINAL,0.0,,False,2곳 이상
+2025-07-28,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-29,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-30,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-07-31,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-01,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-02,5,False,True,1,1,1,0,3,17.0,2025 ONEW WORLD TOUR [ONEW THE LIVE : PERCENT (%)] IN SEOUL / 2025 WayV Concert Tour [NO Way OUT] in SEOUL / 그룹사운드 잔나비 앵콜 콘서트 <모든소년소녀들 2125>,5.0,10.0,True,2곳 이상
+2025-08-03,6,False,True,1,1,1,0,3,16.0,2025 ONEW WORLD TOUR [ONEW THE LIVE : PERCENT (%)] IN SEOUL / 2025 WayV Concert Tour [NO Way OUT] in SEOUL / 그룹사운드 잔나비 앵콜 콘서트 <모든소년소녀들 2125>,2.0,15.0,True,2곳 이상
+2025-08-04,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-05,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-06,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-07,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-08,4,False,False,0,1,0,0,1,19.0,THE BOYZ〈THE BLAZE〉WORLD TOUR in SEOUL,0.0,,False,1곳
+2025-08-09,5,False,True,1,1,1,0,3,17.0,2025 10CM 단독공연 〈5.0〉 / 2025 KANGDANIEL CONCERT ［ACT : NEW EPISODE］ / THE BOYZ〈THE BLAZE〉WORLD TOUR in SEOUL,0.0,,False,2곳 이상
+2025-08-10,6,False,True,1,1,1,0,3,16.0,2025 10CM 단독공연 〈5.0〉 / 2025 KANGDANIEL CONCERT ［ACT : NEW EPISODE］ / THE BOYZ〈THE BLAZE〉WORLD TOUR in SEOUL,0.0,,False,2곳 이상
+2025-08-11,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-12,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-13,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-14,3,False,False,0,0,0,0,0,,,2.0,13.0,True,공연 없음
+2025-08-15,4,True,True,0,1,0,0,1,20.0,2025 PLAVE Asia Tour ［DASH: Quantum Leap］ in Seoul,0.0,,False,1곳
+2025-08-16,5,False,True,1,1,1,0,3,17.0,2025 NAM WOO HYUN CONCERT <식목일5 - 나무高 :TREE HIGH SCHOOL> / 2025 PLAVE Asia Tour ［DASH: Quantum Leap］ in Seoul / 2025 TAEMIN FANMEETING [CLASS-MATE],1.0,16.0,True,2곳 이상
+2025-08-17,6,False,True,1,1,1,0,3,16.0,2025 NAM WOO HYUN CONCERT <식목일5 - 나무高 :TREE HIGH SCHOOL> / 2025 PLAVE Asia Tour ［DASH: Quantum Leap］ in Seoul / 2025 TAEMIN FANMEETING [CLASS-MATE],1.0,15.0,True,2곳 이상
+2025-08-18,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-19,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-20,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-21,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-22,4,False,False,0,1,0,0,1,20.0,SUPER JUNIOR 20th Anniversary TOUR 〈SUPER SHOW 10〉 in SEOUL,0.0,,False,1곳
+2025-08-23,5,False,True,0,1,0,0,1,18.0,SUPER JUNIOR 20th Anniversary TOUR 〈SUPER SHOW 10〉 in SEOUL,0.0,,False,1곳
+2025-08-24,6,False,True,0,1,0,0,1,17.0,SUPER JUNIOR 20th Anniversary TOUR 〈SUPER SHOW 10〉 in SEOUL,0.0,,False,1곳
+2025-08-25,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-26,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-27,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-28,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-08-29,4,False,False,0,1,0,0,1,20.0,2025 aespa LIVE TOUR - SYNK : aeXIS LINE -,0.0,,False,1곳
+2025-08-30,5,False,True,1,1,0,0,2,18.0,2025 aespa LIVE TOUR - SYNK : aeXIS LINE - / 이승환 35주년 콘서트 HEAVEN [ ENCORE ] - 서울,0.0,,False,2곳 이상
+2025-08-31,6,False,True,1,1,0,0,2,17.0,2025 aespa LIVE TOUR - SYNK : aeXIS LINE - / 이승환 35주년 콘서트 HEAVEN [ ENCORE ] - 서울,0.0,,False,2곳 이상
+2025-09-01,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-02,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-03,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-04,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-05,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-06,5,False,True,0,1,0,1,2,12.0,Someday Festival 2025 - week 1 / 크리스토퍼 내한공연 CHRISTOPHER LIVE IN SEOUL 2025,0.0,,False,2곳 이상
+2025-09-07,6,False,True,0,0,0,1,1,12.0,Someday Festival 2025 - week 1,0.0,,False,1곳
+2025-09-08,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-09,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-10,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-11,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-12,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-13,5,False,True,1,1,0,0,2,17.0,"2025 IU FAN MEET-UP ［Bye, Summer］ / Gen Hoshino presents MAD HOPE Asia Tour in SEOUL",6.0,10.0,True,2곳 이상
+2025-09-14,6,False,True,1,1,0,0,2,16.0,"2025 IU FAN MEET-UP ［Bye, Summer］ / Gen Hoshino presents MAD HOPE Asia Tour in SEOUL",0.0,,False,2곳 이상
+2025-09-15,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-16,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-17,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-18,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-19,4,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-20,5,False,True,0,0,0,1,1,13.0,KB 조이올팍 페스티벌 2025,0.0,,False,1곳
+2025-09-21,6,False,True,0,0,0,1,1,13.0,KB 조이올팍 페스티벌 2025,4.0,17.0,True,1곳
+2025-09-22,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-23,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-24,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-25,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-26,4,False,False,0,0,1,0,1,19.0,2025 KEYLAND : Uncanny Valley,0.0,,False,1곳
+2025-09-27,5,False,True,0,0,1,0,1,18.0,2025 KEYLAND : Uncanny Valley,7.0,13.0,True,1곳
+2025-09-28,6,False,True,0,0,1,0,1,16.0,2025 KEYLAND : Uncanny Valley,7.0,11.0,True,1곳
+2025-09-29,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-09-30,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-01,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-02,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-03,4,True,True,1,1,1,0,3,7.5,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL / 허용별 콘서트 : 보컬 전쟁 시즌2 “The War of Vocalists II“ - 서울 앵콜,0.0,,False,2곳 이상
+2025-10-04,5,False,True,0,1,1,0,2,6.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,1.0,13.0,True,2곳 이상
+2025-10-05,6,True,True,0,1,1,0,2,5.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,0.0,,False,2곳 이상
+2025-10-06,0,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-07,1,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-08,2,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-09,3,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-10,4,False,False,0,1,1,0,2,19.0,2025 하현상 콘서트 〈Navy Horizon〉 / 2025-26 TREASURE TOUR［PULSE ON］IN SEOUL,0.0,,False,2곳 이상
+2025-10-11,5,False,True,1,1,1,0,3,14.0,2025 쎄시봉 ［The Last］ 콘서트 - 서울 / 2025 하현상 콘서트 〈Navy Horizon〉 / 2025-26 TREASURE TOUR［PULSE ON］IN SEOUL,0.0,,False,2곳 이상
+2025-10-12,6,False,True,1,1,1,0,3,14.0,2025 쎄시봉 ［The Last］ 콘서트 - 서울 / 2025 하현상 콘서트 〈Navy Horizon〉 / 2025-26 TREASURE TOUR［PULSE ON］IN SEOUL,1.0,16.0,True,2곳 이상
+2025-10-13,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-14,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-15,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-16,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-17,4,False,False,1,0,0,0,1,19.5,비보쇼 with Friends,0.0,,False,1곳
+2025-10-18,5,False,True,1,0,0,0,1,18.0,그랜드 민트 페스티벌 2025 / 비보쇼 with Friends,7.0,10.0,True,1곳
+2025-10-19,6,False,True,1,0,0,0,1,17.0,그랜드 민트 페스티벌 2025 / 비보쇼 with Friends,10.0,10.0,True,1곳
+2025-10-20,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-21,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-22,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-23,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-24,4,False,False,0,1,0,0,1,19.0,ENHYPEN WORLD TOUR ‘WALK THE LINE’ : FINAL,0.0,,False,1곳
+2025-10-25,5,False,True,1,1,0,0,2,18.0,ENHYPEN WORLD TOUR ‘WALK THE LINE’ : FINAL / NEXZ SPECIAL CONCERT〈ONE BEAT〉,8.0,14.0,True,2곳 이상
+2025-10-26,6,False,True,1,1,0,0,2,17.0,ENHYPEN WORLD TOUR ‘WALK THE LINE’ : FINAL / NEXZ SPECIAL CONCERT〈ONE BEAT〉,0.0,,False,2곳 이상
+2025-10-27,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-28,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-29,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-30,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-10-31,4,False,False,0,1,0,0,1,19.0,IVE WORLD TOUR [SHOW WHAT I AM],0.0,,False,1곳
+2025-11-01,5,False,True,1,1,0,0,2,18.0,2025 THE신승훈SHOW 〈SINCERELY 35〉 / IVE WORLD TOUR [SHOW WHAT I AM],8.0,14.0,True,2곳 이상
+2025-11-02,6,False,True,1,1,0,0,2,16.0,2025 THE신승훈SHOW 〈SINCERELY 35〉 / IVE WORLD TOUR [SHOW WHAT I AM],0.0,,False,2곳 이상
+2025-11-03,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-04,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-05,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-06,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-07,4,False,False,0,0,1,0,1,7.5,2025 LUCY 8TH CONCERT 〈LUCID LINE〉,0.0,,False,1곳
+2025-11-08,5,False,True,1,1,1,0,3,17.0,2025 ILLIT GLITTER DAY ENCORE / 2025 LUCY 8TH CONCERT 〈LUCID LINE〉 / 2025 김동률 콘서트 ‘산책’,7.0,13.0,True,2곳 이상
+2025-11-09,6,False,True,1,1,1,0,3,16.0,2025 ILLIT GLITTER DAY ENCORE / 2025 LUCY 8TH CONCERT 〈LUCID LINE〉 / 2025 김동률 콘서트 ‘산책’,6.0,13.0,True,2곳 이상
+2025-11-10,0,False,False,0,1,0,0,1,19.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
+2025-11-11,1,False,False,0,1,0,0,1,17.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
+2025-11-12,2,False,False,0,1,0,0,1,17.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
+2025-11-13,3,False,False,0,1,0,0,1,19.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
+2025-11-14,4,False,False,0,1,0,0,1,19.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
+2025-11-15,5,False,True,1,1,0,0,2,17.0,2025 김동률 콘서트 ‘산책’ / 유다빈밴드 단독 콘서트 ‘우리의 밤 - 커튼콜’,0.0,,False,2곳 이상
+2025-11-16,6,False,True,1,1,0,0,2,17.0,2025 김동률 콘서트 ‘산책’ / 유다빈밴드 단독 콘서트 ‘우리의 밤 - 커튼콜’,0.0,,False,2곳 이상
+2025-11-17,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-18,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-19,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-20,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-11-21,4,False,False,0,1,0,0,1,18.0,임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,1곳
+2025-11-22,5,False,True,1,1,0,0,2,16.0,2025 이승철 콘서트 <오케스트락3> 서울공연 / 임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,2곳 이상
+2025-11-23,6,False,True,1,1,0,0,2,16.0,2025 이승철 콘서트 <오케스트락3> 서울공연 / 임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,2곳 이상
+2025-11-24,0,False,False,0,1,0,0,1,17.0,임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,1곳
+2025-11-25,1,False,False,0,1,0,0,1,17.0,임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,1곳
+2025-11-26,2,False,False,0,1,0,0,1,17.0,임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,1곳
+2025-11-27,3,False,False,0,1,0,0,1,17.0,임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,1곳
+2025-11-28,4,False,False,0,1,1,0,2,15.0,2025 JUNGWOO FANMEETING [Golden Sugar Time] / 임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,2곳 이상
+2025-11-29,5,False,True,1,1,0,0,2,17.0,2025 어반자카파 전국투어 콘서트 '겨울' - 서울 / 임영웅 IM HERO TOUR 2025 - 서울,0.0,,False,2곳 이상
+2025-11-30,6,False,True,1,1,0,0,2,17.0,2025 어반자카파 전국투어 콘서트 '겨울' - 서울 / 임영웅 IM HERO TOUR 2025 - 서울,7.0,14.0,True,2곳 이상
+2025-12-01,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-02,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-03,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-04,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-05,4,False,False,0,1,1,0,2,17.0,"2025 god CONCERT < ICONIC BOX > - 서울 / 2025 정승환의 안녕, 겨울",3.0,10.0,True,2곳 이상
+2025-12-06,5,False,True,1,1,1,0,3,17.0,"2025 god CONCERT < ICONIC BOX > - 서울 / 2025 정승환의 안녕, 겨울 / ［서울］ 2025 손태진 전국투어 콘서트 〈It‘s Son Time〉",0.0,,False,2곳 이상
+2025-12-07,6,False,True,1,1,1,0,3,16.0,"2025 god CONCERT < ICONIC BOX > - 서울 / 2025 정승환의 안녕, 겨울 / ［서울］ 2025 손태진 전국투어 콘서트 〈It‘s Son Time〉",0.0,,False,2곳 이상
+2025-12-08,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-09,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-10,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-11,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-12,4,False,False,0,0,1,0,1,8.0,"2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,1곳
+2025-12-13,5,False,True,1,1,1,0,3,6.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
+2025-12-14,6,False,True,1,1,1,0,3,4.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
+2025-12-15,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-16,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-17,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-18,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-19,4,False,False,1,1,1,0,3,17.0,2025 DAY6 Special Concert ‘The Present’ / 2025 N.Flying LIVE ‘&CON4 ENCORE : Let’s Roll &4EVER’ / 2025 규현(KYUHYUN) Concert ‘The Classic’,0.0,,False,2곳 이상
+2025-12-20,5,False,True,1,1,1,0,3,17.0,2025 DAY6 Special Concert ‘The Present’ / 2025 N.Flying LIVE ‘&CON4 ENCORE : Let’s Roll &4EVER’ / 2025 규현(KYUHYUN) Concert ‘The Classic’,0.0,,False,2곳 이상
+2025-12-21,6,False,True,1,1,1,0,3,16.0,2025 DAY6 Special Concert ‘The Present’ / 2025 N.Flying LIVE ‘&CON4 ENCORE : Let’s Roll &4EVER’ / 2025 규현(KYUHYUN) Concert ‘The Classic’,0.0,,False,2곳 이상
+2025-12-22,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-23,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-24,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-25,3,True,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1.0,15.0,True,2곳 이상
+2025-12-26,4,False,False,0,1,1,0,2,7.5,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
+2025-12-27,5,False,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,5.0,15.0,True,2곳 이상
+2025-12-28,6,False,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
+2025-12-29,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-30,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
+2025-12-31,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>올팍 편한 방문</title>
+<meta name="description" content="올림픽공원 공연일 주차 혼잡 위험과 교통약자 이동 정보를 한곳에 모은 비공식 안내">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#days">본문 바로가기</a>
+<header>
+  <h1>올팍 편한 방문</h1>
+  <p class="sub">올림픽공원 공연일 주차 혼잡 위험과 교통약자 이동 정보를 한곳에</p>
+  <p class="notice" role="note">개인이 공공데이터로 만든 <strong>비공식</strong> 안내입니다. 한국체육산업개발·올림픽공원의 공식 서비스가 아닙니다. 방문 전 공식 안내를 함께 확인해 주세요.</p>
+</header>
+
+<main>
+  <section id="days" aria-labelledby="days-h">
+    <h2 id="days-h">다가오는 주말·공연일 주차 혼잡 위험</h2>
+    <p id="days-summary" class="lead"></p>
+    <ul id="day-list" class="days" aria-live="polite"><li>불러오는 중…</li></ul>
+  </section>
+
+  <section id="access" aria-labelledby="access-h">
+    <h2 id="access-h">교통약자 안내</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>지하철 엘리베이터 출구</h3>
+        <ul id="elevators"></ul>
+        <p class="warn" id="exit-warn"></p>
+      </article>
+      <article class="card">
+        <h3>공연장별 가까운 주차장·장애인 주차</h3>
+        <table id="venues"><thead><tr><th scope="col">공연장</th><th scope="col">가까운 주차장</th><th scope="col">장애인 주차면</th></tr></thead><tbody></tbody></table>
+        <p class="small" id="parking-note"></p>
+      </article>
+      <article class="card">
+        <h3>휠체어·유모차 대여</h3>
+        <p id="rental"></p>
+        <p class="warn" id="rental-warn"></p>
+      </article>
+      <article class="card">
+        <h3>휠체어 진입로</h3>
+        <p id="entry"></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="method" aria-labelledby="method-h">
+    <h2 id="method-h">이 등급은 어떻게 정하나요?</h2>
+    <p>한국체육산업개발이 공개한 「주차장 혼잡도 정보」(2025년 주차구역별 원활·혼잡·만차 기록)를 공연 일정·날씨와 맞춰 보고,
+      <strong>같은 조건이었던 2025년 날들 중 만차가 기록된 비율</strong>을 그대로 보여줍니다.
+      70% 이상이면 높음, 35~70%는 보통, 35% 미만은 낮음입니다. 3일 이내는 기상청 강수확률(60% 이상이면 비)을 반영합니다.</p>
+    <p class="small">정밀한 시간대별 예측이 아니라 과거 기록에 근거한 참고 등급입니다. 기록이 적은 조건은 그렇게 표시합니다.</p>
+  </section>
+</main>
+
+<footer>
+  <h2>데이터 출처</h2>
+  <ul id="sources"></ul>
+  <p>마지막 갱신: <span id="generated"></span> · <a href="https://github.com/lee2017-bit/olpark-easy-visit">소스 코드</a></p>
+  <p class="small">한국체육산업개발(주) 공공데이터 활용 경진대회 출품을 위한 개인 프로젝트입니다.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+{
+ "generated_at": "2026-11-15 14:46",
+ "stats": {
+  "first_full_h_median": 13.0,
+  "share_full_before_show": 0.7368421052631579,
+  "period": "2025-02-12~2025-12-31",
+  "offdays": 104,
+  "full_days": 57
+ },
+ "days": [
+  {
+   "date": "2026-11-15",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일, 비 안 온 날 45일 중 17일 만차",
+   "rain_pop": 20,
+   "events": [
+    {
+     "title": "2026 CRAVITY CONCERT 〈SONOROUS〉 in Seoul",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "16:00"
+    },
+    {
+     "title": "TOMORROW X TOGETHER WORLD TOUR 〈STEAL THE WIND〉 IN SEOUL",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026-27 로이킴 LIVE TOUR ［R:O:Y］ in SEOUL",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026-27 로이킴 LIVE TOUR ［R:O:Y］ in SEOUL",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "weekday": "금",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 조용필 ＆ 위대한탄생 콘서트",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "19:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 조용필 ＆ 위대한탄생 콘서트",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "18:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-29",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 조용필 ＆ 위대한탄생 콘서트",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-04",
+   "weekday": "금",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 이승철 40주년 콘서트 [THE VOICE: LEE SEUNG CHUL]",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "19:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-05",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 이승철 40주년 콘서트 [THE VOICE: LEE SEUNG CHUL]",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "16:00"
+    },
+    {
+     "title": "2026 비 (RAIN) CONCERT [THE SMOKE]",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "18:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "[서울] 2026 이승철 40주년 콘서트 [THE VOICE: LEE SEUNG CHUL]",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "16:00"
+    },
+    {
+     "title": "2026 비 (RAIN) CONCERT [THE SMOKE]",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": "금",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박지현 팬콘서트 〈멤버쉽 시즌2：2026 박지현 어워즈〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "19:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-12",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박지현 팬콘서트 〈멤버쉽 시즌2：2026 박지현 어워즈〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "17:00"
+    },
+    {
+     "title": "2026 DAVICHI CONCERT 〈IN OUR SCENES〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-13",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박지현 팬콘서트 〈멤버쉽 시즌2：2026 박지현 어워즈〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "16:00"
+    },
+    {
+     "title": "2026 DAVICHI CONCERT 〈IN OUR SCENES〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-18",
+   "weekday": "금",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 DAY6 Special Concert ‘The Present’",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    },
+    {
+     "title": "자우림 단독 콘서트 ［ MIDNIGHT EXPRESS 2026-2027 ］ - 서울",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "20:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-19",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 DAY6 Special Concert ‘The Present’",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    },
+    {
+     "title": "자우림 단독 콘서트 ［ MIDNIGHT EXPRESS 2026-2027 ］ - 서울",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "18:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-20",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 DAY6 Special Concert ‘The Present’",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "17:00"
+    },
+    {
+     "title": "자우림 단독 콘서트 ［ MIDNIGHT EXPRESS 2026-2027 ］ - 서울",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "18:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-24",
+   "weekday": "목",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박진영 콘서트 〈WET〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "20:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-25",
+   "weekday": "금",
+   "offday": true,
+   "holiday": true,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박진영 콘서트 〈WET〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "17:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-26",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 박진영 콘서트 〈WET〉",
+     "venue": "올림픽홀",
+     "venue_key": "olympic_hall",
+     "start": "18:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-27",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "rain_pop": null,
+   "events": []
+  },
+  {
+   "date": "2026-12-31",
+   "weekday": "목",
+   "offday": false,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 성시경 연말 콘서트 〈성시경〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "09:00"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-01",
+   "weekday": "금",
+   "offday": true,
+   "holiday": true,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 성시경 연말 콘서트 〈성시경〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "07:00"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-02",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 성시경 연말 콘서트 〈성시경〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "06:00"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-03",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "보통",
+   "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "rain_pop": null,
+   "events": [
+    {
+     "title": "2026 성시경 연말 콘서트 〈성시경〉",
+     "venue": "KSPO DOME",
+     "venue_key": "kspo_dome",
+     "start": "06:00"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-09",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "rain_pop": null,
+   "events": []
+  },
+  {
+   "date": "2027-01-10",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "grade": "낮음",
+   "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "rain_pop": null,
+   "events": []
+  }
+ ],
+ "access": {
+  "subway_elevators": [
+   {
+    "line": "5호선",
+    "station": "올림픽공원",
+    "where": "2번 출입구",
+    "exit": "2"
+   },
+   {
+    "line": "8호선",
+    "station": "몽촌토성",
+    "where": "대합실(B1, 4번 출입구 화장실 앞)",
+    "exit": "4"
+   }
+  ],
+  "subway_note": "9호선(올림픽공원역·한성백제역)은 운영사가 달라 이 데이터에 없습니다.",
+  "park_exit_guidance": "5·9호선 올림픽공원역 3·4번 출구, 8호선 몽촌토성역 1번 출구, 9호선 한성백제역 2번 출구",
+  "wheelchair_rental": {
+   "source": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+   "places": {
+    "평화의광장 안내센터": 3,
+    "만남의광장 안내센터": 3
+   },
+   "hours": "09:00~19:00 (휴게 12:00~13:00)",
+   "rule": "무상, 신분증 맡기고 3시간"
+  },
+  "wheelchair_entry_route": "만남의광장: 동2문 입차 → 그래피티의 벽 주차장 → 올림픽공원역 쪽 경사로",
+  "disabled_parking_total_agency": 85,
+  "disabled_parking_knto": "장애인 주차장 140칸 있음_무장애 편의시설",
+  "restroom_knto": "장애인 화장실 있음",
+  "stroller_knto": "대여가능(평화의 광장 안내센터 4대, 동1문 안내센터3대)",
+  "venues": {
+   "KSPO DOME": {
+    "lot": "P5 (북2문·동2문·남2문)",
+    "disabled_spaces": 10,
+    "walk": "주차장에서 1분"
+   },
+   "올림픽홀": {
+    "lot": "P2·올림픽홀 지하 (동2문)",
+    "disabled_spaces": 5,
+    "walk": "1~2분"
+   },
+   "티켓링크 라이브 아레나(핸드볼경기장)": {
+    "lot": "P6 (동2문·남2문)",
+    "disabled_spaces": 3,
+    "walk": "1~2분"
+   },
+   "88잔디마당": {
+    "lot": "동2문 쪽 주차장",
+    "disabled_spaces": null,
+    "walk": "공지에 지정 장애인 주차 구역 없음"
+   }
+  }
+ },
+ "sources": [
+  {
+   "name": "한국체육산업개발 주차장 혼잡도 정보 (공공데이터포털)",
+   "url": "https://www.data.go.kr/data/15164156/fileData.do"
+  },
+  {
+   "name": "한국체육산업개발 올림픽공원 공연정보 (문화공공데이터광장)",
+   "url": "https://www.data.go.kr/data/3037877/openapi.do"
+  },
+  {
+   "name": "올림픽공원 홈페이지 공연 일정·주차 안내·편의시설",
+   "url": "https://www.ksponco.or.kr/olympicpark/"
+  },
+  {
+   "name": "서울교통공사 교통약자이용정보",
+   "url": "https://www.data.go.kr/data/15143843/openapi.do"
+  },
+  {
+   "name": "한국관광공사 무장애 여행 정보",
+   "url": "https://www.data.go.kr/"
+  },
+  {
+   "name": "기상청 단기예보·ASOS, 한국천문연구원 특일 정보",
+   "url": "https://www.data.go.kr/"
+  }
+ ]
+}
