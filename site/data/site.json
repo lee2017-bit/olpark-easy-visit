@@ -1,5 +1,84 @@
 {
- "generated_at": "2026-11-15 15:28",
+ "map": {
+  "venues": [
+   {
+    "key": "kspo_dome",
+    "name": "KSPO DOME",
+    "lat": 37.519231,
+    "lon": 127.127469,
+    "osm": "way/75956855",
+    "lot": "P5 (북2문·동2문·남2문)",
+    "disabled_spaces": 10,
+    "walk": "주차장에서 1분",
+    "nearest_elevator": {
+     "label": "5호선 올림픽공원역 2번",
+     "km": 0.5
+    }
+   },
+   {
+    "key": "olympic_hall",
+    "name": "올림픽홀",
+    "lat": 37.514732,
+    "lon": 127.127587,
+    "osm": "way/75956846",
+    "lot": "P2·올림픽홀 지하 (동2문)",
+    "disabled_spaces": 5,
+    "walk": "1~2분",
+    "nearest_elevator": {
+     "label": "5호선 올림픽공원역 2번",
+     "km": 0.4
+    }
+   },
+   {
+    "key": "handball",
+    "name": "티켓링크 라이브 아레나(핸드볼경기장)",
+    "lat": 37.517346,
+    "lon": 127.1264,
+    "osm": "way/75956853",
+    "lot": "P6 (동2문·남2문)",
+    "disabled_spaces": 3,
+    "walk": "1~2분",
+    "nearest_elevator": {
+     "label": "5호선 올림픽공원역 2번",
+     "km": 0.4
+    }
+   },
+   {
+    "key": "lawn88",
+    "name": "88잔디마당",
+    "lat": 37.518974,
+    "lon": 127.125,
+    "osm": "way/469354406",
+    "lot": "동2문 쪽 주차장",
+    "disabled_spaces": null,
+    "walk": "공지에 지정 장애인 주차 구역 없음",
+    "nearest_elevator": {
+     "label": "5호선 올림픽공원역 2번",
+     "km": 0.6
+    }
+   }
+  ],
+  "elevator_exits": [
+   {
+    "line": "5호선",
+    "station": "올림픽공원",
+    "exit": "2",
+    "lat": 37.516093,
+    "lon": 127.131227,
+    "osm": "node/3401446010"
+   },
+   {
+    "line": "8호선",
+    "station": "몽촌토성",
+    "exit": "4",
+    "lat": 37.517585,
+    "lon": 127.112233,
+    "osm": "node/3401171487"
+   }
+  ],
+  "attribution": "© OpenStreetMap contributors (ODbL)"
+ },
+ "generated_at": "2026-11-15 17:28",
  "stats": {
   "first_full_h_median": 13.0,
   "share_full_before_show": 0.7368421052631579,
@@ -15,6 +94,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일, 비 안 온 날 45일 중 17일 만차",
+   "m": 17,
+   "n": 45,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": 20,
    "events": [
     {
@@ -45,6 +129,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -68,6 +157,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -91,6 +185,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -114,6 +213,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -137,6 +241,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -160,6 +269,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -183,6 +297,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -213,6 +332,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -243,6 +367,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -266,6 +395,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -296,6 +430,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -326,6 +465,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -356,6 +500,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -386,6 +535,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -416,6 +570,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -439,6 +598,11 @@
    "holiday": true,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -462,6 +626,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": true,
    "rain_pop": null,
    "events": [
     {
@@ -485,6 +654,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "m": 0,
+   "n": 8,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": false,
    "rain_pop": null,
    "events": [],
    "tips": [
@@ -499,6 +673,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 평일 219일 중 2일만 만차 기록",
+   "m": 2,
+   "n": 219,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": false,
    "rain_pop": null,
    "events": [
     {
@@ -521,6 +700,11 @@
    "holiday": true,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": false,
    "rain_pop": null,
    "events": [
     {
@@ -543,6 +727,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": false,
    "rain_pop": null,
    "events": [
     {
@@ -565,6 +754,11 @@
    "holiday": false,
    "grade": "보통",
    "basis": "2025년 7~2월 공연 있는 주말·공휴일 59일 중 24일 만차",
+   "m": 24,
+   "n": 59,
+   "car": "early",
+   "arrive_by": 13,
+   "evening": false,
    "rain_pop": null,
    "events": [
     {
@@ -587,6 +781,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "m": 0,
+   "n": 8,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": false,
    "rain_pop": null,
    "events": [],
    "tips": [
@@ -601,6 +800,11 @@
    "holiday": false,
    "grade": "낮음",
    "basis": "2025년 공연 없는 주말·공휴일 8일(대부분 명절·공휴일)은 모두 만차 기록 없음 — 표본이 적어 참고용",
+   "m": 0,
+   "n": 8,
+   "car": "ok",
+   "arrive_by": null,
+   "evening": false,
    "rain_pop": null,
    "events": [],
    "tips": [
@@ -687,6 +891,10 @@
   {
    "name": "기상청 단기예보·ASOS, 한국천문연구원 특일 정보",
    "url": "https://www.data.go.kr/"
+  },
+  {
+   "name": "지도·위치: © OpenStreetMap 기여자 (ODbL)",
+   "url": "https://www.openstreetmap.org/copyright"
   }
  ]
 }

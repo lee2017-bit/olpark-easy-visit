@@ -4,69 +4,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>올팍 편한 방문</title>
-<meta name="description" content="올림픽공원 공연일 주차 혼잡 위험과 교통약자 이동 정보를 한곳에 모은 비공식 안내">
+<meta name="description" content="휠체어·유모차 이용자를 위한 올림픽공원 공연일 방문 안내 (비공식)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#days">본문 바로가기</a>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="9" cy="3.5" r="1.8" fill="currentColor" stroke="none"/><path d="M9 7v6h5.5l2.5 6.5M9 10h5"/><path d="M6.2 11.2a5.5 5.5 0 1 0 7.6 6.3"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 17v-4l2.2-5A2 2 0 0 1 7 7h10a2 2 0 0 1 1.8 1l2.2 5v4h-3v2h-2v-2H8v2H6v-2z"/><path d="M5 13h14"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-elev" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8.5 10L12 6.5 15.5 10M8.5 14l3.5 3.5 3.5-3.5"/></symbol>
+  <symbol id="i-stage" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-rain" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v4.5M12 17.5v.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-8M11 20V5M17 20v-5M3 20h18"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+  <symbol id="i-stroller" viewBox="0 0 24 24"><path d="M3 5h2.5l2 9h10l2.5-7H6.5"/><path d="M12 7V3a5 5 0 0 1 5 4"/><circle cx="9" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></symbol>
+  <symbol id="i-ramp" viewBox="0 0 24 24"><path d="M2 20h20L2 9z"/><path d="M16 6l3 3-3 3M19 9h-6"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 10h14M8.5 21l2-4M15.5 21l-2-4"/><circle cx="9" cy="13.5" r=".9" fill="currentColor"/><circle cx="15" cy="13.5" r=".9" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
+
+<a class="skip" href="#day">본문 바로가기</a>
 <header>
-  <h1>올팍 편한 방문</h1>
-  <p class="sub">올림픽공원 공연일 주차 혼잡 위험과 교통약자 이동 정보를 한곳에</p>
-  <p class="notice" role="note">개인이 공공데이터로 만든 <strong>비공식</strong> 안내입니다. 한국체육산업개발·올림픽공원의 공식 서비스가 아닙니다. 방문 전 공식 안내를 함께 확인해 주세요.</p>
+  <h1><svg class="ic"><use href="#i-wheel"/></svg>올팍 편한 방문</h1>
+  <p class="sub">휠체어·유모차로 올림픽공원 공연에 갈 때, 날짜만 고르세요.</p>
+  <p class="notice" role="note"><svg class="ic sm"><use href="#i-info"/></svg><span>개인이 공공데이터로 만든 <strong>비공식</strong> 안내예요. 방문 전 공식 안내도 확인하세요.</span></p>
 </header>
 
 <main>
-  <section class="howto" aria-label="이용 방법">
-    <ol>
-      <li>가려는 날짜를 찾아 <strong>만차 위험</strong>을 확인하세요.</li>
-      <li>휠체어·유모차와 함께라면 <strong>교통약자 안내 보기</strong>를 눌러 주차·지하철 출구를 확인하세요.</li>
-      <li>위험이 높은 날은 지하철 엘리베이터 출구로 오시는 것이 편합니다.</li>
-    </ol>
-  </section>
-
-  <section id="days" aria-labelledby="days-h">
-    <h2 id="days-h">다가오는 주말·공연일 주차 혼잡 위험</h2>
-    <p id="days-summary" class="lead"></p>
-    <p class="legend" aria-label="등급 설명">
-      <span class="badge g-높음">높음</span> 같은 조건 날의 70% 이상 만차
-      <span class="badge g-보통">보통</span> 35~70%
-      <span class="badge g-낮음">낮음</span> 35% 미만
+  <section aria-labelledby="pick-h">
+    <h2 id="pick-h">언제 가세요?</h2>
+    <div id="chips" class="chips" role="group" aria-label="날짜 선택"></div>
+    <button id="more" class="more" type="button" hidden></button>
+    <p class="legend" aria-label="만차 위험 표시">
+      <span class="dot g-높음"></span>높음 <span class="dot g-보통"></span>보통 <span class="dot g-낮음"></span>낮음
+      <span class="legend-note">· 2025년 같은 조건 날의 만차 비율</span>
     </p>
-    <ul id="day-list" class="days" aria-live="polite"><li>불러오는 중…</li></ul>
   </section>
 
-  <section id="access" aria-labelledby="access-h">
-    <h2 id="access-h">교통약자 안내</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>지하철 엘리베이터 출구</h3>
-        <ul id="elevators"></ul>
-        <p class="warn" id="exit-warn"></p>
-      </article>
-      <article class="card">
-        <h3>공연장별 가까운 주차장·장애인 주차</h3>
-        <table id="venues"><thead><tr><th scope="col">공연장</th><th scope="col">가까운 주차장</th><th scope="col">장애인 주차면</th></tr></thead><tbody></tbody></table>
-        <p class="small" id="parking-note"></p>
-      </article>
-      <article class="card">
-        <h3>휠체어·유모차 대여</h3>
-        <p id="rental"></p>
-        <p class="warn" id="rental-warn"></p>
-      </article>
-      <article class="card">
-        <h3>휠체어 진입로</h3>
-        <p id="entry"></p>
-      </article>
-    </div>
+  <section id="day" aria-live="polite" aria-label="선택한 날짜 안내"><p>불러오는 중…</p></section>
+
+  <section aria-labelledby="map-h">
+    <h2 id="map-h"><svg class="ic"><use href="#i-pin"/></svg>지도</h2>
+    <div id="map" class="map" role="region" aria-label="공연장과 엘리베이터 출구 지도"></div>
+    <ul class="map-key">
+      <li><span class="mk mk-venue on"><svg><use href="#i-stage"/></svg></span>그날 공연 있는 공연장</li>
+      <li><span class="mk mk-venue"><svg><use href="#i-stage"/></svg></span>다른 공연장</li>
+      <li><span class="mk mk-elev"><svg><use href="#i-elev"/></svg></span>엘리베이터 있는 지하철 출구</li>
+    </ul>
+    <ul id="map-list" class="map-list"></ul>
   </section>
 
-  <section id="method" aria-labelledby="method-h">
-    <h2 id="method-h">이 등급은 어떻게 정하나요?</h2>
-    <p>한국체육산업개발이 공개한 「주차장 혼잡도 정보」(2025년 주차구역별 원활·혼잡·만차 기록)를 공연 일정·날씨와 맞춰 보고,
-      <strong>같은 조건이었던 2025년 날들 중 만차가 기록된 비율</strong>을 그대로 보여줍니다.
-      70% 이상이면 높음, 35~70%는 보통, 35% 미만은 낮음입니다. 3일 이내는 기상청 강수확률(60% 이상이면 비)을 반영합니다.</p>
-    <p class="small">정밀한 시간대별 예측이 아니라 과거 기록에 근거한 참고 등급입니다. 기록이 적은 조건은 그렇게 표시합니다.</p>
+  <section aria-labelledby="access-h">
+    <h2 id="access-h">늘 같은 정보</h2>
+    <div id="tiles" class="tiles"></div>
   </section>
+
+  <details class="method">
+    <summary><svg class="ic sm"><use href="#i-chart"/></svg>만차 위험은 어떻게 정하나요?</summary>
+    <p>한국체육산업개발 「주차장 혼잡도 정보」(2025년 주차구역별 원활·혼잡·만차 기록)를 공연 일정·날씨와 맞춰,
+      <strong>같은 조건이었던 2025년 날들 중 만차가 기록된 비율</strong>을 보여줍니다.
+      70% 이상 높음, 35~70% 보통, 35% 미만 낮음. 3일 이내는 기상청 강수확률(60% 이상이면 비)을 반영합니다.</p>
+    <p class="small">시간대별 정밀 예측이 아니라 과거 기록에 근거한 참고 등급입니다.</p>
+  </details>
 </main>
 
 <footer>
@@ -75,6 +77,7 @@
   <p>마지막 갱신: <span id="generated"></span> · <a href="https://github.com/lee2017-bit/olpark-easy-visit">소스 코드</a></p>
   <p class="small">한국체육산업개발(주) 공공데이터 활용 경진대회 출품을 위한 개인 프로젝트입니다.</p>
 </footer>
-<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>

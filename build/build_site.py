@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import math
 from pathlib import Path
 
 import pandas as pd
@@ -55,6 +56,35 @@ def access_tips(grade: str, offday: bool, evs: pd.DataFrame, elev_text: str, ful
     return tips
 
 
+def _km(a, b) -> float:
+    """두 지점 직선거리(km, 구면 근사)."""
+    la1, lo1, la2, lo2 = map(math.radians, (a["lat"], a["lon"], b["lat"], b["lon"]))
+    h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    return 2 * 6371 * math.asin(math.sqrt(h))
+
+
+def map_points(elev: list[dict]) -> dict | None:
+    """지도용 좌표: 공연장(OSM)과, 서울교통공사 데이터에서 엘리베이터가 있는 출구(OSM 출구 좌표)."""
+    f = ROOT / "data" / "static" / "map_points.json"
+    if not f.exists():
+        return None
+    mp = json.loads(f.read_text(encoding="utf-8"))
+    exits = []
+    for e in elev:
+        hit = [x for x in mp["exits"] if x["station"] == e["station"] and x["exit"] == str(e["exit"])]
+        if hit:
+            exits.append({"line": e["line"], "station": e["station"], "exit": str(e["exit"]),
+                          "lat": hit[0]["lat"], "lon": hit[0]["lon"], "osm": hit[0]["osm"]})
+    venues = []
+    for k, v in mp["venues"].items():
+        near = min(exits, key=lambda x: _km(v, x)) if exits else None
+        venues.append({"key": k, "name": VENUE_KO[k], "lat": v["lat"], "lon": v["lon"], "osm": v["osm"],
+                       **VENUE_ACCESS[k],
+                       "nearest_elevator": None if not near else
+                       {"label": f"{near['line']} {near['station']}역 {near['exit']}번", "km": round(_km(v, near), 1)}})
+    return {"venues": venues, "elevator_exits": exits, "attribution": mp["attribution"]}
+
+
 def build(days_ahead: int = 60) -> dict:
     u, stats = upcoming(days_ahead)
     ed = event_days()
@@ -67,11 +97,15 @@ def build(days_ahead: int = 60) -> dict:
         evs = ed[ed.date == r.date].sort_values("start_h")
         if not (r.offday or len(evs)):
             continue
+        full_h = int(stats["first_full_h_median"])
+        car = "avoid" if r.grade == "높음" else ("early" if (r.grade == "보통" and r.offday) else "ok")
         days.append({
             "date": r.date.strftime("%Y-%m-%d"),
             "weekday": "월화수목금토일"[r.date.dayofweek],
             "offday": r.offday, "holiday": r.holiday,
-            "grade": r.grade, "basis": r.basis,
+            "grade": r.grade, "basis": r.basis, "m": int(r.m), "n": int(r.n),
+            "car": car, "arrive_by": full_h if car != "ok" else None,
+            "evening": any((h or 0) >= 16 for h in evs.start_h.tolist()),
             "rain_pop": None if pd.isna(r.pop_max) else int(r.pop_max),
             "events": [{"title": e.title, "venue": VENUE_KO[e.venue], "venue_key": e.venue,
                         "start": _fmt_h(e.start_h)} for e in evs.itertuples()],
@@ -83,6 +117,7 @@ def build(days_ahead: int = 60) -> dict:
              "exit": x.get("vcntEntrcNo")} for x in acc["elevators"] if "외부" in x["fcltNm"]]
     knto = acc.get("barrier_free_knto", {})
     data = {
+        "map": map_points(elev),
         "generated_at": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"),
         "stats": stats,
         "days": days,
@@ -105,6 +140,7 @@ def build(days_ahead: int = 60) -> dict:
             {"name": "서울교통공사 교통약자이용정보", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
             {"name": "한국관광공사 무장애 여행 정보", "url": "https://www.data.go.kr/"},
             {"name": "기상청 단기예보·ASOS, 한국천문연구원 특일 정보", "url": "https://www.data.go.kr/"},
+            {"name": "지도·위치: © OpenStreetMap 기여자 (ODbL)", "url": "https://www.openstreetmap.org/copyright"},
         ],
     }
     out = SITE / "data" / "site.json"

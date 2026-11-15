@@ -5,7 +5,8 @@
 
 ## 구성
 
-- `site/` 정적 사이트 (GitHub Pages). `site/data/site.json`을 읽어 화면을 그림
+- `site/` 정적 사이트 (GitHub Pages). `site/data/site.json`을 읽어 날짜 선택 → 아이콘 안내 → 지도(Leaflet + OpenStreetMap)로 보여줌
+- `data/static/map_points.json` 지도 좌표: 공연장·지하철 출구의 OpenStreetMap 요소 좌표(© OpenStreetMap contributors, ODbL). 추정 좌표 없음, 주차장은 기관 번호와 OSM 이름이 맞지 않아 지도에 찍지 않음
 - `build/build_site.py` site.json 생성
 - `analysis/risk.py` 만차 위험 등급: 2025년 같은 조건 날들의 실제 만차 비율
 - `.github/workflows/site.yml` 매주 월·목 06:17(KST) 데이터 갱신 → 커밋 → 배포. 수집이 실패해도 기존 데이터로 배포
@@ -32,6 +33,7 @@ python3 -m collectors.kcisa_parking all               # 2025 연계·입출차 (
 python3 -m collectors.agency_prediction               # 기관 예상 이용률 스냅샷 (주말 전 실행)
 python3 -m collectors.accessibility                   # 지하철 엘리베이터, 무장애 정보
 python3 -m collectors.calendar_weather                # 공휴일, 단기예보
+python3 -m collectors.osm_points                      # 지도 좌표 (OSM, 필요할 때만)
 ```
 
 ## 분석
