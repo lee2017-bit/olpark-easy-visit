@@ -67,11 +67,12 @@ def _parse_inout(item: dict) -> list:
     return [item.get("LOCAL_ID") or ""] + g
 
 
-def collect_inout_compact(rows: int = 10000, gap: float = 10.5) -> str:
-    """API_CPM_008(2025 입출차 전체구역)을 1만 건씩 받아 필요한 열만 gzip CSV로 저장 (이어받기 가능).
+def collect_inout_compact(rows: int = 5000, gap: float = 20.0) -> str:
+    """API_CPM_008(2025 입출차 전체구역)을 나눠 받아 필요한 열만 gzip CSV로 저장 (이어받기 가능).
 
-    게이트웨이 제한이 '10초에 1회'라 요청 간격을 둔다. 원본 JSON(페이지당 약 3.7MB)은 저장하지 않는다.
-    산출: data/raw/kcisa_inout/compact_NNNNN.csv.gz  (local_id, in_gate, in_time, out_gate, out_time)
+    게이트웨이 제한이 '10초에 1회'라 앞 요청이 끝난 뒤 gap초를 기다린다. 큰 페이지는 504가 잦아 5천 건씩.
+    파일 이름은 시작 위치(offset) 기준이라 페이지 크기를 바꿔도 이어받을 수 있다.
+    산출: data/raw/kcisa_inout/compact_oNNNNNNN.csv.gz  (local_id, in_gate, in_time, out_gate, out_time)
     """
     import csv
     import gzip
@@ -80,45 +81,51 @@ def collect_inout_compact(rows: int = 10000, gap: float = 10.5) -> str:
     out.mkdir(parents=True, exist_ok=True)
     meta = out / "compact_total.txt"
     total = int(meta.read_text()) if meta.exists() else None
-    page, last = 1, 0.0
-    while True:
-        f = out / f"compact_{page:05d}.csv.gz"
-        if not f.exists():
-            wait = gap - (time.time() - last)
-            if wait > 0:
-                time.sleep(wait)
-            for attempt in range(6):
-                last = time.time()
-                try:
-                    b = kcisa("openapi/API_CPM_008/request", "kcisa_inout",
-                              {"numOfRows": rows, "pageNo": page}, timeout=300, retries=1)
-                    break
-                except FetchError as e:
-                    print(f"page {page} 재시도 {attempt + 1}: {str(e)[:80]}", flush=True)
-                    time.sleep(gap * (attempt + 2))
-                    last = time.time()
-            else:
-                return f"inout: 중단 — {page - 1}페이지까지 저장됨 (다시 실행하면 이어받음)"
-            obj = json.loads(b)
-            total = _total(obj) or total
-            if total:
-                meta.write_text(str(total))
-            items = obj.get("response", {}).get("body", {}).get("items", {}) or {}
-            items = items.get("item", []) if isinstance(items, dict) else items
-            if isinstance(items, dict):
-                items = [items]
-            buf = io.StringIO()
-            w = csv.writer(buf)
-            w.writerow(["local_id", "in_gate", "in_time", "out_gate", "out_time"])
-            for it in items:
-                w.writerow(_parse_inout(it))
-            f.write_bytes(gzip.compress(buf.getvalue().encode("utf-8")))
-            print(f"page {page} 저장 {len(items)}건 (total={total})", flush=True)
-            if not items:
-                return f"inout: 빈 페이지 {page}에서 종료"
-        if total and page * rows >= total:
-            return f"inout: 완료 {page}페이지 (totalCount={total})"
-        page += 1
+    covered = []
+    for f in out.glob("compact_o*.csv.gz"):
+        a = int(f.name[len("compact_o"):-len(".csv.gz")])
+        with gzip.open(f, "rt", encoding="utf-8") as fh:
+            covered.append((a, a + sum(1 for _ in fh) - 1))
+    offset, last_end, fails = 0, 0.0, 0
+    while total is None or offset < total:
+        if any(a <= offset < b for a, b in covered):
+            offset += rows
+            continue
+        wait = gap - (time.time() - last_end)
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            b = kcisa("openapi/API_CPM_008/request", "kcisa_inout",
+                      {"numOfRows": rows, "pageNo": offset // rows + 1}, timeout=120, retries=1)
+        except FetchError as e:
+            last_end = time.time()
+            fails += 1
+            print(f"offset {offset} 실패 {fails}: {str(e)[:60]}", flush=True)
+            if fails >= 30:
+                return f"inout: 연속 실패로 중단 — offset {offset}부터 다시 실행하면 이어받음"
+            time.sleep(gap * (2 if "429" in str(e) else 1))
+            continue
+        last_end, fails = time.time(), 0
+        obj = json.loads(b)
+        total = _total(obj) or total
+        if total:
+            meta.write_text(str(total))
+        items = obj.get("response", {}).get("body", {}).get("items", {}) or {}
+        items = items.get("item", []) if isinstance(items, dict) else items
+        if isinstance(items, dict):
+            items = [items]
+        if not items:
+            return f"inout: offset {offset}에서 빈 응답으로 종료"
+        buf = io.StringIO()
+        w = csv.writer(buf)
+        w.writerow(["local_id", "in_gate", "in_time", "out_gate", "out_time"])
+        for it in items:
+            w.writerow(_parse_inout(it))
+        (out / f"compact_o{offset:07d}.csv.gz").write_bytes(gzip.compress(buf.getvalue().encode("utf-8")))
+        covered.append((offset, offset + len(items)))
+        print(f"offset {offset} 저장 {len(items)}건 / {total}", flush=True)
+        offset += rows
+    return f"inout: 완료 (totalCount={total})"
 
 if __name__ == "__main__":
     args = sys.argv[1:]
