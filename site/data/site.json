@@ -78,7 +78,7 @@
   ],
   "attribution": "© OpenStreetMap contributors (ODbL)"
  },
- "generated_at": "2026-11-15 17:28",
+ "generated_at": "2026-11-16 10:03",
  "stats": {
   "first_full_h_median": 13.0,
   "share_full_before_show": 0.7368421052631579,
@@ -87,41 +87,6 @@
   "full_days": 57
  },
  "days": [
-  {
-   "date": "2026-11-15",
-   "weekday": "일",
-   "offday": true,
-   "holiday": false,
-   "grade": "보통",
-   "basis": "2025년 7~2월 공연 있는 주말·공휴일, 비 안 온 날 45일 중 17일 만차",
-   "m": 17,
-   "n": 45,
-   "car": "early",
-   "arrive_by": 13,
-   "evening": true,
-   "rain_pop": 20,
-   "events": [
-    {
-     "title": "2026 CRAVITY CONCERT 〈SONOROUS〉 in Seoul",
-     "venue": "올림픽홀",
-     "venue_key": "olympic_hall",
-     "start": "16:00"
-    },
-    {
-     "title": "TOMORROW X TOGETHER WORLD TOUR 〈STEAL THE WIND〉 IN SEOUL",
-     "venue": "KSPO DOME",
-     "venue_key": "kspo_dome",
-     "start": "17:00"
-    }
-   ],
-   "tips": [
-    "자가용이라면 13시 이전 도착을 권합니다. 이후에는 장애인 구역까지 들어가기 어려울 수 있습니다.",
-    "올림픽홀 16:00: 가까운 주차장 P2·올림픽홀 지하 (동2문), 장애인 주차 5면",
-    "KSPO DOME 17:00: 가까운 주차장 P5 (북2문·동2문·남2문), 장애인 주차 10면",
-    "지하철 엘리베이터 출구: 5호선 올림픽공원역 2번, 8호선 몽촌토성역 4번",
-    "공원 휠체어 대여는 19시에 끝나고 3시간 한도라 저녁 공연 중에는 쓰기 어렵습니다. 개인 휠체어를 권합니다."
-   ]
-  },
   {
    "date": "2026-11-21",
    "weekday": "토",
