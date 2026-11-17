@@ -28,16 +28,29 @@ EVENING = ["16:00", "17:00", "18:00", "19:00", "20:00", "21:00"]
 
 
 def load_compact() -> tuple[pd.DataFrame, int, int]:
-    files = sorted(SRC.glob("compact_o*.csv.gz"))
+    files = sorted(SRC.glob("compact_o*.csv.gz")) + sorted((SRC / "refill").glob("r_o*.csv.gz"))
     df = pd.concat((pd.read_csv(f, dtype=str, keep_default_na=False) for f in files), ignore_index=True)
     df = df.drop_duplicates("local_id")
     total = int((SRC / "compact_total.txt").read_text())
     rec = pd.DataFrame({
+        "id": df.local_id.str.rpartition("-")[2].astype(int),
         "gate": df.in_gate.str.extract(r"^(\S{1,3}문)")[0],
         "t_in": pd.to_datetime(df.in_time, errors="coerce"),
         "t_out": pd.to_datetime(df.out_time.replace("", None), errors="coerce"),
     }).dropna(subset=["t_in"])
     return rec, len(df), total
+
+
+def month_coverage(rec: pd.DataFrame, total: int) -> pd.DataFrame:
+    """월별로 받은 비율 추정. ID는 1~total이고 2만 단위 구간이 대체로 한 달에 속하므로,
+    구간마다 (구간 크기 × 받은 기록 중 그 달 비율)을 더해 그 달의 실제 건수를 추정."""
+    r = rec.assign(b=rec.id // 20000, m=rec.t_in.dt.strftime("%Y-%m"))
+    b = r.groupby("b").size()
+    size = pd.Series({k: min(total, k * 20000 + 19999) - max(1, k * 20000) + 1 for k in b.index})
+    bm = r.groupby(["b", "m"]).size()
+    est = (bm / b.reindex(bm.index, level="b") * size.reindex(bm.index, level="b")).groupby(level="m").sum()
+    have = r.groupby("m").size()
+    return pd.DataFrame({"have": have, "est": est.round(0), "coverage": (have / est).round(3)})
 
 
 def first_reach(occ: pd.DataFrame, level: float) -> pd.Series:
@@ -71,10 +84,12 @@ def pct(s):
     return (s / CAPACITY * 100).round(0)
 
 
-def report(d: pd.DataFrame, n_rows: int, total: int) -> str:
+def report(d: pd.DataFrame, n_rows: int, total: int, cov: pd.DataFrame) -> str:
     out = [f"# 2025 입출차 전체구역 분석 ({date.today():%Y-%m-%d})", "",
            f"- 받은 기록 {n_rows:,} / 전체 {total:,}건 ({n_rows / total * 100:.1f}%)",
-           f"- 대상: 동2·남2·북2문 입구, 수용 {CAPACITY:,}대. 2025년 {d.date.nunique()}일", ""]
+           f"- 대상: 동2·남2·북2문 입구, 수용 {CAPACITY:,}대. 2025년 {d.date.nunique()}일",
+           "- API가 쪽마다 순서를 조금씩 섞어 보내 일부 기록은 중복, 일부는 누락됨. 월별로 받은 비율(추정):", "",
+           "```", cov.to_string(), "```", ""]
     o = d[d.offday == True]  # noqa: E712
     w = d[d.offday == False]  # noqa: E712
 
@@ -116,11 +131,14 @@ def report(d: pd.DataFrame, n_rows: int, total: int) -> str:
 
 if __name__ == "__main__":
     rec, n_rows, total = load_compact()
-    if n_rows < total and "--partial" not in sys.argv:
-        sys.exit(f"아직 {n_rows:,}/{total:,}건만 받음 — 다 받은 뒤 실행 (시험: --partial)")
+    first_pass = len(list(SRC.glob("compact_o*.csv.gz"))) * 5000 >= total - 10000
+    final = first_pass and "--partial" not in sys.argv
+    if not first_pass and "--partial" not in sys.argv:
+        sys.exit(f"1차 수집이 아직 안 끝남 ({n_rows:,}/{total:,}건) — 끝난 뒤 실행 (시험: --partial)")
+    cov = month_coverage(rec, total)
     d, occ = daily(rec)
-    txt = report(d, n_rows, total)
-    if n_rows >= total:
+    txt = report(d, n_rows, total, cov)
+    if final:
         occ.to_csv(PROCESSED / "occupancy_2025_15min.csv", index=False)
         d.to_csv(PROCESSED / "daily_2025_inout.csv", index=False)
         (REPORTS / f"inout_2025_{date.today():%Y%m%d}.md").write_text(txt, encoding="utf-8")
