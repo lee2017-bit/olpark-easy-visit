@@ -155,7 +155,7 @@ def collect_inout_refill(rows: int = 5000, gap: float = 20.0, max_requests: int 
     이 API는 같은 쪽을 다시 요청해도 순서가 조금씩 섞여 나와(정렬 기준이 고유하지 않은 듯),
     1차에서 일부 기록이 다른 쪽에 중복으로 나오고 그만큼은 한 번도 안 나온다.
     기록 ID(B050-1 ~ B050-<전체 건수>)는 대체로 월별로 이어져 있어, 빠진 ID가 많은 구간(2만 단위)을
-    1차에서 담고 있던 쪽부터 다시 받는다. 다시 받아도 새 기록이 거의 없는 쪽은 건너뛴다.
+    1차에서 담고 있던 쪽부터 다시 받는다. 순서가 바뀌는 건 가끔(시점별)이고 그 사이엔 고정돼 있어 쪽마다 한 번씩만.
     산출: data/raw/kcisa_inout/refill/r_oNNNNNNN_K.csv.gz (K = 그 쪽을 다시 받은 횟수)
     """
     import csv
@@ -173,7 +173,8 @@ def collect_inout_refill(rows: int = 5000, gap: float = 20.0, max_requests: int 
     # 구간 b의 ID 개수 (ID는 1부터 total까지)
     size = [min(total, b * 20000 + 19999) - max(1, b * 20000) + 1 for b in range(n_bucket)]
     tries = {o: len(list((out / "refill").glob(f"r_o{o:07d}_*.csv.gz"))) for o in pb}
-    dry = {o for o in pb if tries[o] >= 2}   # 두 번 다시 받았으면 일단 제외
+    # 다시 받은 결과를 보니 지금은 순서가 고정돼 있어(같은 쪽 재요청 = 같은 내용) 쪽마다 한 번만 다시 받는다
+    dry = {o for o in pb if tries[o] >= 1}
     last_end, fails, done = 0.0, 0, 0
     while done < max_requests:
         miss = [size[b] - have[b] for b in range(n_bucket)]
@@ -215,8 +216,7 @@ def collect_inout_refill(rows: int = 5000, gap: float = 20.0, max_requests: int 
             ids.add(n)
             have[n // 20000] += 1
         pb[offset] |= {_id_num(r[0]) // 20000 for r in parsed}
-        if len(new) < 50 or tries[offset] >= 2:
-            dry.add(offset)
+        dry.add(offset)
         done += 1
         print(f"refill offset {offset} 새 기록 {len(new)}건 → 누적 {len(ids):,}/{total:,} "
               f"({len(ids) / total * 100:.2f}%)", flush=True)
