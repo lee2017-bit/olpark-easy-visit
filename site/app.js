@@ -124,7 +124,7 @@
     }
     if (day.rain_pop != null) {
       acts.append(act(day.rain_pop >= 60 ? "mid" : "", "rain", `강수확률 ${day.rain_pop}%`,
-        day.rain_pop >= 60 ? "비 예보를 등급에 반영했어요" : null));
+        day.rain_pop >= 60 ? "등급에는 반영하지 않았어요 (2025년 기록상 비 온 날도 혼잡은 비슷했어요)" : null));
     }
     p.append(acts);
     box.append(p);

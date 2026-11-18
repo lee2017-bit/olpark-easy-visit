@@ -40,7 +40,7 @@
     <button id="more" class="more" type="button" hidden></button>
     <p class="legend" aria-label="만차 위험 표시">
       <span class="dot g-높음"></span>높음 <span class="dot g-보통"></span>보통 <span class="dot g-낮음"></span>낮음
-      <span class="legend-note">· 2025년 같은 조건 날의 만차 비율</span>
+      <span class="legend-note">· 2025년 같은 달·같은 조건 날의 기록</span>
     </p>
   </section>
 
@@ -64,10 +64,12 @@
 
   <details class="method">
     <summary><svg class="ic sm"><use href="#i-chart"/></svg>만차 위험은 어떻게 정하나요?</summary>
-    <p>한국체육산업개발 「주차장 혼잡도 정보」(2025년 주차구역별 원활·혼잡·만차 기록)를 공연 일정·날씨와 맞춰,
-      <strong>같은 조건이었던 2025년 날들 중 만차가 기록된 비율</strong>을 보여줍니다.
-      70% 이상 높음, 35~70% 보통, 35% 미만 낮음. 3일 이내는 기상청 강수확률(60% 이상이면 비)을 반영합니다.</p>
-    <p class="small">시간대별 정밀 예측이 아니라 과거 기록에 근거한 참고 등급입니다.</p>
+    <p>2025년 <strong>같은 달, 같은 조건(주말·공휴일, 공연 있음)이었던 날들</strong>의 기록으로 정합니다.
+      근거는 두 가지입니다: 한국체육산업개발 「주차장 혼잡도 정보」의 만차 기록, 그리고 2025년 입출차 기록으로 다시 계산한 실제 주차대수(90% 이상 찬 날).
+      둘 중 높은 비율을 써서 70% 이상 높음, 35~70% 보통, 35% 미만 낮음으로 나눕니다.
+      기록이 적은 달은 1년 평균 쪽으로 조금 당겨 계산합니다.</p>
+    <p class="small">비 예보는 등급에 넣지 않습니다. 2025년 기록에서 비 온 날과 아닌 날의 혼잡 차이가 없었습니다.
+      시간대별 정밀 예측이 아니라 과거 기록에 근거한 참고 등급입니다.</p>
   </details>
 </main>
 
