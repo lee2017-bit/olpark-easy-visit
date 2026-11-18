@@ -77,7 +77,7 @@ TRUNCATED = {"2025-08", "2025-09"}  # 원본이 65,534건에서 잘려 하루 �
 
 def daily(rec: pd.DataFrame, cov: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """15분 주차대수. 1~7월은 기록이 무작위로 빠져 있어 그 달 받은 비율로 나눠 보정(occ),
-    보정 전 값은 occ_raw. usable = 하루치가 온전한 날(8·9월, 11·12월 7일 이후, 10월 누락 구간 제외)."""
+    보정 전 값은 occ_raw. usable = 하루치가 온전한 날(8·9월, 11·12월 7일 이후, 10월 누락 구간, 매달 마지막 날 제외)."""
     main = rec[rec.gate.isin(MAIN)]
     occ = occupancy(main)
     occ = occ[occ.t.dt.year == 2025].copy()
@@ -99,7 +99,8 @@ def daily(rec: pd.DataFrame, cov: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
     mm = d.date.dt.strftime("%Y-%m")
     # 시각 순서인 달은 마지막 기록 시각 전날까지만 온전 (11·12월은 7일 도중에서 끊김)
     cut = mm.map(lambda k: last_t[k].normalize() if cov.time_ordered.get(k, False) else pd.Timestamp.max)
-    d["usable"] = ~mm.isin(TRUNCATED) & ~d.date.isin(bad) & (d.date < cut)
+    # 매달 마지막 날은 원본에 입차 기록이 없음(전날 들어온 차만 남아 0에 가까움) → 입차 기록이 있는 날만
+    d["usable"] = ~mm.isin(TRUNCATED) & ~d.date.isin(bad) & (d.date < cut) & d.entries.notna()
     c = pd.read_csv(PROCESSED / "congestion_daily_2025.csv", parse_dates=["date"])
     keep = ["date", "dow", "holiday", "offday", "n_venues", "first_start_h", "titles",
             "full_lots", "first_full_h", "any_full", "ev_cat"]
