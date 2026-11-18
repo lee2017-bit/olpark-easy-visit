@@ -224,6 +224,16 @@
     for (const s of d.sources) ul.append(el("li", {}, el("a", { href: s.url, rel: "noopener" }, s.name)));
   }
 
+  // 글자 크기: 누른 단계를 <html data-fs>에 반영하고 저장 (다음 방문에도 유지)
+  function setFontSize(level) {
+    const root = document.documentElement;
+    if (level === "0") delete root.dataset.fs; else root.dataset.fs = level;
+    document.querySelectorAll(".fs-btn").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.fs === level)));
+    try { localStorage.setItem("olpark-fs", level); } catch (e) { /* 저장 못 해도 화면엔 적용 */ }
+    if (state.map) setTimeout(() => state.map.invalidateSize(), 50);
+  }
+  document.querySelectorAll(".fs-btn").forEach((b) => b.addEventListener("click", () => setFontSize(b.dataset.fs)));
+  setFontSize(document.documentElement.dataset.fs || "0");
   $("more").addEventListener("click", () => { state.showAll = !state.showAll; renderChips(); });
 
   fetch("data/site.json", { cache: "no-cache" })

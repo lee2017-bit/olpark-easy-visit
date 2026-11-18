@@ -19,7 +19,11 @@
   --warn-bg: #3a3000; --warn-line: #8a7000; --chip-on: #f1f3f5;
 }
 * { box-sizing: border-box; }
-html { font-size: 18px; }
+/* 글자 크기: 휴대폰·브라우저에 설정한 기본 글자 크기를 따른다(112.5% = 보통 16px 기준 18px).
+   화면 위 '글자 크기' 버튼으로 더 키울 수 있다(저장됨). */
+html { font-size: 112.5%; }
+html[data-fs="1"] { font-size: 131.25%; }
+html[data-fs="2"] { font-size: 150%; }
 body { margin: 0; background: var(--bg); color: var(--fg);
   font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; line-height: 1.55; }
 header, main, footer { max-width: 920px; margin: 0 auto; padding: 0 16px; }
@@ -39,7 +43,7 @@ a { color: var(--link); }
 .ic.sm { width: 1.05em; height: 1.05em; margin-top: .15em; }
 
 /* 날짜 칩 */
-.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 8px; }
+.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(4.4rem, 1fr)); gap: 8px; }
 .chip { font: inherit; color: var(--fg); background: var(--card); border: 2px solid var(--line); border-radius: 12px;
   padding: 6px 4px 8px; min-height: 64px; cursor: pointer; display: grid; justify-items: center; gap: 2px; }
 .chip .d { font-weight: 700; font-size: 1rem; line-height: 1.2; }
@@ -103,7 +107,7 @@ a { color: var(--link); }
   font: 700 12px/1.2 system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color: #111418;
   background: rgba(255,255,255,.92); border-radius: 4px; padding: 1px 4px; pointer-events: none; }
 .leaflet-container { font: inherit; }
-.leaflet-popup-content { font-size: 14px; line-height: 1.5; margin: 10px 12px; }
+.leaflet-popup-content { font-size: .85rem; line-height: 1.5; margin: 10px 12px; }
 .map-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 6px; font-size: .88rem; }
 .map-list li { display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: start; }
 .map-list .ic { color: var(--muted); }
@@ -128,3 +132,16 @@ footer ul { padding-left: 1.1em; }
 .leaflet-div-icon.pin { display: grid; place-items: center; }
 .pin-label.right { left: 100%; top: 50%; transform: translateY(-50%); margin: 0 0 0 4px; }
 .pin-label.left { left: auto; right: 100%; top: 50%; transform: translateY(-50%); margin: 0 4px 0 0; }
+
+/* 글자 크기 조절: 화면 맨 위, 크고 뚜렷하게 (누르는 영역 48px 이상) */
+.fontsize { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 14px;
+  padding: 8px 10px; border: 2px solid var(--fg); border-radius: 12px; background: var(--card); }
+.fontsize-label { font-weight: 800; font-size: 1rem; margin-right: 2px; }
+.fs-btn { font: inherit; font-weight: 800; color: var(--fg); background: var(--bg); border: 2px solid var(--fg);
+  border-radius: 10px; min-height: 48px; min-width: 48px; padding: 4px 12px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px; line-height: 1.1; }
+.fs-btn .ga { font-size: 1.1em; }
+.fs-btn[data-fs="1"] .ga { font-size: 1.35em; }
+.fs-btn[data-fs="2"] .ga { font-size: 1.6em; }
+.fs-btn[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.fs-btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
