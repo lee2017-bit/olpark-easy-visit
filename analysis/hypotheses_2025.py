@@ -69,10 +69,27 @@ def run() -> pd.DataFrame:
     return pd.DataFrame(out), note
 
 
+def grouping_error() -> pd.DataFrame:
+    """쉬는 날 공연일의 하루 최대 이용률을 같은 그룹(다른 날들) 평균으로 맞힐 때의 오차 (하루씩 빼고 검증)."""
+    _, o = load()
+    o = o.assign(m=o.date.dt.month, spring=o.date.dt.month.between(3, 6), season=o.season == 1, all=True)
+    out = []
+    for name, key in [("구분 없음", "all"), ("3~6월 / 나머지", "spring"), ("봄·가을 / 나머지", "season"), ("월별", "m")]:
+        err = []
+        for i in o.index:
+            tr = o.drop(i)
+            g = tr[tr[key] == o.at[i, key]].peak_pct
+            err.append(abs((g.mean() if len(g) else tr.peak_pct.mean()) - o.at[i, "peak_pct"]))
+        out.append({"구분": name, "평균 오차(%p)": round(float(np.mean(err)), 1)})
+    return pd.DataFrame(out)
+
+
 if __name__ == "__main__":
     t, note = run()
     txt = "\n".join([f"# 2025 입출차로 본 만차 가설 검증 ({date.today():%Y-%m-%d})", "",
                      "지표 peak_pct = 하루 최대 이용률(수용 2,200대 대비), eve = 19·20시 평균 이용률. "
-                     "p = 순열검정(2만 번) 양측.", "", "```", t.to_string(index=False), "```", "", f"- {note}", ""])
+                     "p = 순열검정(2만 번) 양측.", "", "```", t.to_string(index=False), "```", "",
+                     "## 달을 어떻게 나눌까 (쉬는 날 공연일 하루 최대 이용률, 하루씩 빼고 검증)", "",
+                     "```", grouping_error().to_string(index=False), "```", "", f"- {note}", ""])
     (REPORTS / f"hypotheses_2025_{date.today():%Y%m%d}.md").write_text(txt, encoding="utf-8")
     print(txt)
