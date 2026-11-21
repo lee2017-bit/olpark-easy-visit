@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>문턱 없는 올팍</title>
-<meta name="description" content="문턱 없는 올팍 — 휠체어·유모차로 가는 올림픽공원 공연일 안내 (비공식)">
+<meta name="description" content="문턱 없는 올팍 — 휠체어·유모차로 가는 올림픽공원 공연, 예매부터 집에 갈 때까지 (비공식)">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="style.css">
 <script>try { var fs = localStorage.getItem("olpark-fs"); if (fs === "1" || fs === "2") document.documentElement.dataset.fs = fs; } catch (e) {}</script>
@@ -12,19 +12,23 @@
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false">
   <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="9" cy="3.5" r="1.8" fill="currentColor" stroke="none"/><path d="M9 7v6h5.5l2.5 6.5M9 10h5"/><path d="M6.2 11.2a5.5 5.5 0 1 0 7.6 6.3"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 17v-4l2.2-5A2 2 0 0 1 7 7h10a2 2 0 0 1 1.8 1l2.2 5v4h-3v2h-2v-2H8v2H6v-2z"/><path d="M5 13h14"/></symbol>
-  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></symbol>
-  <symbol id="i-elev" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8.5 10L12 6.5 15.5 10M8.5 14l3.5 3.5 3.5-3.5"/></symbol>
-  <symbol id="i-stage" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
-  <symbol id="i-rain" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6.5a2 2 0 0 0 4 0"/></symbol>
-  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v4.5M12 17.5v.5"/></symbol>
-  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-8M11 20V5M17 20v-5M3 20h18"/></symbol>
-  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
   <symbol id="i-stroller" viewBox="0 0 24 24"><path d="M3 5h2.5l2 9h10l2.5-7H6.5"/><path d="M12 7V3a5 5 0 0 1 5 4"/><circle cx="9" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></symbol>
-  <symbol id="i-ramp" viewBox="0 0 24 24"><path d="M2 20h20L2 9z"/><path d="M16 6l3 3-3 3M19 9h-6"/></symbol>
+  <symbol id="i-cane" viewBox="0 0 24 24"><circle cx="10" cy="3.5" r="1.8" fill="currentColor" stroke="none"/><path d="M10 7l-1 6 2 3 1 5M9 13l-3 8M10 8l4 3"/><path d="M14 11v10"/><path d="M14 11a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-5.5 1.6"/><path d="M10 9.5a2 2 0 0 1 4 0c0 1.5-2 2-2 3.5"/><path d="M3 3l18 18"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 0 4v4h18v-4a2 2 0 0 1 0-4V4H3z" transform="translate(0 2)"/><path d="M14 6v12" stroke-dasharray="2 2"/></symbol>
   <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 10h14M8.5 21l2-4M15.5 21l-2-4"/><circle cx="9" cy="13.5" r=".9" fill="currentColor"/><circle cx="15" cy="13.5" r=".9" fill="currentColor"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7h3.5a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-ramp" viewBox="0 0 24 24"><path d="M2 20h20L2 9z"/><path d="M16 6l3 3-3 3M19 9h-6"/></symbol>
+  <symbol id="i-stage" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-elev" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8.5 10L12 6.5 15.5 10M8.5 14l3.5 3.5 3.5-3.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v4.5M12 17.5v.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17v.5"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-8M11 20V5M17 20v-5M3 20h18"/></symbol>
 </svg>
 
 <a class="skip" href="#day">본문 바로가기</a>
@@ -36,22 +40,24 @@
     <button type="button" class="fs-btn" data-fs="2" aria-pressed="false"><span class="ga" aria-hidden="true">가</span>아주 크게</button>
   </div>
   <h1><svg class="ic"><use href="#i-wheel"/></svg>문턱 없는 올팍</h1>
-  <p class="sub">휠체어·유모차로 올림픽공원 공연에 갈 때, 날짜만 고르세요.</p>
-  <p class="notice" role="note"><svg class="ic sm"><use href="#i-info"/></svg><span>개인이 공공데이터로 만든 <strong>비공식</strong> 안내예요. 방문 전 공식 안내도 확인하세요.</span></p>
+  <p class="sub">올림픽공원 공연, 예매부터 집에 갈 때까지 교통약자에게 필요한 것만 모았어요.</p>
+  <p class="notice" role="note"><svg class="ic sm"><use href="#i-info"/></svg><span>개인이 공공데이터로 만든 <strong>비공식</strong> 안내예요. 항목마다 출처를 적었어요. 방문 전 공연 공지도 확인하세요.</span></p>
 </header>
 
 <main>
-  <section aria-labelledby="pick-h">
-    <h2 id="pick-h">언제 가세요?</h2>
-    <div id="chips" class="chips" role="group" aria-label="날짜 선택"></div>
-    <button id="more" class="more" type="button" hidden></button>
-    <p class="legend" aria-label="만차 위험 표시">
-      <span class="dot g-높음"></span>높음 <span class="dot g-보통"></span>보통 <span class="dot g-낮음"></span>낮음
-      <span class="legend-note">· 2025년 같은 달·같은 조건 날의 기록</span>
-    </p>
+  <section aria-labelledby="who-h">
+    <h2 id="who-h">누구와 함께 가세요?</h2>
+    <div id="who" class="who" role="group" aria-label="해당하는 것 고르기 (여러 개 가능)"></div>
+    <p class="hint" id="who-hint">여러 개 고를 수 있어요. 고르지 않으면 모든 안내가 보여요.</p>
   </section>
 
-  <section id="day" aria-live="polite" aria-label="선택한 날짜 안내"><p>불러오는 중…</p></section>
+  <section aria-labelledby="pick-h">
+    <h2 id="pick-h">언제 가세요?</h2>
+    <div id="chips" class="chips" role="group" aria-label="공연 있는 날 고르기"></div>
+    <button id="more" class="more" type="button" hidden></button>
+  </section>
+
+  <section id="day" aria-live="polite" aria-label="선택한 날 안내"><p>불러오는 중…</p></section>
 
   <section aria-labelledby="map-h">
     <h2 id="map-h"><svg class="ic"><use href="#i-pin"/></svg>지도</h2>
@@ -59,24 +65,23 @@
     <ul class="map-key">
       <li><span class="mk mk-venue on"><svg><use href="#i-stage"/></svg></span>그날 공연 있는 공연장</li>
       <li><span class="mk mk-venue"><svg><use href="#i-stage"/></svg></span>다른 공연장</li>
-      <li><span class="mk mk-elev"><svg><use href="#i-elev"/></svg></span>엘리베이터 있는 지하철 출구</li>
+      <li><span class="mk mk-elev"><svg><use href="#i-elev"/></svg></span>지상 엘리베이터 있는 지하철 출구</li>
     </ul>
-    <ul id="map-list" class="map-list"></ul>
+    <ul id="map-list" class="map-list" aria-label="엘리베이터 출구 목록"></ul>
   </section>
 
-  <section aria-labelledby="access-h">
-    <h2 id="access-h">늘 같은 정보</h2>
-    <div id="tiles" class="tiles"></div>
-  </section>
-
+  <details class="method" id="gaps-box">
+    <summary><svg class="ic sm"><use href="#i-question"/></svg>공개된 자료가 없어 안내하지 못하는 것</summary>
+    <ul id="gaps"></ul>
+    <p class="small">이런 자료가 공개되면 이 안내에 바로 넣을 수 있어요.</p>
+  </details>
   <details class="method">
-    <summary><svg class="ic sm"><use href="#i-chart"/></svg>만차 위험은 어떻게 정하나요?</summary>
-    <p>2025년 <strong>같은 달, 같은 조건(주말·공휴일, 공연 있음)이었던 날들</strong>의 기록으로 정합니다.
-      근거는 두 가지입니다: 한국체육산업개발 「주차장 혼잡도 정보」의 만차 기록, 그리고 2025년 입출차 기록으로 다시 계산한 실제 주차대수(90% 이상 찬 날).
-      둘 중 높은 비율을 써서 70% 이상 높음, 35~70% 보통, 35% 미만 낮음으로 나눕니다.
-      기록이 적은 달은 1년 평균 쪽으로 조금 당겨 계산합니다.</p>
-    <p class="small">비 예보는 등급에 넣지 않습니다. 2025년 기록에서 비 온 날과 아닌 날의 혼잡 차이가 없었습니다.
-      시간대별 정밀 예측이 아니라 과거 기록에 근거한 참고 등급입니다.</p>
+    <summary><svg class="ic sm"><use href="#i-chart"/></svg>이 안내는 어떻게 만들었나요?</summary>
+    <p>항목마다 근거를 표시했어요.
+      <b>공식</b>은 올림픽공원 홈페이지·공지, <b>공공데이터</b>는 공공데이터포털 자료, <b>분석</b>은 공공데이터로 직접 계산한 값,
+      <b>기사</b>·<b>후기</b>는 언론 보도와 관람 후기예요. 후기는 한 사람의 경험일 수 있어요.</p>
+    <p class="small">주차장이 언제 찰지는 예측하지 않아요. 기관의 「주차장 예상 이용률」과 실시간 주차대수를 확인하세요.
+      2025년 공연 뒤 출차 시각, 장애인콜택시 대기 시간처럼 해마다 비슷하게 반복되는 기록만 보여 드려요.</p>
   </details>
 </main>
 

@@ -4,7 +4,7 @@
   const SVGNS = "http://www.w3.org/2000/svg";
   const el = (tag, attrs = {}, ...kids) => {
     const n = document.createElement(tag);
-    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    for (const [k, v] of Object.entries(attrs)) if (v != null) n.setAttribute(k, v);
     for (const k of kids) if (k != null) n.append(k);
     return n;
   };
@@ -18,19 +18,46 @@
     return s;
   };
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const SHORT = { kspo_dome: "KSPO DOME", olympic_hall: "올림픽홀", handball: "라이브 아레나", lawn88: "88잔디마당" };
-  const FIRST = 8;
-  const LABEL_SIDE = { kspo_dome: "right", lawn88: "left" };
-  const state = { d: null, sel: 0, showAll: false, map: null, venueMarkers: {} };
+  const WHO_ICON = { wheel: "wheel", stroller: "stroller", slow: "cane", vision: "eye", hearing: "ear" };
+  const KIND = { warn: ["alert", "주의"], tip: ["info", "도움말"], gap: ["question", "공개 자료 없음"] };
+  const FIRST = 10;
+  const LABEL_SIDE = { kspo_dome: "right", lawn88: "left", woori_art_hall: "left" };
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* 저장 못 해도 화면엔 적용 */ } },
+  };
+  const state = { d: null, sel: 0, showAll: false, venue: "all", who: new Set(), map: null, venueMarkers: {} };
+  try { (JSON.parse(store.get("olpark-who") || "[]") || []).forEach((w) => state.who.add(w)); } catch (e) { /* 무시 */ }
 
+  const md = (date) => { const [, m, d] = date.split("-"); return { m: +m, d: +d }; };
   const km = (a, b) => {
     const r = Math.PI / 180, la1 = a.lat * r, la2 = b.lat * r;
     const h = Math.sin((la2 - la1) / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin((b.lon - a.lon) * r / 2) ** 2;
     return 2 * 6371 * Math.asin(Math.sqrt(h));
   };
-  const md = (date) => { const [, m, d] = date.split("-"); return { m: +m, d: +d }; };
+  const forMe = (it) => !state.who.size || !it.who || !it.who.length || it.who.some((w) => state.who.has(w));
 
-  // ---------- 날짜 칩 ----------
+  // ---------- 누구와 ----------
+  function renderWho() {
+    const box = $("who");
+    box.textContent = "";
+    for (const [k, label] of Object.entries(state.d.who)) {
+      const b = el("button", { type: "button", class: "who-btn", "aria-pressed": String(state.who.has(k)) },
+        icon(WHO_ICON[k] || "info"), el("span", {}, label));
+      b.addEventListener("click", () => {
+        if (state.who.has(k)) state.who.delete(k); else state.who.add(k);
+        store.set("olpark-who", JSON.stringify([...state.who]));
+        renderWho();
+        renderDay(state.d.days[state.sel]);
+      });
+      box.append(b);
+    }
+    $("who-hint").textContent = state.who.size
+      ? `${[...state.who].map((k) => state.d.who[k]).join(", ")}에 해당하는 안내와 모두에게 필요한 안내만 보여요.`
+      : "여러 개 고를 수 있어요. 고르지 않으면 모든 안내가 보여요.";
+  }
+
+  // ---------- 날짜 ----------
   function renderChips() {
     const box = $("chips");
     box.textContent = "";
@@ -38,14 +65,14 @@
     days.forEach((day, i) => {
       if (!state.showAll && i >= FIRST && i !== state.sel) return;
       const { m, d } = md(day.date);
-      const off = day.offday;
+      const venues = [...new Set(day.shows.map((s) => s.venue))];
       const b = el("button", {
         type: "button", class: "chip", "aria-pressed": String(i === state.sel),
-        "aria-label": `${m}월 ${d}일 ${day.weekday}요일${day.holiday ? " 공휴일" : ""}, 만차 위험 ${day.grade}`,
+        "aria-label": `${m}월 ${d}일 ${day.weekday}요일${day.holiday ? " 공휴일" : ""}, 공연 ${day.shows.length}개: ${venues.join(", ")}`,
       },
         el("span", { class: "d" }, `${m}.${d}`),
-        el("span", { class: "w" + (off ? " off" : "") }, day.holiday ? "공휴일" : day.weekday),
-        el("span", { class: `g g-${day.grade}` }, day.grade));
+        el("span", { class: "w" + (day.offday ? " off" : "") }, day.holiday ? "공휴일" : day.weekday),
+        el("span", { class: "v" }, venues.length > 1 ? `${venues[0]} 외 ${venues.length - 1}` : venues[0]));
       b.addEventListener("click", () => select(i));
       box.append(b);
     });
@@ -57,16 +84,29 @@
 
   function select(i) {
     state.sel = i;
+    state.venue = "all";
     renderChips();
     renderDay(state.d.days[i]);
     highlightVenues(state.d.days[i]);
   }
 
   // ---------- 선택한 날 ----------
-  function act(cls, ico, title, sub) {
-    return el("li", { class: "act " + cls },
-      el("span", { class: "bub" }, icon(ico)),
-      el("div", {}, el("b", {}, title), sub ? el("span", { class: "s" }, sub) : null));
+  function srcBadge(it) {
+    if (!it.src) return null;
+    return it.url ? el("a", { class: "src", href: it.url, rel: "noopener", target: "_blank" }, it.src)
+      : el("span", { class: "src" }, it.src);
+  }
+
+  function itemLi(it, showVenue, shortOf) {
+    const [ic, label] = KIND[it.kind] || ["check", null];
+    const meta = el("span", { class: "meta" });
+    if (label) meta.append(el("span", { class: "kind" }, label));
+    if (showVenue && it.venue) meta.append(el("span", { class: "vtag" }, shortOf[it.venue] || it.venue));
+    const b = srcBadge(it);
+    if (b) meta.append(b);
+    return el("li", { class: "item" + (it.kind ? " k-" + it.kind : "") },
+      el("span", { class: "bub" }, icon(ic)),
+      el("div", {}, el("b", {}, it.t), it.s ? el("span", { class: "s" }, it.s) : null, meta));
   }
 
   function renderDay(day) {
@@ -74,59 +114,52 @@
     box.textContent = "";
     const { m, d } = md(day.date);
     const p = el("article", { class: "panel" });
-    const head = el("div", { class: `panel-head g-${day.grade}` },
+    p.append(el("div", { class: "panel-head" + (day.offday ? " off" : "") },
       el("span", { class: "panel-date" }, `${m}월 ${d}일 (${day.weekday})${day.holiday ? " 공휴일" : ""}`),
-      el("span", { class: "grade" }, icon("car"), `만차 위험 ${day.grade}`));
-    p.append(head);
-    p.append(el("p", { class: "basis g-" + day.grade }, icon("chart", "ic sm"), el("span", {}, day.basis)));
+      el("span", { class: "count" }, `공연 ${day.shows.length}개`)));
 
-    if (day.events.length) {
-      const ul = el("ul", { class: "shows", "aria-label": "이날 공연" });
-      for (const e of day.events) {
-        ul.append(el("li", {}, icon("stage"),
-          el("span", { class: "v" }, `${e.venue}${e.start ? " · " + e.start : ""}`),
-          el("span", { class: "t" }, e.title)));
+    const ul = el("ul", { class: "shows", "aria-label": "이날 공연" });
+    for (const s of day.shows) {
+      const when = s.start ? (s.end ? `${s.start}~${s.end} 무렵` : `${s.start} 시작`) : "시간은 공연 공지 확인";
+      ul.append(el("li", {}, icon("stage"),
+        el("span", { class: "v" }, `${s.venue} · ${when}`),
+        el("span", { class: "t" }, s.title),
+        el("span", { class: "x" }, [s.vendor && `예매 ${s.vendor}`, s.age && `관람 ${s.age}`, s.inquiry && `문의 ${s.inquiry}`].filter(Boolean).join(" · ")),
+        s.link ? el("a", { class: "x", href: s.link, rel: "noopener", target: "_blank" }, "공연 정보 보기") : null));
+    }
+    p.append(ul);
+
+    const shortOf = Object.fromEntries(day.shows.map((s) => [s.venue_key, s.venue]));
+    const vkeys = [...new Set(day.shows.map((s) => s.venue_key))];
+    if (vkeys.length > 1) {
+      const g = el("div", { class: "vpick", role: "group", "aria-label": "어느 공연장에 가세요?" },
+        el("span", { class: "vpick-label" }, "어느 공연장?"));
+      for (const k of ["all", ...vkeys]) {
+        const b = el("button", { type: "button", class: "vp-btn", "aria-pressed": String(state.venue === k) }, k === "all" ? "모두" : shortOf[k]);
+        b.addEventListener("click", () => { state.venue = k; renderDay(day); });
+        g.append(b);
       }
-      p.append(ul);
-    } else {
-      p.append(el("p", { class: "empty" }, "대형 공연장 공연 없음"));
+      p.append(g);
     }
 
-    const acts = el("ul", { class: "acts", "aria-label": "교통약자 안내" });
-    if (day.car === "avoid") acts.append(act("bad", "car", "자가용 비권장", `비슷한 날엔 대개 ${day.arrive_by}시 전후부터 만차였어요`));
-    else if (day.car === "early") acts.append(act("mid", "clock", `자가용이면 ${day.arrive_by}시 전 도착`, "늦으면 장애인 구역까지 들어가기 어려울 수 있어요"));
-    else acts.append(act("good", "car", day.offday ? "주차 여유 예상" : "평일, 주차 여유 있는 편", day.offday ? "공연 없는 휴일 기록이 적어 참고만 하세요" : null));
-
-    const mp = state.d.map;
-    const seen = new Set();
-    for (const e of day.events) {
-      if (seen.has(e.venue_key)) continue;
-      seen.add(e.venue_key);
-      const v = mp && mp.venues.find((x) => x.key === e.venue_key);
-      if (!v) continue;
-      const lotShort = v.lot.split(" (")[0], gates = (v.lot.match(/\((.+)\)/) || [])[1];
-      acts.append(act("venue", "park", `${SHORT[v.key]} → ${lotShort}`,
-        (v.disabled_spaces ? `장애인 주차 ${v.disabled_spaces}면 · ${v.walk}` : "지정 장애인 주차 안내 없음") + (gates ? ` · ${gates}` : "")));
-    }
-
-    let near = null;
-    if (mp && seen.size) {
-      const v = mp.venues.find((x) => seen.has(x.key));
-      near = v && v.nearest_elevator;
-    }
-    if (near) acts.append(act("elev", "elev", `엘리베이터: ${near.label} 출구`, `공연장까지 직선 약 ${near.km}km · 공원 안내 출구와 달라요`));
-    else acts.append(act("elev", "elev", "엘리베이터 출구",
-      state.d.access.subway_elevators.map((x) => `${x.line} ${x.station}역 ${x.exit}번`).join(" · ")));
-
-    if (day.evening) {
-      const w = act("warn", "wheel", "휠체어 대여는 19시 마감", "한 번에 3시간까지라 저녁 공연엔 개인 휠체어를 권해요");
-      acts.append(w);
-    }
-    if (day.rain_pop != null) {
-      acts.append(act(day.rain_pop >= 60 ? "mid" : "", "rain", `강수확률 ${day.rain_pop}%`,
-        day.rain_pop >= 60 ? "등급에는 반영하지 않았어요 (2025년 기록상 비 온 날도 혼잡은 비슷했어요)" : null));
-    }
-    p.append(acts);
+    const showVenue = vkeys.length > 1 && state.venue === "all";
+    const steps = el("div", { class: "steps" });
+    state.d.steps.forEach((st, n) => {
+      const dyn = (day.items[st.key] || []).filter((it) => state.venue === "all" || !it.venue || it.venue === state.venue);
+      const items = [...dyn, ...st.items].filter(forMe);
+      if (!items.length) return;
+      const sec = el("section", { class: "step", "aria-labelledby": `st-${st.key}` },
+        el("h3", { id: `st-${st.key}` }, el("span", { class: "num" }, String(n + 1)), icon(st.icon), st.title));
+      const list = el("ul", { class: "items" });
+      // 주의 → 그날 안내 → 늘 같은 안내 순서
+      // 집에 갈 때는 시간 순서(끝나는 시각 → 출차 → 콜택시) 그대로
+      const order = (it) => (st.key === "home" ? 0 : it.kind === "warn" ? 0 : it.kind === "gap" ? 3 : 1);
+      items.map((it, i) => [it, i]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1])
+        .forEach(([it]) => list.append(itemLi(it, showVenue, shortOf)));
+      sec.append(list);
+      steps.append(sec);
+    });
+    p.append(steps);
     box.append(p);
   }
 
@@ -142,34 +175,30 @@
     });
   }
 
+  function exitName(x) { return `${x.line} ${x.station}역 ${x.exit}번 출구`; }
+
   function initMap() {
     const mp = state.d.map;
+    const exits = state.d.subway.exits.filter((x) => x.lat);
+    renderMapList(exits);
     const box = $("map");
-    if (!mp) { box.replaceWith(el("p", { class: "map-fallback" }, "지도 데이터가 없습니다.")); return; }
-    renderMapList(mp);
     if (!window.L) { box.append(el("p", { class: "map-fallback" }, "지도를 불러오지 못했습니다. 아래 목록을 참고하세요.")); return; }
     const map = L.map(box, { scrollWheelZoom: false, tap: true });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 기여자',
+      maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 기여자',
     }).addTo(map);
     const pts = [];
     for (const v of mp.venues) {
-      const n = v.nearest_elevator;
-      const pop = `<b>${esc(v.name)}</b><br>가까운 주차장 ${esc(v.lot)}<br>` +
-        (v.disabled_spaces ? `장애인 주차 ${v.disabled_spaces}면 · ${esc(v.walk)}` : "지정 장애인 주차 안내 없음") +
-        (n ? `<br>엘리베이터 출구: ${esc(n.label)} (직선 약 ${n.km}km)` : "");
-      const mk = L.marker([v.lat, v.lon], { icon: pinIcon("venue", SHORT[v.key], false, LABEL_SIDE[v.key]), title: v.name, alt: v.name, keyboard: true })
-        .bindPopup(pop).addTo(map);
-      state.venueMarkers[v.key] = mk;
+      const mk = L.marker([v.lat, v.lon], { icon: pinIcon("venue", v.short, false, LABEL_SIDE[v.key]), title: v.name, alt: v.name, keyboard: true })
+        .bindPopup(`<b>${esc(v.name)}</b>`).addTo(map);
+      state.venueMarkers[v.key] = { mk, v };
       pts.push([v.lat, v.lon]);
     }
-    const venueCenter = { lat: mp.venues.reduce((s, v) => s + v.lat, 0) / mp.venues.length, lon: mp.venues.reduce((s, v) => s + v.lon, 0) / mp.venues.length };
-    for (const x of mp.elevator_exits) {
-      const name = `${x.line} ${x.station}역 ${x.exit}번 출구`;
-      L.marker([x.lat, x.lon], { icon: pinIcon("elev", `${x.station} ${x.exit}번`, false), title: name, alt: name, keyboard: true })
-        .bindPopup(`<b>${esc(name)}</b><br>지상으로 나가는 엘리베이터 (서울교통공사 데이터)`).addTo(map);
-      if (km(venueCenter, x) < 1) pts.push([x.lat, x.lon]);
+    const c = { lat: mp.venues.reduce((s, v) => s + v.lat, 0) / mp.venues.length, lon: mp.venues.reduce((s, v) => s + v.lon, 0) / mp.venues.length };
+    for (const x of exits) {
+      L.marker([x.lat, x.lon], { icon: pinIcon("elev", `${x.line.replace("호선", "")} ${x.station} ${x.exit}번`, false), title: exitName(x), alt: exitName(x), keyboard: true })
+        .bindPopup(`<b>${esc(exitName(x))}</b><br>지상으로 나가는 엘리베이터<br><span class="small">${esc(x.src)}</span>`).addTo(map);
+      if (km(c, x) < 1) pts.push([x.lat, x.lon]);
     }
     map.fitBounds(pts, { padding: [36, 36] });
     state.map = map;
@@ -177,51 +206,25 @@
 
   function highlightVenues(day) {
     if (!state.map) return;
-    const on = new Set(day.events.map((e) => e.venue_key));
-    for (const [k, mk] of Object.entries(state.venueMarkers)) mk.setIcon(pinIcon("venue", SHORT[k], on.has(k), LABEL_SIDE[k]));
+    const on = new Set(day.shows.map((s) => s.venue_key));
+    for (const [k, { mk, v }] of Object.entries(state.venueMarkers)) mk.setIcon(pinIcon("venue", v.short, on.has(k), LABEL_SIDE[k]));
   }
 
-  function renderMapList(mp) {
+  function renderMapList(exits) {
     const ul = $("map-list");
     ul.textContent = "";
-    const c = { lat: mp.venues.reduce((s, v) => s + v.lat, 0) / mp.venues.length, lon: mp.venues.reduce((s, v) => s + v.lon, 0) / mp.venues.length };
-    for (const x of mp.elevator_exits) {
-      const dkm = km(c, x);
-      ul.append(el("li", {}, icon("elev"), el("span", {},
-        el("b", {}, `${x.line} ${x.station}역 ${x.exit}번 출구`),
-        ` · 공연장들에서 직선 약 ${dkm.toFixed(1)}km${dkm >= 1 ? " (지도를 축소하면 보여요)" : ""}`)));
+    for (const x of exits) {
+      ul.append(el("li", {}, icon("elev"), el("span", {}, el("b", {}, exitName(x)), ` · ${x.src}`)));
     }
-  }
-
-  // ---------- 늘 같은 정보 ----------
-  function tile(ico, title, ...rows) {
-    return el("article", { class: "tile" }, el("span", { class: "bub" }, icon(ico)), el("h3", {}, title), ...rows);
-  }
-
-  function renderTiles(a, mp) {
-    const box = $("tiles");
-    const ex = a.subway_elevators.map((x) => `${x.line} ${x.station}역 ${x.exit}번`).join(" · ");
-    box.append(tile("elev", "엘리베이터 출구", el("p", {}, ex),
-      el("p", { class: "warnline" }, `공원 안내 출구와 달라요 — 공원 안내: ${a.park_exit_guidance}`),
-      el("p", { class: "note" }, a.subway_note)));
-
-    const sp = (mp ? mp.venues : []).filter((v) => v.disabled_spaces).map((v) => `${SHORT[v.key]} ${v.disabled_spaces}면`).join(" · ");
-    box.append(tile("park", "장애인 주차", el("p", {}, sp),
-      el("p", { class: "note" }, `출처마다 달라요: 기관 공지 합계 ${a.disabled_parking_total_agency}면 · 한국관광공사 ${((a.disabled_parking_knto || "").match(/\d+\s*칸/) || ["정보 없음"])[0]}`)));
-
-    const r = a.wheelchair_rental;
-    const places = Object.entries(r.places).map(([k, v]) => `${k} ${v}대`).join(", ");
-    box.append(tile("wheel", "휠체어 대여", el("p", {}, places), el("p", { class: "note" }, `${r.hours} · ${r.rule}`),
-      el("p", { class: "warnline" }, "19시 마감 · 3시간 한도 → 저녁 공연엔 개인 휠체어")));
-
-    if (a.stroller_knto) box.append(tile("stroller", "유모차 대여", el("p", {}, a.stroller_knto.replace(/^대여가능\s*\(?/, "").replace(/\)\s*$/, "")), el("p", { class: "note" }, "한국관광공사 무장애 여행 정보")));
-    box.append(tile("ramp", "휠체어 진입로", el("p", {}, a.wheelchair_entry_route), el("p", { class: "note" }, "올림픽공원 주차 안내")));
+    ul.append(el("li", { class: "warnline" }, icon("alert"), el("span", {}, `${state.d.subway.park_guidance} — 5호선·8호선을 타면 이 출구에 엘리베이터가 없을 수 있어요.`)));
   }
 
   function renderFooter(d) {
     $("generated").textContent = d.generated_at + " (KST)";
     const ul = $("sources");
     for (const s of d.sources) ul.append(el("li", {}, el("a", { href: s.url, rel: "noopener" }, s.name)));
+    const g = $("gaps");
+    for (const t of d.gaps) g.append(el("li", {}, t));
   }
 
   // 글자 크기: 누른 단계를 <html data-fs>에 반영하고 저장 (다음 방문에도 유지)
@@ -229,7 +232,7 @@
     const root = document.documentElement;
     if (level === "0") delete root.dataset.fs; else root.dataset.fs = level;
     document.querySelectorAll(".fs-btn").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.fs === level)));
-    try { localStorage.setItem("olpark-fs", level); } catch (e) { /* 저장 못 해도 화면엔 적용 */ }
+    store.set("olpark-fs", level);
     if (state.map) setTimeout(() => state.map.invalidateSize(), 50);
   }
   document.querySelectorAll(".fs-btn").forEach((b) => b.addEventListener("click", () => setFontSize(b.dataset.fs)));
@@ -241,8 +244,8 @@
     .then((d) => {
       state.d = d;
       renderFooter(d);
-      renderTiles(d.access, d.map);
-      if (!d.days.length) { $("day").textContent = "표시할 날이 없습니다."; return; }
+      renderWho();
+      if (!d.days.length) { $("day").textContent = "앞으로 60일 안에 공연이 없습니다."; return; }
       renderChips();
       renderDay(d.days[0]);
       try { initMap(); } catch (e) { $("map").textContent = "지도를 불러오지 못했습니다."; }

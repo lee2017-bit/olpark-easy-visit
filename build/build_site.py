@@ -1,5 +1,8 @@
 """site/data/site.json 생성 (정적 사이트가 읽는 데이터).
 
+구성: 공연 있는 날마다 공연 목록 + 여정 단계(예매 → 가는 길 → 주차 → 공원 안 → 공연장 안 → 집에 갈 때)별 안내.
+- 늘 같은 안내: data/static/access_guide.json (공식 페이지·공공데이터·기사·후기, 출처 표시)
+- 그날·그 공연에 따라 바뀌는 안내: 아래 day_items()에서 공연정보·지하철 엘리베이터·2025 입출차·장애인콜택시 자료로 계산
 사용: python -m build.build_site
 """
 from __future__ import annotations
@@ -7,139 +10,270 @@ from __future__ import annotations
 import datetime as dt
 import json
 import math
-from pathlib import Path
+import re
 
 import pandas as pd
 
-from analysis.features import event_days
-from analysis.risk import VENUE_KO, upcoming
+from analysis.calltaxi_wait import run as calltaxi_run
+from analysis.features import parse_start_times
+from analysis.risk import upcoming
 from olpark.common import PROCESSED, ROOT
 
 SITE = ROOT / "site"
+STATIC = ROOT / "data" / "static"
 KST = dt.timezone(dt.timedelta(hours=9))
-
-VENUE_ACCESS = {  # 기관 주차 안내·공지 기준
-    "kspo_dome": {"lot": "P5 (북2문·동2문·남2문)", "disabled_spaces": 10, "walk": "주차장에서 1분"},
-    "olympic_hall": {"lot": "P2·올림픽홀 지하 (동2문)", "disabled_spaces": 5, "walk": "1~2분"},
-    "handball": {"lot": "P6 (동2문·남2문)", "disabled_spaces": 3, "walk": "1~2분"},
-    "lawn88": {"lot": "동2문 쪽 주차장", "disabled_spaces": None, "walk": "공지에 지정 장애인 주차 구역 없음"},
-}
+VENUE_BY_CODE = {"01": "olympic_hall", "02": "kspo_dome", "03": "handball", "04": "woori_art_hall",
+                 "06": "lawn88", "07": "muse_live"}
+CALLTAXI_VENUES = {"kspo_dome", "handball", "olympic_hall"}  # 행정동 오륜동, analysis.calltaxi_wait 기준
+PARKING_PAGE = "https://www.ksponco.or.kr/online/main/parking.do"
 
 
 def _fmt_h(h) -> str | None:
     if h is None or pd.isna(h):
         return None
-    return f"{int(h):02d}:{int(round((h % 1) * 60)):02d}"
+    m = int(round(h * 60)) % (24 * 60)
+    return f"{m // 60:02d}:{m % 60:02d}"
 
 
-def access_tips(grade: str, offday: bool, evs: pd.DataFrame, elev_text: str, full_h: float) -> list[str]:
-    """그날 교통약자·동행자에게 보여줄 짧은 안내 문장들."""
-    tips = []
-    if grade == "높음":
-        tips.append(f"자가용은 권하지 않습니다. 비슷한 조건의 날에는 대개 {int(full_h)}시 전후부터 주차장이 찼습니다.")
-    elif grade == "보통" and offday:
-        tips.append(f"자가용이라면 {int(full_h)}시 이전 도착을 권합니다. 이후에는 장애인 구역까지 들어가기 어려울 수 있습니다.")
-    else:
-        tips.append("평일이라 주차 여유가 있는 편입니다." if not offday else "공연이 없는 날이라 비교적 여유가 있을 것으로 보입니다(기록 적음).")
-    seen = set()
-    for e in evs.itertuples():
-        if e.venue in seen:
+def run_minutes(nd) -> int | None:
+    """'총 130분', '약 120분 (인터미션 20분)', '120' → 분."""
+    if not isinstance(nd, str):
+        return None
+    m = re.search(r"(\d{2,3})\s*분", nd) or re.fullmatch(r"\s*(\d{2,3})\s*", nd)
+    return int(m.group(1)) if m else None
+
+
+def vendor_of(link, guide: dict) -> dict | None:
+    if not isinstance(link, str):
+        return None
+    for k, v in guide["ticketing"].items():
+        if any(s in link for s in v["match"]):
+            return {"key": k, **{x: v.get(x) for x in ("name", "phone", "hours", "how", "src", "kind", "url")}}
+    return None
+
+
+def site_events(start: dt.date, end: dt.date, guide: dict) -> pd.DataFrame:
+    """공연장 6곳의 공연을 날짜별 한 줄로 (오래 하는 공연 포함). 시작 시각은 그 요일의 가장 이른 회차."""
+    ev = pd.read_csv(PROCESSED / "events_homepage.csv", dtype=str)
+    ev = ev[ev.plcCd.isin(VENUE_BY_CODE)]
+    rows = []
+    for r in ev.itertuples():
+        b, e = pd.Timestamp(r.beginDt).date(), pd.Timestamp(r.endDt).date()
+        if e < start or b > end:
             continue
-        seen.add(e.venue)
-        v = VENUE_ACCESS[e.venue]
-        spaces = f"장애인 주차 {v['disabled_spaces']}면" if v["disabled_spaces"] else "지정 장애인 주차 안내 없음"
-        start = f" {_fmt_h(e.start_h)}" if _fmt_h(e.start_h) else ""
-        tips.append(f"{VENUE_KO[e.venue]}{start}: 가까운 주차장 {v['lot']}, {spaces}")
-    tips.append(f"지하철 엘리베이터 출구: {elev_text}")
-    if any((h or 0) >= 16 for h in evs.start_h.tolist()):
-        tips.append("공원 휠체어 대여는 19시에 끝나고 3시간 한도라 저녁 공연 중에는 쓰기 어렵습니다. 개인 휠체어를 권합니다.")
-    return tips
+        st = parse_start_times(r.tm)
+        for d in pd.date_range(max(b, start), min(e, end)):
+            h = st.get(d.dayofweek, st.get(None, min(st.values()) if st else None))
+            if st and d.dayofweek not in st and None not in st and (e - b).days > 6:
+                continue  # 오래 하는 공연에서 시간표에 없는 요일(휴관일)은 뺌
+            rows.append({"date": d.normalize(), "venue": VENUE_BY_CODE[r.plcCd], "start_h": h, "title": r.title,
+                         "tm": r.tm, "run": run_minutes(r.ndTm) or 0, "age": r.seeAge, "inquiry": r.nqry,
+                         "link": r.evtLink, "vendor": vendor_of(r.evtLink, guide)})
+    return pd.DataFrame(rows)
 
 
 def _km(a, b) -> float:
-    """두 지점 직선거리(km, 구면 근사)."""
     la1, lo1, la2, lo2 = map(math.radians, (a["lat"], a["lon"], b["lat"], b["lon"]))
     h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
     return 2 * 6371 * math.asin(math.sqrt(h))
 
 
-def map_points(elev: list[dict]) -> dict | None:
-    """지도용 좌표: 공연장(OSM)과, 서울교통공사 데이터에서 엘리베이터가 있는 출구(OSM 출구 좌표)."""
-    f = ROOT / "data" / "static" / "map_points.json"
+def elevator_exits(acc: dict) -> list[dict]:
+    """지상 엘리베이터가 있는 출구: 1~8호선은 서울교통공사 API, 9호선은 승강기 현황 파일."""
+    out = [{"line": x["lineNm"], "station": x["stnNm"], "exit": str(x.get("vcntEntrcNo")), "where": x.get("dtlPstn"),
+            "src": "서울교통공사 교통약자이용정보"} for x in acc["elevators"] if "외부" in x["fcltNm"]]
+    f = STATIC / "line9_elevators.csv"
+    if f.exists():
+        for r in pd.read_csv(f).itertuples():
+            m = re.match(r"(\d+)번 출구", str(r._5))
+            if m:
+                out.append({"line": "9호선", "station": str(r.역명).replace("(9)", ""), "exit": m.group(1),
+                            "where": str(r.설치위치), "src": "9호선 2·3단계 승강기 현황"})
+    mp = json.loads((STATIC / "map_points.json").read_text(encoding="utf-8"))
+    for x in out:
+        hit = [p for p in mp["exits"] if p["station"] == x["station"] and p["exit"] == x["exit"]]
+        if hit:
+            x.update(lat=hit[0]["lat"], lon=hit[0]["lon"], osm=hit[0]["osm"])
+    return out
+
+
+def exit_wave_stats() -> dict | None:
+    f = PROCESSED / "exit_wave_2025.csv"
     if not f.exists():
         return None
-    mp = json.loads(f.read_text(encoding="utf-8"))
-    exits = []
-    for e in elev:
-        hit = [x for x in mp["exits"] if x["station"] == e["station"] and x["exit"] == str(e["exit"])]
-        if hit:
-            exits.append({"line": e["line"], "station": e["station"], "exit": str(e["exit"]),
-                          "lat": hit[0]["lat"], "lon": hit[0]["lon"], "osm": hit[0]["osm"]})
-    venues = []
-    for k, v in mp["venues"].items():
-        near = min(exits, key=lambda x: _km(v, x)) if exits else None
-        venues.append({"key": k, "name": VENUE_KO[k], "lat": v["lat"], "lon": v["lon"], "osm": v["osm"],
-                       **VENUE_ACCESS[k],
-                       "nearest_elevator": None if not near else
-                       {"label": f"{near['line']} {near['station']}역 {near['exit']}번", "km": round(_km(v, near), 1)}})
-    return {"venues": venues, "elevator_exits": exits, "attribution": mp["attribution"]}
+    t = pd.read_csv(f)
+    k = t[(t.kspo_dome == 1) & (t.first_start_h >= 16)]
+    full = k[k.full_count]
+    return {"n": int(len(k)), "q25": float(k.peak_after_start_h.quantile(.25)),
+            "q75": float(k.peak_after_start_h.quantile(.75)), "median": float(k.peak_after_start_h.median()),
+            "peak30": int(full.peak_30min.median()) if len(full) else None}
+
+
+def calltaxi_stats() -> dict | None:
+    try:
+        t, n_show = calltaxi_run()
+    except FileNotFoundError:
+        return None
+    o = t[t.출발동 == "오륜동"].set_index("밤")
+    s, n = o.loc["공연 있는 밤"], o.loc["그 밖의 밤"]
+    return {"median": round(float(s["대기 중앙값(분)"])), "p75": round(float(s["대기 상위 25%(분)"])),
+            "cancel": round(float(s["취소 비율"]) * 100), "median_other": round(float(n["대기 중앙값(분)"])),
+            "n": int(s["건수"]), "nights": int(n_show)}
+
+
+def _hm(h: float) -> str:
+    return f"{int(h)}시간" + (f" {int(round(h % 1 * 60))}분" if h % 1 else "")
+
+
+def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, wave, taxi, today) -> dict:
+    """그날·그 공연에 따라 바뀌는 안내. 각 항목에 venue가 있으면 그 공연장 공연을 고를 때만 보임."""
+    G = guide["venues"]
+    it = {k: [] for k in ("ticket", "go", "park", "inpark", "venue", "home")}
+    W, ALL_MOVE = ["wheel"], ["wheel", "stroller", "slow"]
+    seen_v, seen_vendor = set(), set()
+    for e in evs.itertuples():
+        g = G[e.venue]
+        vd = e.vendor if isinstance(e.vendor, dict) else None
+        if vd and (vd["key"], e.venue) not in seen_vendor:
+            seen_vendor.add((vd["key"], e.venue))
+            it["ticket"].append({"venue": e.venue, "who": W, "kind": vd.get("kind"), "src": vd["src"], "url": vd.get("url"),
+                                 "t": f"{g['short']} 예매처 {vd['name']}: {vd['how']}",
+                                 "s": f"고객센터 {vd['phone']}" + (f" ({vd['hours']})" if vd.get("hours") else "")
+                                      + (f" · 공연 문의 {e.inquiry}" if isinstance(e.inquiry, str) else "")})
+        if e.venue in seen_v:
+            continue
+        seen_v.add(e.venue)
+        # 가는 길: 가까운 엘리베이터 출구
+        if e.venue in venues_xy:
+            grp: dict = {}
+            for x in (x for x in exits if "lat" in x):
+                k = (x["line"], x["station"])
+                grp.setdefault(k, []).append((round(_km(venues_xy[e.venue], x), 1), x["exit"]))
+            near = sorted(grp.items(), key=lambda kv: min(kv[1]))[:2]
+            if near:
+                it["go"].append({"venue": e.venue, "who": ALL_MOVE, "src": "공공데이터", "kind": "tip",
+                                 "t": f"{g['short']}에서 가까운 엘리베이터 출구: "
+                                      + ", ".join(f"{ln} {st}역 {'·'.join(sorted(n for _, n in v))}번" for (ln, st), v in near),
+                                 "s": "공연장까지 직선 " + ", ".join(f"{min(v)[0]}km" for _, v in near) + " (걷는 길은 더 길어요)"})
+        if g.get("route_review"):
+            it["go"].append({"venue": e.venue, "who": ["wheel"], **g["route_review"]})
+        # 주차
+        if g.get("lot"):
+            spots = guide.get("_spots", {}).get(g.get("lot_key"))
+            it["park"].append({"venue": e.venue, "who": ALL_MOVE, "src": "공식",
+                               "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+                               "t": f"{g['short']} → 가까운 주차장 {g['lot']}" + (f" ({g['lot_gates']})" if g.get("lot_gates") else ""),
+                               "s": (f"장애인 주차 {spots}면" if spots else "지정 장애인 주차 안내 없음")
+                                    + (f" · 공연장까지 {g['walk']}" if g.get("walk") else "")})
+        # 공연장 안
+        for key, who in (("seats", W), ("view", W), ("entry", W), ("caption", ["hearing"]), ("notice", [])):
+            if g.get(key):
+                it["venue"].append({"venue": e.venue, "who": who, **g[key],
+                                    "t": (f"{g['short']} " if key in ("seats", "notice") else "") + g[key]["t"]})
+        bf = g.get("bf") or g.get("bf_text")
+        if bf:
+            it["venue"].append({"venue": e.venue, "who": ["wheel", "stroller", "slow", "vision"], "src": "공공데이터",
+                                "url": "https://www.data.go.kr/data/15014781/fileData.do", "kind": None if g.get("bf") else "gap",
+                                "t": f"{g['short']} 장애물 없는 생활환경(BF) 인증: {bf}" if g.get("bf")
+                                     else f"{g['short']}: {bf}"})
+    # 집에 갈 때: 끝나는 시각, 출차가 몰리는 때, 콜택시 대기, 늦은 출차
+    late = False
+    for e in evs.sort_values("start_h").itertuples():
+        g = G[e.venue]
+        if e.start_h is None or pd.isna(e.start_h):
+            continue
+        end_h = e.start_h + e.run / 60 if e.run else None
+        if end_h:
+            it["home"].append({"venue": e.venue, "who": [], "src": "공식",
+                               "t": f"{g['short']} {_fmt_h(e.start_h)} 시작 · 공연 {int(e.run)}분 → {_fmt_h(end_h)} 무렵 끝",
+                               "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"})
+        if e.venue == "kspo_dome" and wave and e.start_h >= 16:
+            a, b = e.start_h + wave["q25"], e.start_h + wave["q75"]
+            late |= b >= 21.5
+            it["home"].append({"venue": e.venue, "who": ALL_MOVE, "kind": "warn", "src": "분석",
+                               "url": "https://www.data.go.kr/data/15159093/openapi.do",
+                               "t": f"출차가 가장 몰리는 때: {_fmt_h(a)}~{_fmt_h(b)}",
+                               "s": f"2025년 KSPO DOME 저녁 공연 {wave['n']}일, 시작 {_hm(wave['q25'])}~{_hm(wave['q75'])} 뒤에 "
+                                    f"가장 많이 나갔어요" + (f" (가장 붐빈 30분에 약 {wave['peak30']}대)" if wave.get("peak30") else "")
+                                    + ". 휠체어 승하차에 시간이 걸리면 이때를 피하세요"})
+        elif end_h:
+            late |= end_h >= 21.5
+    if taxi and any(v in CALLTAXI_VENUES and (h or 0) >= 16 for v, h in zip(evs.venue, evs.start_h)):
+        it["home"].append({"who": ["wheel"], "kind": "warn", "src": "분석", "url": "https://www.data.go.kr/data/15115859/fileData.do",
+                           "t": f"공연 끝난 밤 공원에서 장애인콜택시 대기: 중간값 {taxi['median']}분 (공연 없는 밤 {taxi['median_other']}분)",
+                           "s": f"4건 중 1건은 {taxi['p75']}분 넘게 기다렸고 {taxi['cancel']}%는 취소됐어요 "
+                                f"(2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 {taxi['n']}건)"})
+    if late:
+        it["home"].append({"who": [], "kind": "warn", "src": "공식",
+                           "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+                           "t": "늦게 끝나면: 북2문·남2문 출차는 22:30까지, 동2문은 24시간",
+                           "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"})
+    if any((h or 0) >= 16 for h in evs.start_h.fillna(0)):
+        it["inpark"].append({"who": ["wheel", "slow"], "kind": "warn", "src": "공식",
+                             "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+                             "t": "저녁 공연이면 공원 휠체어를 빌리기 어려워요",
+                             "s": "대여는 19:00까지, 한 번에 3시간이라 공연 중에 반납할 수 없어요 → 개인 휠체어를 권해요"})
+    # 주차: 2025 기록과 기관 안내
+    it["park"].append({"who": [], "src": "분석", "url": "https://www.data.go.kr/data/15164156/fileData.do",
+                       "t": "주차 기록 — " + r.basis})
+    near_weekend = r.offday and (r.date.date() - today).days <= 7
+    it["park"].append({"who": [], "kind": "tip", "src": "공식", "url": PARKING_PAGE,
+                       "t": "그날 예상 이용률과 실시간 주차대수는 기관 홈페이지" if near_weekend else "실시간 주차대수는 기관 홈페이지",
+                       "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요" if r.offday else None})
+    if r.pop_max is not None and not pd.isna(r.pop_max) and r.pop_max >= 30:
+        it["go"].append({"who": [], "kind": "tip", "src": "공공데이터",
+                         "t": f"강수확률 {int(r.pop_max)}%: 우비·휠체어 덮개를 챙기세요",
+                         "s": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"})
+    return {k: v for k, v in it.items() if v}
 
 
 def build(days_ahead: int = 60) -> dict:
-    u, stats = upcoming(days_ahead)
-    ed = event_days()
-    ed = ed[ed.date.isin(u.date)]
-    acc0 = json.loads((PROCESSED / "accessibility.json").read_text(encoding="utf-8"))
-    elev_text = ", ".join(f"{x['lineNm']} {x['stnNm']}역 {x.get('vcntEntrcNo')}번"
-                          for x in acc0["elevators"] if "외부" in x["fcltNm"]) or "정보 없음"
+    guide = json.loads((STATIC / "access_guide.json").read_text(encoding="utf-8"))
+    acc = json.loads((PROCESSED / "accessibility.json").read_text(encoding="utf-8"))
+    guide["_spots"] = acc["agency_static"]["disabled_parking_by_spot"]["spots"]
+    today = dt.datetime.now(KST).date()
+    u, _ = upcoming(days_ahead, today)
+    ev = site_events(today, today + dt.timedelta(days=days_ahead), guide)
+    exits = elevator_exits(acc)
+    mp = json.loads((STATIC / "map_points.json").read_text(encoding="utf-8"))
+    venues_xy = mp["venues"]
+    wave, taxi = exit_wave_stats(), calltaxi_stats()
     days = []
     for _, r in u.iterrows():
-        evs = ed[ed.date == r.date].sort_values("start_h")
-        if not (r.offday or len(evs)):
+        evs = ev[ev.date == r.date].sort_values("start_h") if len(ev) else ev
+        if not len(evs):
             continue
-        full_h = int(stats["first_full_h_median"])
-        car = "avoid" if r.grade == "높음" else ("early" if (r.grade == "보통" and r.offday) else "ok")
         days.append({
-            "date": r.date.strftime("%Y-%m-%d"),
-            "weekday": "월화수목금토일"[r.date.dayofweek],
-            "offday": r.offday, "holiday": r.holiday,
-            "grade": r.grade, "basis": r.basis, "m": int(r.m), "n": int(r.n),
-            "car": car, "arrive_by": full_h if car != "ok" else None,
-            "evening": any((h or 0) >= 16 for h in evs.start_h.tolist()),
-            "rain_pop": None if pd.isna(r.pop_max) else int(r.pop_max),
-            "events": [{"title": e.title, "venue": VENUE_KO[e.venue], "venue_key": e.venue,
-                        "start": _fmt_h(e.start_h)} for e in evs.itertuples()],
-            "tips": access_tips(r.grade, r.offday, evs, elev_text, stats["first_full_h_median"]),
+            "date": r.date.strftime("%Y-%m-%d"), "weekday": "월화수목금토일"[r.date.dayofweek],
+            "offday": bool(r.offday), "holiday": bool(r.holiday),
+            "shows": [{"title": e.title, "venue_key": e.venue, "venue": guide["venues"][e.venue]["short"],
+                       "start": _fmt_h(e.start_h), "end": _fmt_h(e.start_h + e.run / 60) if e.run and e.start_h is not None
+                       and not pd.isna(e.start_h) else None, "run": int(e.run) or None, "tm": e.tm, "age": e.age,
+                       "inquiry": e.inquiry if isinstance(e.inquiry, str) else None, "link": e.link,
+                       "vendor": (e.vendor or {}).get("name") if isinstance(e.vendor, dict) else None} for e in evs.itertuples()],
+            "items": day_items(r, evs, guide, exits, venues_xy, wave, taxi, today),
         })
-    acc = json.loads((PROCESSED / "accessibility.json").read_text(encoding="utf-8"))
-    st = acc["agency_static"]
-    elev = [{"line": x["lineNm"], "station": x["stnNm"], "where": x.get("dtlPstn"),
-             "exit": x.get("vcntEntrcNo")} for x in acc["elevators"] if "외부" in x["fcltNm"]]
-    knto = acc.get("barrier_free_knto", {})
+    steps = [{k: s[k] for k in ("key", "title", "icon", "items")} for s in guide["steps"]]
+    map_venues = [{"key": k, "name": guide["venues"][k]["name"], "short": guide["venues"][k]["short"], **v}
+                  for k, v in venues_xy.items() if k in guide["venues"]]
     data = {
-        "map": map_points(elev),
         "generated_at": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"),
-        "stats": stats,
-        "days": days,
-        "access": {
-            "subway_elevators": elev,
-            "subway_note": "9호선(올림픽공원역·한성백제역)은 운영사가 달라 이 데이터에 없습니다.",
-            "park_exit_guidance": st["subway_exit_guidance"]["text"],
-            "wheelchair_rental": st["wheelchair_rental"],
-            "wheelchair_entry_route": st["wheelchair_entry_route"]["text"],
-            "disabled_parking_total_agency": sum(st["disabled_parking_by_spot"]["spots"].values()),
-            "disabled_parking_knto": knto.get("parking"),
-            "restroom_knto": knto.get("restroom"),
-            "stroller_knto": knto.get("stroller"),
-            "venues": {VENUE_KO[k]: v for k, v in VENUE_ACCESS.items()},
-        },
+        "who": guide["who"], "steps": steps, "gaps": guide["gaps"], "days": days,
+        "subway": {"exits": [{k: x.get(k) for k in ("line", "station", "exit", "where", "lat", "lon", "osm", "src")} for x in exits],
+                   "park_guidance": guide["subway"]["park_guidance"]},
+        "map": {"venues": map_venues, "attribution": mp["attribution"]},
         "sources": [
-            {"name": "한국체육산업개발 주차장 혼잡도 정보 (공공데이터포털)", "url": "https://www.data.go.kr/data/15164156/fileData.do"},
-            {"name": "한국체육산업개발 올림픽공원 공연정보 (문화공공데이터광장)", "url": "https://www.data.go.kr/data/3037877/openapi.do"},
-            {"name": "올림픽공원 홈페이지 공연 일정·주차 안내·편의시설", "url": "https://www.ksponco.or.kr/olympicpark/"},
-            {"name": "서울교통공사 교통약자이용정보", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
-            {"name": "한국관광공사 무장애 여행 정보", "url": "https://www.data.go.kr/"},
-            {"name": "기상청 단기예보·ASOS, 한국천문연구원 특일 정보", "url": "https://www.data.go.kr/"},
+            {"name": "한국체육산업개발 올림픽공원 공연정보 (공연 일정·예매처·문의처)", "url": "https://www.data.go.kr/data/3037877/openapi.do"},
+            {"name": "한국체육산업개발 입출차정보(전체구역) 2025 — 공연 뒤 출차 시각", "url": "https://www.data.go.kr/data/15159093/openapi.do"},
+            {"name": "한국체육산업개발 주차장 혼잡도 정보", "url": "https://www.data.go.kr/data/15164156/fileData.do"},
+            {"name": "올림픽공원 홈페이지 (공연장 좌석·주차·편의시설·공지)", "url": "https://www.ksponco.or.kr/olympicpark/"},
+            {"name": "서울교통공사 교통약자이용정보 (엘리베이터·충전기·화장실·안전발판)", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
+            {"name": "서울시메트로9호선 2·3단계 승강기 현황", "url": "https://www.data.go.kr/data/15118716/fileData.do"},
+            {"name": "서울시설공단 장애인콜택시 탑승내역 2025", "url": "https://www.data.go.kr/data/15115859/fileData.do"},
+            {"name": "장애물 없는 생활환경(BF) 인증 현황", "url": "https://www.data.go.kr/data/15014781/fileData.do"},
+            {"name": "한국관광공사 무장애 여행 정보", "url": "https://www.data.go.kr/data/15101897/openapi.do"},
+            {"name": "기상청 단기예보, 한국천문연구원 특일 정보", "url": "https://www.data.go.kr/"},
+            {"name": "참고: 계단뿌셔클럽 공연장 접근성 후기, 비마이너 공연장 접근성 기사 (후기·기사로 표시)", "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"},
             {"name": "지도·위치: © OpenStreetMap 기여자 (ODbL)", "url": "https://www.openstreetmap.org/copyright"},
         ],
     }
@@ -151,5 +285,5 @@ def build(days_ahead: int = 60) -> dict:
 
 if __name__ == "__main__":
     d = build()
-    print("days:", len(d["days"]), "| generated:", d["generated_at"])
-    print(json.dumps(d["days"][:2], ensure_ascii=False, indent=1)[:1200])
+    print("days:", len(d["days"]), "| generated:", d["generated_at"], "| exits:", len(d["subway"]["exits"]))
+    print(json.dumps(d["days"][:1], ensure_ascii=False, indent=1)[:3000])

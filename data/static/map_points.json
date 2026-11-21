@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-15",
+ "fetched": "2026-11-21",
  "attribution": "© OpenStreetMap contributors (ODbL)",
  "venues": {
   "kspo_dome": {
@@ -25,6 +25,12 @@
    "lon": 127.125,
    "osm": "way/469354406",
    "osm_name": "88잔디마당"
+  },
+  "woori_art_hall": {
+   "lat": 37.516728,
+   "lon": 127.125052,
+   "osm": "way/75956852",
+   "osm_name": "우리금융아트홀"
   }
  },
  "exits": [

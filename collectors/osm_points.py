@@ -22,6 +22,7 @@ VENUES = {  # 공연장 키 → OSM way id
     "olympic_hall": 75956846,  # 올림픽홀
     "handball": 75956853,      # SK올림픽핸드볼경기장 (티켓링크 라이브 아레나)
     "lawn88": 469354406,       # 88잔디마당
+    "woori_art_hall": 75956852,  # 우리금융아트홀 (옛 역도경기장)
 }
 EXITS = {  # (역, 출구 번호) → OSM node id (railway=subway_entrance)
     ("올림픽공원", "1"): 3401446008, ("올림픽공원", "2"): 3401446010,

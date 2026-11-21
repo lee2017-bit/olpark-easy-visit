@@ -16,7 +16,18 @@ URL = "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoListAjax.es"
 VENUE = {"01": "올림픽홀", "02": "KSPO DOME", "03": "핸드볼경기장", "04": "우리금융아트홀",
          "05": "기타", "06": "88잔디마당", "07": "뮤즈라이브"}
 FIELDS = ["evtSeq", "title", "beginDt", "endDt", "tm", "plc", "plcCd", "tktPrc", "seeAge",
-          "ndTm", "muf", "spns", "regDate", "evtLink"]
+          "ndTm", "muf", "spns", "nqry", "regDate", "evtLink"]
+# plcCd가 비어 오는 공연이 있음(예: 2026-11 다이나믹 듀오, 올림픽홀) → 장소 이름(plc)으로 채움
+PLC_NAME = [("우리금융", "04"), ("올림픽홀", "01"), ("KSPO", "02"), ("체조", "02"), ("핸드볼", "03"),
+            ("티켓링크", "03"), ("잔디마당", "06"), ("뮤즈", "07")]
+
+
+def _plc_code(row) -> str | None:
+    c = str(row.plcCd or "").strip()
+    if c and c != "nan":
+        return c
+    name = str(row.plc or "")
+    return next((code for key, code in PLC_NAME if key in name), None)
 
 
 def months(start: str, end: str):
@@ -48,10 +59,11 @@ def fetch(start: str, end: str, refresh: bool = False) -> pd.DataFrame:
     df = pd.DataFrame(rows, columns=FIELDS)
     prev_f = PROCESSED / "events_homepage.csv"
     if prev_f.exists():  # CI에는 raw가 없으므로 기존 결과와 합침 (새로 받은 값 우선)
-        prev = pd.read_csv(prev_f, dtype=str)[FIELDS]
+        prev = pd.read_csv(prev_f, dtype=str).reindex(columns=FIELDS)
         df = pd.concat([prev, df.astype(str).replace({"None": None})], ignore_index=True)
     df["evtSeq"] = df["evtSeq"].astype(str)
     df = df.drop_duplicates("evtSeq", keep="last")
+    df["plcCd"] = df.apply(_plc_code, axis=1)
     df["venue"] = df["plcCd"].map(VENUE).fillna("기타")
     df["run_days"] = (pd.to_datetime(df.endDt) - pd.to_datetime(df.beginDt)).dt.days + 1
     df = df.sort_values(["beginDt", "plcCd"])
