@@ -18,7 +18,10 @@ OUT = PROCESSED / "agency_live.csv"
 
 def once() -> dict:
     now = dt.datetime.now(KST)
-    rec = parse(http_get(URL).decode("utf-8", "ignore"), now.isoformat(timespec="minutes"))
+    stamp = now.isoformat(timespec="minutes")
+    if OUT.exists() and pd.read_csv(OUT).captured_kst.iloc[-1] == stamp:
+        return {"captured_kst": stamp, "skip": "already recorded"}  # 이어서 다시 켤 때 같은 분 중복 방지
+    rec = parse(http_get(URL).decode("utf-8", "ignore"), stamp)
     row = {"captured_kst": rec["captured_kst"], "live_parked": rec["live_parked"],
            "live_capacity": rec["live_capacity"]}
     row["pct"] = round(row["live_parked"] / row["live_capacity"] * 100, 1) if row["live_parked"] else None

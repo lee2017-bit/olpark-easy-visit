@@ -18,7 +18,8 @@ KST = dt.timezone(dt.timedelta(hours=9))
 
 
 def parse(text: str, captured: str) -> dict:
-    t = re.sub(r"<script.*?</script>|<style.*?</style>", "", text, flags=re.S)
+    # 주석(<!-- -->) 안의 견본 공연 행(산타와 빈양말·미스터트롯)은 실제 공연이 아니므로 뺌
+    t = re.sub(r"<!--.*?-->|<script.*?</script>|<style.*?</style>", "", text, flags=re.S)
     x = html.unescape(re.sub(r"<[^>]+>", "\n", t))
     x = re.sub(r"[ \t]+", " ", re.sub(r"\n\s*\n+", "\n", x))
     live = re.search(r"실시간 주차대수[^:]*:\s*\n?\s*([\d,]+)\s*대.*?([\d,]+)\s*대\s*가능", x, re.S)
