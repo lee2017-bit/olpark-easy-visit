@@ -37,6 +37,7 @@ def load_compact() -> tuple[pd.DataFrame, int, int]:
         "gate": df.in_gate.str.extract(r"^(\S{1,3}문)")[0],
         "t_in": pd.to_datetime(df.in_time, errors="coerce"),
         "t_out": pd.to_datetime(df.out_time.replace("", None), errors="coerce"),
+        "out_gate": df.out_gate.str.extract(r"^(\S{1,3}문)")[0],
     }).dropna(subset=["t_in"])
     return rec, len(df), total
 
