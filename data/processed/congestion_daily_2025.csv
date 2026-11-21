@@ -64,9 +64,9 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-04-15,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-04-16,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-04-17,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
-2025-04-18,4,False,False,0,1,0,0,1,7.5,2025 ZEROBASEONE FAN-CON［BLUE MANSION］,0.0,,False,1곳
-2025-04-19,5,False,True,1,1,0,0,2,6.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,3.0,13.0,True,2곳 이상
-2025-04-20,6,False,True,1,1,0,0,2,5.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,5.0,15.0,True,2곳 이상
+2025-04-18,4,False,False,0,1,0,0,1,19.5,2025 ZEROBASEONE FAN-CON［BLUE MANSION］,0.0,,False,1곳
+2025-04-19,5,False,True,1,1,0,0,2,18.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,3.0,13.0,True,2곳 이상
+2025-04-20,6,False,True,1,1,0,0,2,17.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,5.0,15.0,True,2곳 이상
 2025-04-21,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-04-22,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-04-23,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
@@ -232,9 +232,9 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-09-30,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-10-01,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-10-02,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
-2025-10-03,4,True,True,1,1,1,0,3,7.5,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL / 허용별 콘서트 : 보컬 전쟁 시즌2 “The War of Vocalists II“ - 서울 앵콜,0.0,,False,2곳 이상
-2025-10-04,5,False,True,0,1,1,0,2,6.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,1.0,13.0,True,2곳 이상
-2025-10-05,6,True,True,0,1,1,0,2,5.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,0.0,,False,2곳 이상
+2025-10-03,4,True,True,1,1,1,0,3,14.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL / 허용별 콘서트 : 보컬 전쟁 시즌2 “The War of Vocalists II“ - 서울 앵콜,0.0,,False,2곳 이상
+2025-10-04,5,False,True,0,1,1,0,2,17.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,1.0,13.0,True,2곳 이상
+2025-10-05,6,True,True,0,1,1,0,2,17.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,0.0,,False,2곳 이상
 2025-10-06,0,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-10-07,1,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-10-08,2,True,True,0,0,0,0,0,,,0.0,,False,공연 없음
@@ -267,7 +267,7 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-11-04,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-11-05,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-11-06,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
-2025-11-07,4,False,False,0,0,1,0,1,7.5,2025 LUCY 8TH CONCERT 〈LUCID LINE〉,0.0,,False,1곳
+2025-11-07,4,False,False,0,0,1,0,1,19.5,2025 LUCY 8TH CONCERT 〈LUCID LINE〉,0.0,,False,1곳
 2025-11-08,5,False,True,1,1,1,0,3,17.0,2025 ILLIT GLITTER DAY ENCORE / 2025 LUCY 8TH CONCERT 〈LUCID LINE〉 / 2025 김동률 콘서트 ‘산책’,7.0,13.0,True,2곳 이상
 2025-11-09,6,False,True,1,1,1,0,3,16.0,2025 ILLIT GLITTER DAY ENCORE / 2025 LUCY 8TH CONCERT 〈LUCID LINE〉 / 2025 김동률 콘서트 ‘산책’,6.0,13.0,True,2곳 이상
 2025-11-10,0,False,False,0,1,0,0,1,19.0,2025 김동률 콘서트 ‘산책’,0.0,,False,1곳
@@ -302,9 +302,9 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-12-09,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-10,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-11,3,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
-2025-12-12,4,False,False,0,0,1,0,1,8.0,"2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,1곳
-2025-12-13,5,False,True,1,1,1,0,3,6.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
-2025-12-14,6,False,True,1,1,1,0,3,4.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
+2025-12-12,4,False,False,0,0,1,0,1,20.0,"2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,1곳
+2025-12-13,5,False,True,1,1,1,0,3,16.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
+2025-12-14,6,False,True,1,1,1,0,3,16.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상
 2025-12-15,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-16,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-17,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
@@ -315,10 +315,10 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-12-22,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-23,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-24,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
-2025-12-25,3,True,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1.0,15.0,True,2곳 이상
-2025-12-26,4,False,False,0,1,1,0,2,7.5,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
-2025-12-27,5,False,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,5.0,15.0,True,2곳 이상
-2025-12-28,6,False,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
+2025-12-25,3,True,True,0,1,1,0,2,18.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1.0,15.0,True,2곳 이상
+2025-12-26,4,False,False,0,1,1,0,2,19.5,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
+2025-12-27,5,False,True,0,1,1,0,2,18.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,5.0,15.0,True,2곳 이상
+2025-12-28,6,False,True,0,1,1,0,2,16.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상
 2025-12-29,0,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-30,1,False,False,0,0,0,0,0,,,0.0,,False,공연 없음
 2025-12-31,2,False,False,0,0,0,0,0,,,0.0,,False,공연 없음

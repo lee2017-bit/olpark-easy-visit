@@ -16,9 +16,11 @@ WD = "월화수목금토일"
 CONCERT_VENUES = {"01": "olympic_hall", "02": "kspo_dome", "03": "handball", "06": "lawn88"}
 
 _wd_re = re.compile(r"\(([월화수목금토일])\)|(?<![0-9가-힣])([월화수목금토일]{1,2})(?=[\s/,|]|오|[0-9]|$)")
-_t_colon = re.compile(r"(\d{1,2}):(\d\d)")
+_t_colon = re.compile(r"(\d{1,2}):(\d\d)(?::\d\d)?\s*(PM|AM|pm|am)?")
 _t_si = re.compile(r"(오전|오후)?\s*(\d{1,2})\s*시")
-_t_pm = re.compile(r"(\d{1,2})\s*(PM|AM|pm|am)")
+_t_pm = re.compile(r"(?<![:\d])(\d{1,2})\s*(PM|AM|pm|am)")
+_wd_en = re.compile(r"(?<![A-Za-z])(MON|TUE|WED|THU|FRI|SAT|SUN)(?:DAY|S|SDAY|NESDAY|RS|RSDAY|URDAY)?\.?(?![A-Za-z])", re.I)
+_WD_EN = {"MON": "월", "TUE": "화", "WED": "수", "THU": "목", "FRI": "금", "SAT": "토", "SUN": "일"}
 
 
 def _norm_hour(h: int, ampm: str | None) -> int:
@@ -33,11 +35,15 @@ def parse_start_times(tm: str) -> dict:
     """Return {weekday_index or None: earliest start hour (float)}."""
     if not isinstance(tm, str):
         return {}
+    tm = _wd_en.sub(lambda m: f"({_WD_EN[m.group(1).upper()]})", tm)  # "SAT 6PM" → "(토) 6PM"
     tokens = []
     for m in _wd_re.finditer(tm):
         tokens.append((m.start(), "wd", m.group(1) or m.group(2)))
     for m in _t_colon.finditer(tm):
-        tokens.append((m.start(), "t", int(m.group(1)) + int(m.group(2)) / 60))
+        h = int(m.group(1))
+        if m.group(3):  # "9:00:00PM", "07:00 PM"
+            h = _norm_hour(h, m.group(3))
+        tokens.append((m.start(), "t", h + int(m.group(2)) / 60))
     for m in _t_si.finditer(tm):
         if _t_colon.match(tm, m.start(2)):
             continue
@@ -106,7 +112,8 @@ def daily_calendar(start: str, end: str, events: pd.DataFrame | None = None) -> 
 if __name__ == "__main__":
     for s in ["(토) 18:00 / (일) 16:00", "2025년 1월 17일(금) 오후 8시 2025년 1월 18일(토) 오후 6시",
               "토일 18:00", "금 20시 / 토 18시 / 일 17시", "8월 22일(토) 1PM, 6PM / 8월 23일(일) 1PM, 6PM",
-              "11:00", "2026년 12월 12일(토) 6시 / 2026년 12월 13() 5시"]:
+              "11:00", "2026년 12월 12일(토) 6시 / 2026년 12월 13() 5시",
+              "2026.11.21.(SAT) 6PM  2026.11.22.(SUN) 5PM", "2026.12.18. FRI 7PM / 12.19 SAT 6PM / 12.20 SUN 5PM(KST)"]:
         print(s, "->", parse_start_times(s))
     cal = daily_calendar("2024-07-01", "2024-07-31")
     print(cal[cal.n_venues > 0][["date", "dow", "n_venues", "first_start_h", "titles"]].to_string())

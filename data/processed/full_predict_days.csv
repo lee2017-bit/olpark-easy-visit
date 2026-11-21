@@ -18,8 +18,8 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-04-06,6,0,True,1,1,0,0,2,16.0,2025 IVE THE 3RD FAN CONCERT 〈IVE SCOUT〉 / EUNHYUK LIVE TOUR 2025 -Limitless: Time- Special in SEOUL,6.0,15.0,True,2곳 이상,1.0,,0,1,1,0.0,15.7,0,1
 2025-04-12,5,0,True,1,1,0,0,2,18.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL / 2025 STAYC TOUR ‘STAY TUNED’,7.0,9.0,True,2곳 이상,14.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL,1,0,1,15.4,22.5,1,1
 2025-04-13,6,0,True,1,1,0,0,2,17.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL / 2025 STAYC TOUR ‘STAY TUNED’,5.0,13.0,True,2곳 이상,14.0,2025 2NE1 CONCERT ［WELCOME BACK］ ENCORE IN SEOUL,1,1,1,4.2,8.2,1,1
-2025-04-19,5,0,True,1,1,0,0,2,6.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,3.0,13.0,True,2곳 이상,1.0,,0,1,1,9.2,20.0,1,1
-2025-04-20,6,0,True,1,1,0,0,2,5.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,5.0,15.0,True,2곳 이상,1.0,,0,1,1,0.0,24.1,0,1
+2025-04-19,5,0,True,1,1,0,0,2,18.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,3.0,13.0,True,2곳 이상,1.0,,0,0,1,9.2,20.0,1,1
+2025-04-20,6,0,True,1,1,0,0,2,17.0,2025 OH MY GIRL CONCERT [Milky Way] / 2025 ZEROBASEONE FAN-CON［BLUE MANSION］,5.0,15.0,True,2곳 이상,1.0,,0,1,1,0.0,24.1,0,1
 2025-04-26,5,0,True,1,1,0,0,2,17.0,2024-25 TAEMIN WORLD TOUR [Ephemeral Gaze] Finale / DAESUNG 2025 ASIA TOUR：D’s WAVE IN SEOUL,7.0,14.0,True,2곳 이상,0.0,,0,1,1,0.0,20.0,0,1
 2025-04-27,6,0,True,1,1,0,0,2,16.0,2024-25 TAEMIN WORLD TOUR [Ephemeral Gaze] Finale / DAESUNG 2025 ASIA TOUR：D’s WAVE IN SEOUL,1.0,14.0,True,2곳 이상,0.0,,0,1,1,0.0,19.1,0,1
 2025-05-03,5,0,True,1,1,0,0,2,18.0,Xdinary Heroes〈Beautiful Mind〉World Tour in SEOUL / YUURI ARENA LIVE 2025 at SEOUL,2.0,10.0,True,2곳 이상,1.0,,0,0,1,7.3,14.0,1,1
@@ -71,9 +71,9 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-09-21,6,0,True,0,0,0,1,1,13.0,KB 조이올팍 페스티벌 2025,4.0,17.0,True,1곳,0.0,,0,1,1,0.0,27.3,0,1
 2025-09-27,5,0,True,0,0,1,0,1,18.0,2025 KEYLAND : Uncanny Valley,7.0,13.0,True,1곳,1.0,,0,0,1,0.0,27.2,0,1
 2025-09-28,6,0,True,0,0,1,0,1,16.0,2025 KEYLAND : Uncanny Valley,7.0,11.0,True,1곳,1.0,,0,1,1,44.5,21.9,1,1
-2025-10-03,4,1,True,1,1,1,0,3,7.5,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL / 허용별 콘서트 : 보컬 전쟁 시즌2 “The War of Vocalists II“ - 서울 앵콜,0.0,,False,2곳 이상,1.0,,0,1,1,0.8,22.3,0,0
-2025-10-04,5,0,True,0,1,1,0,2,6.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,1.0,13.0,True,2곳 이상,1.0,,0,1,1,0.0,25.0,0,1
-2025-10-05,6,1,True,0,1,1,0,2,5.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,0.0,,False,2곳 이상,1.0,,0,1,1,18.1,22.3,1,0
+2025-10-03,4,1,True,1,1,1,0,3,14.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL / 허용별 콘서트 : 보컬 전쟁 시즌2 “The War of Vocalists II“ - 서울 앵콜,0.0,,False,2곳 이상,1.0,,0,1,1,0.8,22.3,0,0
+2025-10-04,5,0,True,0,1,1,0,2,17.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,1.0,13.0,True,2곳 이상,1.0,,0,1,1,0.0,25.0,0,1
+2025-10-05,6,1,True,0,1,1,0,2,17.0,2025 QWER 1ST WORLDTOUR [ROCKATION] / 2025 ZEROBASEONE WORLD TOUR ［HERE ＆ NOW］ IN SEOUL,0.0,,False,2곳 이상,1.0,,0,1,1,18.1,22.3,1,0
 2025-10-06,0,1,True,0,0,0,0,0,,,0.0,,False,공연 없음,0.0,,0,0,1,36.8,20.7,1,0
 2025-10-07,1,1,True,0,0,0,0,0,,,0.0,,False,공연 없음,0.0,,0,0,1,7.1,20.0,1,0
 2025-10-08,2,1,True,0,0,0,0,0,,,0.0,,False,공연 없음,0.0,,0,0,1,0.0,28.0,0,0
@@ -96,10 +96,10 @@ date,dow,holiday,offday,ev_olympic_hall,ev_kspo_dome,ev_handball,ev_lawn88,n_ven
 2025-11-30,6,0,True,1,1,0,0,2,17.0,2025 어반자카파 전국투어 콘서트 '겨울' - 서울 / 임영웅 IM HERO TOUR 2025 - 서울,7.0,14.0,True,2곳 이상,11.0,2025 어반자카파 전국투어 콘서트 '겨울' - 서울,1,1,1,0.0,16.1,0,1
 2025-12-06,5,0,True,1,1,1,0,3,17.0,"2025 god CONCERT < ICONIC BOX > - 서울 / 2025 정승환의 안녕, 겨울 / ［서울］ 2025 손태진 전국투어 콘서트 〈It‘s Son Time〉",0.0,,False,2곳 이상,10.0,2025 god CONCERT < ICONIC BOX > - 서울,1,1,0,0.6,4.5,0,0
 2025-12-07,6,0,True,1,1,1,0,3,16.0,"2025 god CONCERT < ICONIC BOX > - 서울 / 2025 정승환의 안녕, 겨울 / ［서울］ 2025 손태진 전국투어 콘서트 〈It‘s Son Time〉",0.0,,False,2곳 이상,10.0,2025 god CONCERT < ICONIC BOX > - 서울,1,1,0,0.0,13.4,0,0
-2025-12-13,5,0,True,1,1,1,0,3,6.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상,15.0,"2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",1,1,0,9.5,4.5,1,0
-2025-12-14,6,0,True,1,1,1,0,3,4.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상,15.0,"2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",1,1,0,0.1,3.1,0,0
+2025-12-13,5,0,True,1,1,1,0,3,16.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상,15.0,"2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",1,1,0,9.5,4.5,1,0
+2025-12-14,6,0,True,1,1,1,0,3,16.0,"2025 박지현 팬콘서트 멤버쉽 “MEMBERSHIP” / 2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",0.0,,False,2곳 이상,15.0,"2025 이문세 ‘The Best’ / 2025-26 로이킴 LIVE TOUR ［ja, daumm］ - 서울",1,1,0,0.1,3.1,0,0
 2025-12-20,5,0,True,1,1,1,0,3,17.0,2025 DAY6 Special Concert ‘The Present’ / 2025 N.Flying LIVE ‘&CON4 ENCORE : Let’s Roll &4EVER’ / 2025 규현(KYUHYUN) Concert ‘The Classic’,0.0,,False,2곳 이상,6.0,,0,1,0,0.3,10.7,0,0
 2025-12-21,6,0,True,1,1,1,0,3,16.0,2025 DAY6 Special Concert ‘The Present’ / 2025 N.Flying LIVE ‘&CON4 ENCORE : Let’s Roll &4EVER’ / 2025 규현(KYUHYUN) Concert ‘The Classic’,0.0,,False,2곳 이상,6.0,,0,1,0,0.0,2.5,0,0
-2025-12-25,3,1,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1.0,15.0,True,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,1,0,0.0,0.0,0,1
-2025-12-27,5,0,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,5.0,15.0,True,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,1,0,0.0,0.5,0,1
-2025-12-28,6,0,True,0,1,1,0,2,6.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,1,0,0.6,6.1,0,0
+2025-12-25,3,1,True,0,1,1,0,2,18.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1.0,15.0,True,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,0,0,0.0,0.0,0,1
+2025-12-27,5,0,True,0,1,1,0,2,18.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,5.0,15.0,True,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,0,0,0.0,0.5,0,1
+2025-12-28,6,0,True,0,1,1,0,2,16.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,0.0,,False,2곳 이상,13.0,2025 성시경 연말 콘서트 〈성시경〉 / 2025 에픽하이 콘서트,1,1,0,0.6,6.1,0,0

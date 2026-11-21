@@ -29,8 +29,14 @@ def holidays(y0: int, y1: int) -> pd.DataFrame:
             rows += [{"date": str(i["locdate"]), "name": i["dateName"], "holiday": i["isHoliday"]} for i in items]
             time.sleep(0.2)
     df = pd.DataFrame(rows)
-    df["date"] = pd.to_datetime(df["date"]).dt.date
-    df.to_csv(PROCESSED / "holidays.csv", index=False)
+    df["date"] = pd.to_datetime(df["date"]).dt.date.astype(str)
+    f = PROCESSED / "holidays.csv"
+    if f.exists():  # 받은 해만 바꾸고 다른 해(2024·2025 분석용)는 남김
+        prev = pd.read_csv(f, dtype=str)
+        prev = prev[~prev.date.str[:4].astype(int).between(y0, y1)]
+        df = pd.concat([prev, df], ignore_index=True)
+    df = df.drop_duplicates(["date", "name"]).sort_values("date")
+    df.to_csv(f, index=False)
     return df
 
 
