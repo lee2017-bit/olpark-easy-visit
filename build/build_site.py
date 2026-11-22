@@ -218,8 +218,11 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
                        "t": "주차 기록 — " + r.basis})
     near_weekend = r.offday and (r.date.date() - today).days <= 7
     it["park"].append({"who": [], "kind": "tip", "src": "공식", "url": PARKING_PAGE,
-                       "t": "그날 예상 이용률과 실시간 주차대수는 기관 홈페이지" if near_weekend else "실시간 주차대수는 기관 홈페이지",
-                       "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요" if r.offday else None})
+                       "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+                       "s": ("기관 홈페이지 숫자를 그대로 불러와요. " +
+                             ("이 날 기관 예상 이용률은 기관 홈페이지에서 날짜를 골라 볼 수 있어요" if near_weekend
+                              else "기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요" if r.offday
+                              else "기관 예상 이용률은 주말에만 나와요"))})
     if r.pop_max is not None and not pd.isna(r.pop_max) and r.pop_max >= 30:
         it["go"].append({"who": [], "kind": "tip", "src": "공공데이터",
                          "t": f"강수확률 {int(r.pop_max)}%: 우비·휠체어 덮개를 챙기세요",

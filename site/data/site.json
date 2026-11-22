@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21 23:47",
+ "generated_at": "2026-11-22 09:56",
  "who": {
   "wheel": "휠체어",
   "stroller": "유모차",
@@ -314,183 +314,6 @@
  ],
  "days": [
   {
-   "date": "2026-11-21",
-   "weekday": "토",
-   "offday": true,
-   "holiday": false,
-   "shows": [
-    {
-     "title": "2026-27 로이킴 LIVE TOUR ［R:O:Y］ in SEOUL",
-     "venue_key": "kspo_dome",
-     "venue": "KSPO DOME",
-     "start": "18:00",
-     "end": null,
-     "run": null,
-     "tm": "2026.11.21.(SAT) 6PM  2026.11.22.(SUN) 5PM",
-     "age": "만 7세이상",
-     "inquiry": "1544-1555",
-     "link": "https://nol.yanolja.com/ticket/products/26013078",
-     "vendor": "NOL 티켓(인터파크)"
-    }
-   ],
-   "items": {
-    "ticket": [
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel"
-      ],
-      "kind": null,
-      "src": "공연 공지 사례",
-      "url": null,
-      "t": "KSPO DOME 예매처 NOL 티켓(인터파크): 휠체어석은 고객센터 전화 예매",
-      "s": "고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
-     }
-    ],
-    "go": [
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel",
-       "stroller",
-       "slow"
-      ],
-      "src": "공공데이터",
-      "kind": "tip",
-      "t": "KSPO DOME에서 가까운 엘리베이터 출구: 9호선 올림픽공원역 3·4번, 5호선 올림픽공원역 2번",
-      "s": "공연장까지 직선 0.4km, 0.5km (걷는 길은 더 길어요)"
-     },
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel"
-      ],
-      "t": "9호선 올림픽공원역 3·4번 출구 엘리베이터에서 전동휠체어 약 8분, 수동휠체어 약 15분",
-      "s": "아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
-      "src": "후기",
-      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
-     }
-    ],
-    "park": [
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel",
-       "stroller",
-       "slow"
-      ],
-      "src": "공식",
-      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
-      "t": "KSPO DOME → 가까운 주차장 P5 (북2문·동2문·남2문)",
-      "s": "장애인 주차 10면 · 공연장까지 주차장에서 1분"
-     },
-     {
-      "who": [],
-      "src": "분석",
-      "url": "https://www.data.go.kr/data/15164156/fileData.do",
-      "t": "주차 기록 — 2025년 11월 공연 있는 주말·공휴일: 만차 기록 10일 중 4일, 실제 주차대수 90% 이상 2일 중 2일"
-     },
-     {
-      "who": [],
-      "kind": "tip",
-      "src": "공식",
-      "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "그날 예상 이용률과 실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
-     }
-    ],
-    "inpark": [
-     {
-      "who": [
-       "wheel",
-       "slow"
-      ],
-      "kind": "warn",
-      "src": "공식",
-      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
-      "t": "저녁 공연이면 공원 휠체어를 빌리기 어려워요",
-      "s": "대여는 19:00까지, 한 번에 3시간이라 공연 중에 반납할 수 없어요 → 개인 휠체어를 권해요"
-     }
-    ],
-    "venue": [
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel"
-      ],
-      "t": "KSPO DOME 휠체어석: 2층 C블록(5~11구역) 뒤편",
-      "s": "석 수는 공식 안내에 없음. 관람 후기에는 '1층 5~11구역 뒤 통로'로 적혀 층 표기가 다름",
-      "src": "공식",
-      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301030800"
-     },
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel"
-      ],
-      "t": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
-      "src": "기사",
-      "url": "https://www.beminor.com/news/articleView.html?idxno=30041"
-     },
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel"
-      ],
-      "t": "후기: 2-2 게이트로 들어갔음 (공연마다 다를 수 있음)",
-      "src": "후기",
-      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
-     },
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel",
-       "stroller",
-       "slow",
-       "vision"
-      ],
-      "src": "공공데이터",
-      "url": "https://www.data.go.kr/data/15014781/fileData.do",
-      "kind": "gap",
-      "t": "KSPO DOME: 장애물 없는 생활환경(BF) 인증 목록에 없음"
-     }
-    ],
-    "home": [
-     {
-      "venue": "kspo_dome",
-      "who": [
-       "wheel",
-       "stroller",
-       "slow"
-      ],
-      "kind": "warn",
-      "src": "분석",
-      "url": "https://www.data.go.kr/data/15159093/openapi.do",
-      "t": "출차가 가장 몰리는 때: 20:45~21:45",
-      "s": "2025년 KSPO DOME 저녁 공연 43일, 시작 2시간 45분~3시간 45분 뒤에 가장 많이 나갔어요 (가장 붐빈 30분에 약 607대). 휠체어 승하차에 시간이 걸리면 이때를 피하세요"
-     },
-     {
-      "who": [
-       "wheel"
-      ],
-      "kind": "warn",
-      "src": "분석",
-      "url": "https://www.data.go.kr/data/15115859/fileData.do",
-      "t": "공연 끝난 밤 공원에서 장애인콜택시 대기: 중간값 59분 (공연 없는 밤 30분)",
-      "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
-     },
-     {
-      "who": [],
-      "kind": "warn",
-      "src": "공식",
-      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
-      "t": "늦게 끝나면: 북2문·남2문 출차는 22:30까지, 동2문은 24시간",
-      "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
-     }
-    ]
-   }
-  },
-  {
    "date": "2026-11-22",
    "weekday": "일",
    "offday": true,
@@ -572,8 +395,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "그날 예상 이용률과 실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 이 날 기관 예상 이용률은 기관 홈페이지에서 날짜를 골라 볼 수 있어요"
      }
     ],
     "inpark": [
@@ -789,8 +612,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -1092,8 +915,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "그날 예상 이용률과 실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 이 날 기관 예상 이용률은 기관 홈페이지에서 날짜를 골라 볼 수 있어요"
      }
     ],
     "inpark": [
@@ -1433,8 +1256,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 이 날 기관 예상 이용률은 기관 홈페이지에서 날짜를 골라 볼 수 있어요"
      }
     ],
     "inpark": [
@@ -1660,8 +1483,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -1793,8 +1616,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -1926,8 +1749,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -2059,8 +1882,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -2250,8 +2073,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -2568,8 +2391,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -2908,8 +2731,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -3142,8 +2965,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -3275,8 +3098,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -3408,8 +3231,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -3541,8 +3364,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -3722,8 +3545,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -4001,8 +3824,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -4341,8 +4164,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -4575,8 +4398,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -4708,8 +4531,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -4841,8 +4664,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -4974,8 +4797,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -5213,8 +5036,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -5554,8 +5377,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -5895,8 +5718,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -6122,8 +5945,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -6255,8 +6078,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -6388,8 +6211,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -6627,8 +6450,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -7016,8 +6839,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -7445,8 +7268,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -7770,8 +7593,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -7974,8 +7797,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -8107,8 +7930,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -8240,8 +8063,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -8431,8 +8254,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -8701,8 +8524,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -8995,8 +8818,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -9318,8 +9141,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -9533,8 +9356,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -9618,8 +9441,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -9703,8 +9526,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -9788,8 +9611,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -9873,8 +9696,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -10056,8 +9879,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -10330,8 +10153,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -10556,8 +10379,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -10729,8 +10552,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -10902,8 +10725,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -11075,8 +10898,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -11306,8 +11129,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "inpark": [
@@ -11670,8 +11493,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -12049,8 +11872,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": "예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
      }
     ],
     "inpark": [
@@ -12322,8 +12145,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -12495,8 +12318,8 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [
@@ -12668,8 +12491,181 @@
       "kind": "tip",
       "src": "공식",
       "url": "https://www.ksponco.or.kr/online/main/parking.do",
-      "t": "실시간 주차대수는 기관 홈페이지",
-      "s": null
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
+     }
+    ],
+    "venue": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "t": "우리금융아트홀 휠체어석 12석: 1층 A·C구역 22열 뒤에 6석씩",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "hearing"
+      ],
+      "t": "영상자막기 보유 (공연마다 쓰는지는 주최 측에 문의)",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "우리금융아트홀 장애물 없는 생활환경(BF) 인증: 우수 (옛 역도경기장, ~2029-12-25)"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "t": "뮤즈라이브 휠체어석·편의시설: 공개된 안내를 찾지 못함 → 공연 문의처에 확인",
+      "src": "공식",
+      "kind": "gap"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "뮤즈라이브: BF 인증 기록 확인 못 함"
+     }
+    ],
+    "home": [
+     {
+      "venue": "woori_art_hall",
+      "who": [],
+      "src": "공식",
+      "t": "우리금융아트홀 11:00 시작 · 공연 70분 → 12:10 무렵 끝",
+      "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "muse_live",
+      "who": [],
+      "src": "공식",
+      "t": "뮤즈라이브 14:00 시작 · 공연 70분 → 15:10 무렵 끝",
+      "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
+     }
+    ]
+   }
+  },
+  {
+   "date": "2027-01-21",
+   "weekday": "목",
+   "offday": false,
+   "holiday": false,
+   "shows": [
+    {
+     "title": "뮤지컬 〈사랑의 하츄핑: 고래보석의 전설〉",
+     "venue_key": "woori_art_hall",
+     "venue": "우리금융아트홀",
+     "start": "11:00",
+     "end": "12:10",
+     "run": 70,
+     "tm": "화, 수, 목, 금, 일 11시, 14시 / 토 11시, 14시, 16시30분(월 공연없음) / 1월 9일 14시, 16시 30분 / 1월 10일 11시, 14시, 16시 30분 / 2월 7일 14시, 16시30분 / 2월 8일 11시, 14시, 16시30분 / 2월 9일 11시, 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "1577-3363",
+     "link": "https://nol.yanolja.com/ticket/products/26016146",
+     "vendor": "NOL 티켓(인터파크)"
+    },
+    {
+     "title": "뮤지컬 〈폭풍우 치는 밤에〉",
+     "venue_key": "muse_live",
+     "venue": "뮤즈라이브",
+     "start": "14:00",
+     "end": "15:10",
+     "run": 70,
+     "tm": "주말 및 공휴일 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "02-558-5738",
+     "link": "https://nol.yanolja.com/ticket/products/26015905",
+     "vendor": "NOL 티켓(인터파크)"
+    }
+   ],
+   "items": {
+    "ticket": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "우리금융아트홀 예매처 NOL 티켓(인터파크): 휠체어석은 고객센터 전화 예매",
+      "s": "고객센터 1544-1555 (09:00~18:00) · 공연 문의 1577-3363"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "뮤즈라이브 예매처 NOL 티켓(인터파크): 휠체어석은 고객센터 전화 예매",
+      "s": "고객센터 1544-1555 (09:00~18:00) · 공연 문의 02-558-5738"
+     }
+    ],
+    "go": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "우리금융아트홀에서 가까운 엘리베이터 출구: 5호선 올림픽공원역 2번, 9호선 올림픽공원역 3·4번",
+      "s": "공연장까지 직선 0.5km, 0.5km (걷는 길은 더 길어요)"
+     }
+    ],
+    "park": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "우리금융아트홀 → 가까운 주차장 P7",
+      "s": "장애인 주차 6면 · 공연장까지 1~2분"
+     },
+     {
+      "who": [],
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15164156/fileData.do",
+      "t": "주차 기록 — 2025년 평일 219일 중 2일만 만차 기록"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/online/main/parking.do",
+      "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
      }
     ],
     "venue": [

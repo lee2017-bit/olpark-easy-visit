@@ -227,6 +227,104 @@
     for (const t of d.gaps) g.append(el("li", {}, t));
   }
 
+  // ---------- 지금 주차장: 기관 홈페이지를 브라우저에서 바로 읽음 ----------
+  // 기관 페이지가 Access-Control-Allow-Origin: * 를 보내므로 서버 없이 읽을 수 있다.
+  // 숫자는 고치지 않고 그대로 보여 준다. 만차 90%·혼잡 70%·다소혼잡 50%는 기관 범례.
+  const PARKING_URL = "https://www.ksponco.or.kr/online/main/parking.do";
+  const LIVE_EVERY = 5 * 60 * 1000;
+  const FULL_PCT = 90;
+  const live = { tried: 0, last: null, busy: false };
+  const fmt = (n) => n.toLocaleString("ko-KR");
+  const kstDate = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date());
+  const kstTime = (t) => new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", hour12: false }).format(t);
+  const level = (p) => p >= 90 ? ["high", "만차"] : p >= 70 ? ["mid", "혼잡"] : p >= 50 ? ["mid", "다소 혼잡"] : ["low", "여유"];
+
+  function parseParking(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html"); // 주석 속 견본 행은 요소가 아니라 자동으로 빠짐
+    const h = [...doc.querySelectorAll("h4")].find((x) => x.textContent.includes("실시간 주차대수"));
+    const m = h && h.textContent.replace(/\s+/g, " ").match(/실시간 주차대수\s*\(([^)]*)\)\s*:\s*([\d,]+)\s*대.*?([\d,]+)\s*대\s*가능/);
+    if (!m) return null;
+    const preds = [];
+    for (const tr of doc.querySelectorAll("table.parking_prediction tbody tr")) {
+      const th = tr.querySelector("th"), td = tr.querySelector("td");
+      const a = th && th.textContent.replace(/\s+/g, " ").match(/(\d{4}-\d\d-\d\d) (\d\d:\d\d)/);
+      const p = td && td.textContent.match(/(\d+)\s*%/);
+      if (a && p) preds.push({ date: a[1], time: a[2], pct: +p[1] });
+    }
+    return { lots: m[1].trim(), parked: +m[2].replace(/,/g, ""), cap: +m[3].replace(/,/g, ""), preds };
+  }
+
+  // 같은 값이 이어지는 시간대는 묶어서 "16:00~20:00 89%"
+  function predRuns(preds) {
+    const out = [];
+    for (const p of preds) {
+      const last = out[out.length - 1];
+      if (last && last.pct === p.pct) last.to = p.time; else out.push({ from: p.time, to: p.time, pct: p.pct });
+    }
+    return out.map((r) => (r.from === r.to ? r.from : r.from + "~" + r.to) + " " + r.pct + "%").join(", ");
+  }
+
+  function renderLive(r, at, stale) {
+    const box = $("live-box");
+    box.textContent = "";
+    const agencyLink = el("a", { href: PARKING_URL, rel: "noopener" }, "기관 페이지");
+    if (!r) {
+      box.append(el("p", {}, "기관 홈페이지에서 실시간 주차대수를 불러오지 못했어요. ",
+        el("a", { href: PARKING_URL, rel: "noopener" }, "기관 실시간 주차대수 보기")));
+      return;
+    }
+    const pct = r.cap ? Math.round(r.parked / r.cap * 1000) / 10 : 0;
+    const [cls, word] = level(pct);
+    const full = Math.round(r.cap * FULL_PCT / 100);
+    box.append(el("p", { class: "live-top" },
+      el("span", { class: "live-num" }, el("b", {}, fmt(r.parked)), "대 주차 중"),
+      el("span", { class: "live-cap" }, " / " + fmt(r.cap) + "대"),
+      el("span", { class: "live-lvl lvl-" + cls }, word + " " + pct + "%")));
+    const bar = el("div", { class: "live-bar", role: "img",
+      "aria-label": fmt(r.cap) + "대 중 " + fmt(r.parked) + "대, " + pct + "%. 만차 기준 " + FULL_PCT + "%" });
+    const fill = el("span", { class: "fill lvl-" + cls });
+    fill.style.width = Math.min(100, pct) + "%";
+    const mark = el("span", { class: "mark", "aria-hidden": "true" });
+    mark.style.left = FULL_PCT + "%";
+    bar.append(fill, mark);
+    box.append(bar);
+    const left = full - r.parked;
+    box.append(el("p", { class: "live-left" }, left > 0
+      ? "만차 기준(" + FULL_PCT + "%, " + fmt(full) + "대)까지 약 " + fmt(left) + "대 남았어요."
+      : "기관 기준 만차예요(" + FULL_PCT + "% = " + fmt(full) + "대 이상). 엘리베이터 있는 지하철 출구는 아래 지도에 있어요."));
+    const today = r.preds.filter((p) => p.date === kstDate());
+    if (today.length) box.append(el("p", { class: "live-pred" }, el("b", {}, "기관 예상 이용률(오늘) "), predRuns(today)));
+    const again = el("button", { type: "button", class: "live-btn" }, "지금 새로 고침");
+    again.addEventListener("click", () => loadLive(true));
+    box.append(el("p", { class: "small live-meta" },
+      r.lots + " 주차장 · " + kstTime(at) + "에 불러옴 · 5분마다 새로 고침 ", again));
+    if (stale) box.append(el("p", { class: "live-stale" }, "방금 새로 고치지 못했어요. 위 숫자는 " + kstTime(at) + " 기준이에요."));
+    box.append(el("p", { class: "small" },
+      "기관이 내는 숫자 그대로예요. 새벽에도 약 1,000대로 나와서 실제보다 많게 집계될 수 있어요. " +
+      "장애인 주차구역 빈자리는 따로 공개되지 않아요. ", agencyLink));
+  }
+
+  async function loadLive(force) {
+    if (live.busy || (!force && Date.now() - live.tried < LIVE_EVERY - 5000)) return;
+    live.busy = true;
+    live.tried = Date.now();
+    try {
+      const res = await fetch(PARKING_URL, { cache: "no-store", credentials: "omit" });
+      if (!res.ok) throw new Error(res.status);
+      const r = parseParking(await res.text());
+      if (!r) throw new Error("parse");
+      live.last = { r, at: new Date() };
+      renderLive(r, live.last.at);
+    } catch (e) {
+      if (live.last) renderLive(live.last.r, live.last.at, true); else renderLive(null);
+    } finally {
+      live.busy = false;
+    }
+  }
+  loadLive(true);
+  setInterval(() => { if (!document.hidden) loadLive(false); }, 30 * 1000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) loadLive(false); });
+
   // 글자 크기: 누른 단계를 <html data-fs>에 반영하고 저장 (다음 방문에도 유지)
   function setFontSize(level) {
     const root = document.documentElement;
