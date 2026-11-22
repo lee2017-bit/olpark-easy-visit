@@ -2,9 +2,18 @@ name: live-status
 
 # 공원 근처 지하철역 엘리베이터 가동현황을 10분마다 확인해 status 브랜치에 status.json 하나만 올린다.
 # 사이트(브라우저)는 raw.githubusercontent.com 에서 이 파일을 읽는다. 키는 Actions 안에서만 쓰고 결과만 공개.
+#
+# GitHub 예약 실행은 이 저장소에서 4~5시간씩 늦게 돌거나 건너뛰는 일이 있어(11/16·11/19 기록),
+# 10분짜리 예약 대신 한 번 시작하면 최대 약 5시간 40분 동안 안에서 10분마다 갱신한다.
+# 새 실행이 시작되면 이전 실행은 취소된다(concurrency). 지하철이 거의 다니지 않는 01~05시(KST)에는 쉰다.
 on:
   schedule:
-    - cron: "4,14,24,34,44,54 21-23,0-14 * * *"   # 06:00~23:59 KST
+    - cron: "4 20-23,0-15 * * *"   # 매시 4분 (05:04~00:04 KST)
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/status.yml
+      - collectors/live_status.py
   workflow_dispatch:
 
 permissions:
@@ -17,24 +26,34 @@ concurrency:
 jobs:
   status:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: 엘리베이터 가동현황
-        run: python -m collectors.live_status out/status.json
+      - name: 10분마다 엘리베이터 가동현황 확인 → status 브랜치 (기록은 마지막 한 개만 유지)
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
-      - name: status 브랜치에 올림 (기록은 마지막 한 개만 유지)
-        env:
           TOKEN: ${{ github.token }}
         run: |
-          cd out
-          git init -q -b status
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add status.json
-          git commit -q -m "status $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" status
+          mkdir -p out
+          git -C out init -q -b status
+          git -C out config user.name "github-actions[bot]"
+          git -C out config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          end=$(( $(date +%s) + 340*60 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            h=$(TZ=Asia/Seoul date +%H)
+            if [ "$h" -ge 1 ] && [ "$h" -lt 5 ]; then echo "야간 휴식"; break; fi
+            if python -m collectors.live_status out/status.json; then
+              git -C out add status.json
+              git -C out commit -q --amend --allow-empty -m "status $(date -u +%Y-%m-%dT%H:%MZ)" 2>/dev/null \
+                || git -C out commit -q -m "status $(date -u +%Y-%m-%dT%H:%MZ)"
+              for i in 1 2 3; do
+                git -C out push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" status && break
+                sleep $(( i * 10 ))
+              done
+            fi
+            now=$(date +%s)
+            sleep $(( 600 - now % 600 + 60 ))
+          done
