@@ -177,3 +177,39 @@ footer ul { padding-left: 1.1em; }
   min-height: 44px; padding: 4px 12px; cursor: pointer; }
 .live-btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
 .live-stale { background: var(--warn-bg); border-left: 4px solid var(--warn-line); padding: 6px 8px; border-radius: 4px; font-size: .88rem; }
+
+/* 오늘 공연 */
+.today { border: 2px solid var(--accent); border-radius: 14px; padding: 12px 16px; background: var(--accent-bg); }
+.today p { margin: 0 0 6px; }
+.today-when { font-weight: 800; font-size: 1.1rem; }
+.today-list { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 8px; }
+.today-list li { display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: start; }
+.today-list .ic { color: var(--accent); margin-top: .2em; }
+.today-venue { font-size: 1.3rem; font-weight: 800; }
+.today-title { display: block; font-size: .88rem; color: var(--muted); }
+.today-alert { display: flex; gap: 6px; align-items: flex-start; font-weight: 700; background: var(--warn-bg);
+  border-left: 4px solid var(--warn-line); padding: 6px 8px; border-radius: 4px; }
+
+/* 이 날 공사·통제 */
+.alert-box { border-top: 1px solid var(--line); padding: 4px 16px 10px; }
+.alert-box h3 { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; margin: 10px 0 4px; }
+.item.k-ok .bub { background: var(--low-bg); color: var(--low); }
+
+/* 유형별 안내 (눌러서 펼치기) */
+.cases { border-top: 1px solid var(--line); padding: 4px 12px 14px; display: grid; gap: 10px; }
+.cases-h { font-size: 1.1rem; margin: 10px 4px 2px; }
+.case { border: 2px solid var(--line); border-radius: 12px; background: var(--bg); }
+.case[open] { border-color: var(--fg); }
+.case > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  min-height: 60px; padding: 8px 12px; font-weight: 800; font-size: 1.1rem; }
+.case > summary::-webkit-details-marker { display: none; }
+.case > summary:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 10px; }
+.case-ic { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; background: var(--card); flex: none; }
+.case-ic .ic { width: 28px; height: 28px; }
+.case-name { flex: 1; }
+.case-n { font-size: .8rem; color: var(--high); background: var(--high-bg); border-radius: 999px; padding: 2px 10px; }
+.case-n:empty { display: none; }
+.case-open::after { content: "펼치기"; font-size: .8rem; color: var(--link); font-weight: 700; }
+.case[open] .case-open::after { content: "접기"; }
+.case-body { border-top: 1px solid var(--line); }
+.live-step h3 .num { background: var(--accent); }

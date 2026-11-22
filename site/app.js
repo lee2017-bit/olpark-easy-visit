@@ -19,15 +19,16 @@
   };
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const WHO_ICON = { wheel: "wheel", stroller: "stroller", slow: "cane", vision: "eye", hearing: "ear" };
-  const KIND = { warn: ["alert", "주의"], tip: ["info", "도움말"], gap: ["question", "공개 자료 없음"] };
+  const KIND = { warn: ["alert", "주의"], tip: ["info", "도움말"], gap: ["question", "공개 자료 없음"], ok: ["check", "확인됨"] };
   const FIRST = 10;
   const LABEL_SIDE = { kspo_dome: "right", lawn88: "left", woori_art_hall: "left" };
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* 저장 못 해도 화면엔 적용 */ } },
   };
-  const state = { d: null, sel: 0, showAll: false, venue: "all", who: new Set(), map: null, venueMarkers: {} };
-  try { (JSON.parse(store.get("olpark-who") || "[]") || []).forEach((w) => state.who.add(w)); } catch (e) { /* 무시 */ }
+  const state = { d: null, sel: 0, showAll: false, venue: "all", open: new Set(), map: null, venueMarkers: {} };
+  // 실시간 확인 결과: null = 불러오는 중, { ok: false } = 실패
+  const chk = { notices: null, status: null };
 
   const md = (date) => { const [, m, d] = date.split("-"); return { m: +m, d: +d }; };
   const km = (a, b) => {
@@ -35,27 +36,7 @@
     const h = Math.sin((la2 - la1) / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin((b.lon - a.lon) * r / 2) ** 2;
     return 2 * 6371 * Math.asin(Math.sqrt(h));
   };
-  const forMe = (it) => !state.who.size || !it.who || !it.who.length || it.who.some((w) => state.who.has(w));
-
-  // ---------- 누구와 ----------
-  function renderWho() {
-    const box = $("who");
-    box.textContent = "";
-    for (const [k, label] of Object.entries(state.d.who)) {
-      const b = el("button", { type: "button", class: "who-btn", "aria-pressed": String(state.who.has(k)) },
-        icon(WHO_ICON[k] || "info"), el("span", {}, label));
-      b.addEventListener("click", () => {
-        if (state.who.has(k)) state.who.delete(k); else state.who.add(k);
-        store.set("olpark-who", JSON.stringify([...state.who]));
-        renderWho();
-        renderDay(state.d.days[state.sel]);
-      });
-      box.append(b);
-    }
-    $("who-hint").textContent = state.who.size
-      ? `${[...state.who].map((k) => state.d.who[k]).join(", ")}에 해당하는 안내와 모두에게 필요한 안내만 보여요.`
-      : "여러 개 고를 수 있어요. 고르지 않으면 모든 안내가 보여요.";
-  }
+  const forWho = (k) => (it) => !it.who || !it.who.length || it.who.includes(k);
 
   // ---------- 날짜 ----------
   function renderChips() {
@@ -109,6 +90,239 @@
       el("div", {}, el("b", {}, it.t), it.s ? el("span", { class: "s" }, it.s) : null, meta));
   }
 
+  // ---------- 실시간 확인 1: 올림픽공원 공지(공사·통제) ----------
+  // 공원 홈페이지도 Access-Control-Allow-Origin: * 라서 브라우저에서 바로 읽는다.
+  const NOTICE_VIEW = (no) => `https://www.ksponco.or.kr/olympicpark/board.es?mid=a20601000000&bid=0045&list_no=${no}&act=view`;
+  const pad2 = (n) => String(n).padStart(2, "0");
+
+  function ymd(s, baseY) {
+    let m = s.match(/(\d{4})\s*[.\-년]\s*(\d{1,2})\s*[.\-월]?\s*(?:(\d{1,2})\s*[.일]?)?/);
+    if (m) return { y: +m[1], mo: +m[2], d: m[3] ? +m[3] : null };
+    if (!baseY) return null;
+    m = s.match(/(\d{1,2})\s*[.\-월]\s*(\d{1,2})/);
+    if (m) return { y: baseY, mo: +m[1], d: +m[2] };
+    m = s.match(/(\d{1,2})\s*월/);
+    return m ? { y: baseY, mo: +m[1], d: null } : null;
+  }
+  function period(txt) {
+    const [a, b] = txt.split(/~|∼|부터/);
+    const f = ymd(a || "");
+    if (!f) return null;
+    const t = b ? ymd(b, f.y) : null;
+    if (t && !/\d{4}/.test(b) && t.mo < f.mo) t.y = f.y + 1;
+    const iso = (x, end) => `${x.y}-${pad2(x.mo)}-${pad2(x.d || (end ? new Date(x.y, x.mo, 0).getDate() : 1))}`;
+    return { from: iso(f, false), to: t ? iso(t, true) : null };
+  }
+  // 공지 본문 → 공사별 {이름, 위치, 기간, 통제구간}. 형식이 달라 못 읽으면 segs가 비고, 공지 제목·링크만 보여 준다.
+  function parseNotice(text) {
+    const t = text.replace(/\s+/g, " ")
+      .replace(/(\d{4})\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?/g, "$1-$2-$3")
+      .replace(/~\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?/g, "~ $1-$2");
+    const segs = [];
+    for (const part of t.split(/\s\d{1,2}\.\s+(?=[가-힣A-Za-z])/)) {
+      const per = part.match(/공사\s*기간\s*[:：]?\s*(.+?)(?=ㅇ|○|※|공사\s*내용|통제|안내\s*사항|문의|\(|$)/);
+      const pr = per && period(per[1]);
+      if (!pr) continue;
+      const grab = (re) => ((part.match(re) || [])[1] || "").trim();
+      segs.push({
+        name: grab(/공사명\s*[:：]\s*(.+?)(?=공사\s*기간|공사\s*내용|$)/) || grab(/^\s*(.+?)(?=ㅇ|○|공사\s*위치|$)/),
+        where: grab(/공사\s*위치\s*[:：]\s*(.+?)(?=ㅇ|○|공사\s*내용|공사\s*기간|$)/),
+        ctrl: grab(/통제\s*구간\s*[:：]\s*(.+?)(?=ㅇ|○|$)/),
+        ...pr,
+      });
+    }
+    const dates = [...t.matchAll(/(\d{4})-(\d{1,2})-(\d{1,2})/g)].map((m) => `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`);
+    return { segs, last: dates.sort().pop() || null, text: t };
+  }
+
+  async function loadNotices() {
+    const cfg = state.d.live;
+    try {
+      const res = await fetch(cfg.notice_board, { cache: "no-store", credentials: "omit" });
+      if (!res.ok) throw new Error(res.status);
+      const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+      const kw = new RegExp(cfg.notice_keywords);
+      const list = [];
+      for (const li of doc.querySelectorAll("li.list_li")) {
+        const a = li.querySelector("a[href*='list_no=']");
+        const ttl = li.querySelector("strong.title span") || li.querySelector("strong.title");
+        const no = a && (a.getAttribute("href").match(/list_no=(\d+)/) || [])[1];
+        const posted = (li.textContent.match(/\d{4}-\d\d-\d\d/) || [])[0];
+        const title = ttl ? ttl.textContent.replace(/\s+/g, " ").replace(/^Notice\s*/, "").trim() : "";
+        if (no && title && kw.test(title) && !list.some((x) => x.no === no)) list.push({ no, title, posted, url: NOTICE_VIEW(no) });
+      }
+      await Promise.all(list.slice(0, 6).map(async (n) => {
+        try {
+          const r = await fetch(n.url, { cache: "no-store", credentials: "omit" });
+          const vd = new DOMParser().parseFromString(await r.text(), "text/html");
+          const box = vd.querySelector(".view_cont");
+          const alts = box ? [...box.querySelectorAll("img[alt]")].map((i) => i.getAttribute("alt")).join(" ") : "";
+          Object.assign(n, parseNotice(alts + " " + (box ? box.textContent : "")));
+        } catch (e) { n.segs = []; n.failed = true; }
+      }));
+      chk.notices = { ok: true, items: list.slice(0, 6), at: new Date() };
+    } catch (e) {
+      chk.notices = { ok: false };
+    }
+    rerender();
+  }
+
+  // 그날 해당하는 공사: 기간이 그날을 포함하면. 기간을 못 읽었으면 공지일 30일 안이거나 본문 마지막 날짜가 그날 뒤면 '확인 필요'로.
+  function noticesFor(day) {
+    if (!chk.notices || !chk.notices.ok) return [];
+    const out = [];
+    for (const n of chk.notices.items) {
+      if (n.segs && n.segs.length) {
+        const segs = n.segs.filter((g) => g.from <= day.date && (!g.to || day.date <= g.to));
+        if (segs.length) out.push({ n, segs });
+      } else if ((n.last && n.last >= day.date) || (n.posted && n.posted <= day.date && (Date.parse(day.date) - Date.parse(n.posted)) / 864e5 <= 30)) {
+        out.push({ n, segs: [], unsure: true });
+      }
+    }
+    return out;
+  }
+  // 공사 하나(seg) 또는 기간을 못 읽은 공지 전체 글에서, 그날 공연장 이름이 나오는지
+  const segText = (g) => [g.name, g.where, g.ctrl].join(" ");
+  function venueHit(txt, day) {
+    const alias = state.d.live.venue_alias;
+    const keys = [...new Set(day.shows.map((s) => s.venue_key))].filter((k) => state.venue === "all" || k === state.venue);
+    return keys.filter((k) => (alias[k] || []).some((a) => txt.includes(a)));
+  }
+  const hitTexts = (h) => (h.segs.length ? h.segs.map(segText) : [h.n.title + " " + (h.n.text || "")]);
+
+  // ---------- 실시간 확인 2: 지하철 엘리베이터 (GitHub Actions가 10분마다 확인해 둔 파일) ----------
+  async function loadStatus() {
+    try {
+      const res = await fetch(state.d.live.status_url, { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      const data = await res.json();
+      chk.status = { ok: !!data.ok, data, at: new Date(data.checked_at) };
+    } catch (e) {
+      chk.status = { ok: false };
+    }
+    rerender();
+  }
+  setInterval(() => { if (!document.hidden && state.d) loadStatus(); }, 10 * 60 * 1000);
+
+  function rerender() {
+    if (!state.d || !state.d.days.length) return;
+    renderToday();
+    renderDay(state.d.days[state.sel]);
+  }
+
+  // ---------- 오늘 공연 ----------
+  function renderToday() {
+    const box = $("today");
+    if (!box) return;
+    box.textContent = "";
+    const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date());
+    const days = state.d.days;
+    const i = days.findIndex((x) => x.date >= today);
+    if (i < 0) { box.append(el("p", {}, "앞으로 60일 안에 공연이 없어요.")); return; }
+    const day = days[i];
+    const { m, d } = md(day.date);
+    const isToday = day.date === today;
+    box.append(el("p", { class: "today-when" }, isToday ? `오늘 ${m}월 ${d}일 (${day.weekday})` : `오늘은 공연이 없어요. 다음 공연: ${m}월 ${d}일 (${day.weekday})`));
+    const ul = el("ul", { class: "today-list" });
+    for (const s of day.shows) {
+      ul.append(el("li", {}, icon("stage"),
+        el("span", {}, el("b", { class: "today-venue" }, s.venue), " ", s.start ? `${s.start} 시작` : "시간은 공연 공지 확인",
+          el("span", { class: "today-title" }, s.title))));
+    }
+    box.append(ul);
+    const hits = noticesFor(day).filter((h) => hitTexts(h).some((x) => venueHit(x, day).length));
+    if (hits.length) box.append(el("p", { class: "today-alert" }, icon("alert", "ic sm"), el("span", {}, "공연장 주변에 공사 안내가 있어요. 아래에서 확인하세요.")));
+    if (i !== state.sel) {
+      const go = el("button", { type: "button", class: "live-btn" }, "이 날 안내 보기");
+      go.addEventListener("click", () => { select(i); $("day").scrollIntoView({ behavior: "smooth", block: "start" }); });
+      box.append(go);
+    }
+  }
+
+  // ---------- 선택한 날 ----------
+  const hm = (t) => kstTime(t);
+  function elevSummary(day, k) {
+    // 휠체어·유모차·천천히 걷는 분에게만: 역별 엘리베이터 상태 + 멈췄으면 대처
+    const out = [];
+    const st = chk.status;
+    const today = kstDate() === day.date;
+    const cfg = state.d.live;
+    if (st === null) { out.push({ kind: "tip", t: "지하철 엘리베이터 상태를 확인하는 중…" }); return out; }
+    if (!st.ok) {
+      out.push({ kind: "warn", t: "지하철 엘리베이터 실시간 상태를 불러오지 못했어요", s: "또타지하철 앱의 승강기 고장 알림이나 역에 직접 확인하세요.", src: "공식", url: "https://mediahub.seoul.go.kr/archives/2003952" });
+      return out;
+    }
+    const ageMin = (Date.now() - st.at.getTime()) / 60000;
+    const when = `${hm(st.at)} 확인` + (today ? "" : " · 가는 날 다시 확인하세요");
+    const groups = {};
+    for (const e of st.data.elevators) (groups[`${e.line} ${e.station}`] ||= []).push(e);
+    for (const [name, es] of Object.entries(groups)) {
+      const exits = es.filter((e) => e.kind === "exit"), inside = es.filter((e) => e.kind === "inside");
+      const stop = es.filter((e) => e.state !== "ok");
+      const parts = [
+        ...exits.map((e) => `${e.exit}번 출구 지상 엘리베이터 ${e.state === "ok" ? "운행 중" : e.state === "stop" ? "중지로 표시" : "상태 불명"}`),
+        inside.length ? `역 안 엘리베이터 ${inside.length}대 중 ${inside.filter((e) => e.state === "ok").length}대 운행 중` : null,
+      ].filter(Boolean).join(" · ");
+      if (!stop.length) {
+        out.push({ kind: "ok", t: `${name}역: ${parts}`, s: when, src: "공공데이터", url: st.data.source.url });
+      } else {
+        const fb = [...new Set(stop.map((e) => cfg.fallback[`${name} ${e.kind}`]).filter(Boolean))].join(" ");
+        out.push({ kind: "warn", t: `${name}역: ${parts}`, s: fb + " (" + when + ")", src: "공공데이터", url: st.data.source.url });
+      }
+    }
+    out.push({ kind: "gap", t: st.data.not_covered });
+    if (ageMin > cfg.stale_min) out.unshift({ kind: "warn", t: `엘리베이터 상태 확인이 늦어지고 있어요 (마지막 ${hm(st.at)})`, s: "또타지하철 앱이나 역에 직접 확인하세요." });
+    return out;
+  }
+
+  function constructionFor(day, k) {
+    const out = [];
+    const cfg = state.d.live;
+    if (chk.notices === null) { out.push({ kind: "tip", t: "공원 공지에서 공사·통제 안내를 찾는 중…" }); return out; }
+    if (!chk.notices.ok) {
+      out.push({ kind: "warn", t: "공원 공사·통제 공지를 불러오지 못했어요", s: "올팍소식 공지를 직접 확인하세요.", src: "공식", url: cfg.notice_board });
+      return out;
+    }
+    const hits = noticesFor(day);
+    if (!hits.length) {
+      out.push({ kind: "ok", t: "이 날짜에 해당하는 공원 공사·통제 공지는 찾지 못했어요", s: `올팍소식 ${hm(chk.notices.at)} 확인 · 공지에 없는 긴급 통제는 알 수 없어요`, src: "공식", url: cfg.notice_board });
+      return out;
+    }
+    const shortOf = Object.fromEntries(state.d.map.venues.map((v) => [v.key, v.short]));
+    const head = (txt) => {
+      const vs = venueHit(txt, day);
+      return vs.length ? `${vs.map((v) => shortOf[v] || v).join("·")} 주변 공사 — ` : "공원 공사 — ";
+    };
+    const rows = [];
+    for (const h of hits) {
+      if (h.segs.length) {
+        for (const g of h.segs) {
+          const near = venueHit(segText(g), day).length;
+          rows.push({ near, it: { kind: near ? "warn" : "tip", t: head(segText(g)) + (g.name || h.n.title),
+            s: [g.where && `위치: ${g.where}`, `기간: ${g.from} ~ ${g.to || "공지 확인"}`, g.ctrl && `통제: ${g.ctrl}`].filter(Boolean).join(" · "),
+            src: "공식", url: h.n.url } });
+        }
+      } else {
+        const txt = hitTexts(h)[0];
+        rows.push({ near: venueHit(txt, day).length, it: { kind: "warn", t: head(txt) + h.n.title,
+          s: "기간·위치는 공지에서 확인하세요" + (h.n.posted ? ` (공지 ${h.n.posted})` : ""), src: "공식", url: h.n.url } });
+      }
+    }
+    rows.sort((a, b) => b.near - a.near).forEach((r) => out.push(r.it));
+    if (k && cfg.construction_by_who[k]) out.push({ kind: "tip", t: cfg.construction_by_who[k] });
+    return out;
+  }
+
+  function liveItems(day, k) {
+    const items = [...constructionFor(day, k)];
+    if (["wheel", "stroller", "slow"].includes(k)) items.push(...elevSummary(day, k));
+    if (["wheel", "stroller", "slow", "vision"].includes(k)) {
+      const warn = items.some((it) => it.kind === "warn");
+      for (const h of state.d.live.help) items.push({ ...h, kind: warn ? "tip" : null });
+    }
+    return items;
+  }
+
   function renderDay(day) {
     const box = $("day");
     box.textContent = "";
@@ -142,24 +356,53 @@
       p.append(g);
     }
 
+    // 모두에게: 이 날 공사·통제 (열지 않아도 보이게)
+    const alerts = constructionFor(day, null).filter((it) => it.kind === "warn" || it.kind === "ok");
+    if (alerts.length) {
+      const al = el("ul", { class: "items alerts", "aria-label": "이 날 공사·통제 확인" });
+      alerts.forEach((it) => al.append(itemLi(it, false, shortOf)));
+      p.append(el("div", { class: "alert-box" }, el("h3", {}, icon("alert"), "공사·통제 확인"), al));
+    }
+
     const showVenue = vkeys.length > 1 && state.venue === "all";
-    const steps = el("div", { class: "steps" });
-    state.d.steps.forEach((st, n) => {
-      const dyn = (day.items[st.key] || []).filter((it) => state.venue === "all" || !it.venue || it.venue === state.venue);
-      const items = [...dyn, ...st.items].filter(forMe);
-      if (!items.length) return;
-      const sec = el("section", { class: "step", "aria-labelledby": `st-${st.key}` },
-        el("h3", { id: `st-${st.key}` }, el("span", { class: "num" }, String(n + 1)), icon(st.icon), st.title));
-      const list = el("ul", { class: "items" });
-      // 주의 → 그날 안내 → 늘 같은 안내 순서
-      // 집에 갈 때는 시간 순서(끝나는 시각 → 출차 → 콜택시) 그대로
-      const order = (it) => (st.key === "home" ? 0 : it.kind === "warn" ? 0 : it.kind === "gap" ? 3 : 1);
-      items.map((it, i) => [it, i]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1])
-        .forEach(([it]) => list.append(itemLi(it, showVenue, shortOf)));
-      sec.append(list);
-      steps.append(sec);
-    });
-    p.append(steps);
+    const cases = el("div", { class: "cases" },
+      el("h3", { class: "cases-h" }, "누구와 가세요? 눌러서 안내를 보세요"));
+    for (const [k, label] of Object.entries(state.d.who)) {
+      const f = forWho(k);
+      const live = liveItems(day, k);
+      let warnN = live.filter((it) => it.kind === "warn").length;
+      const body = el("div", { class: "case-body" });
+      if (live.length) {
+        const list = el("ul", { class: "items" });
+        live.forEach((it) => list.append(itemLi(it, false, shortOf)));
+        body.append(el("section", { class: "step live-step" }, el("h3", {}, el("span", { class: "num" }, "!"), icon("check"), "지금 확인"), list));
+      }
+      state.d.steps.forEach((st, n) => {
+        const dyn = (day.items[st.key] || []).filter((it) => state.venue === "all" || !it.venue || it.venue === state.venue);
+        const items = [...dyn, ...st.items].filter(f);
+        if (!items.length) return;
+        warnN += items.filter((it) => it.kind === "warn").length;
+        const sec = el("section", { class: "step", "aria-labelledby": `st-${k}-${st.key}` },
+          el("h3", { id: `st-${k}-${st.key}` }, el("span", { class: "num" }, String(n + 1)), icon(st.icon), st.title));
+        const list = el("ul", { class: "items" });
+        // 주의 → 그날 안내 → 늘 같은 안내 순서. 집에 갈 때는 시간 순서 그대로
+        const order = (it) => (st.key === "home" ? 0 : it.kind === "warn" ? 0 : it.kind === "gap" ? 3 : 1);
+        items.map((it, i) => [it, i]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1])
+          .forEach(([it]) => list.append(itemLi(it, showVenue, shortOf)));
+        sec.append(list);
+        body.append(sec);
+      });
+      const det = el("details", { class: "case", "data-who": k },
+        el("summary", {}, el("span", { class: "case-ic" }, icon(WHO_ICON[k] || "info")),
+          el("span", { class: "case-name" }, label),
+          el("span", { class: "case-n" }, warnN ? `주의 ${warnN}` : ""),
+          el("span", { class: "case-open", "aria-hidden": "true" })),
+        body);
+      if (state.open.has(k)) det.open = true;
+      det.addEventListener("toggle", () => { if (det.open) state.open.add(k); else state.open.delete(k); });
+      cases.append(det);
+    }
+    p.append(cases);
     box.append(p);
   }
 
@@ -342,12 +585,14 @@
     .then((d) => {
       state.d = d;
       renderFooter(d);
-      renderWho();
+      renderToday();
       if (!d.days.length) { $("day").textContent = "앞으로 60일 안에 공연이 없습니다."; return; }
       renderChips();
       renderDay(d.days[0]);
       try { initMap(); } catch (e) { $("map").textContent = "지도를 불러오지 못했습니다."; }
       highlightVenues(d.days[0]);
+      loadNotices();
+      loadStatus();
     })
     .catch(() => { $("day").textContent = "데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."; });
 })();

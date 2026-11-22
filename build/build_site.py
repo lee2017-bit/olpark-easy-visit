@@ -261,7 +261,7 @@ def build(days_ahead: int = 60) -> dict:
                   for k, v in venues_xy.items() if k in guide["venues"]]
     data = {
         "generated_at": dt.datetime.now(KST).strftime("%Y-%m-%d %H:%M"),
-        "who": guide["who"], "steps": steps, "gaps": guide["gaps"], "days": days,
+        "who": guide["who"], "steps": steps, "gaps": guide["gaps"], "days": days, "live": guide["live"],
         "subway": {"exits": [{k: x.get(k) for k in ("line", "station", "exit", "where", "lat", "lon", "osm", "src")} for x in exits],
                    "park_guidance": guide["subway"]["park_guidance"]},
         "map": {"venues": map_venues, "attribution": mp["attribution"]},
@@ -270,6 +270,9 @@ def build(days_ahead: int = 60) -> dict:
             {"name": "한국체육산업개발 입출차정보(전체구역) 2025 — 공연 뒤 출차 시각", "url": "https://www.data.go.kr/data/15159093/openapi.do"},
             {"name": "한국체육산업개발 주차장 혼잡도 정보", "url": "https://www.data.go.kr/data/15164156/fileData.do"},
             {"name": "올림픽공원 홈페이지 (공연장 좌석·주차·편의시설·공지)", "url": "https://www.ksponco.or.kr/olympicpark/"},
+            {"name": "올림픽공원 실시간 주차대수·주차장 예상 이용률 (열 때마다 불러옴)", "url": PARKING_PAGE},
+            {"name": "올림픽공원 올팍소식 공지 — 공사·통제 (열 때마다 불러옴)", "url": guide["live"]["notice_board"]},
+            {"name": "서울교통공사 엘리베이터 가동현황 (10분마다 확인)", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
             {"name": "서울교통공사 교통약자이용정보 (엘리베이터·충전기·화장실·안전발판)", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
             {"name": "서울시메트로9호선 2·3단계 승강기 현황", "url": "https://www.data.go.kr/data/15118716/fileData.do"},
             {"name": "서울시설공단 장애인콜택시 탑승내역 2025", "url": "https://www.data.go.kr/data/15115859/fileData.do"},

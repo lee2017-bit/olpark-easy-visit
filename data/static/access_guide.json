@@ -10,106 +10,519 @@
  },
  "venues": {
   "kspo_dome": {
-   "name": "KSPO DOME", "short": "KSPO DOME", "plcCd": "02",
-   "seats": {"t": "휠체어석: 2층 C블록(5~11구역) 뒤편", "s": "석 수는 공식 안내에 없음. 관람 후기에는 '1층 5~11구역 뒤 통로'로 적혀 층 표기가 다름", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301030800"},
-   "view": {"t": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요", "src": "기사", "url": "https://www.beminor.com/news/articleView.html?idxno=30041"},
+   "name": "KSPO DOME",
+   "short": "KSPO DOME",
+   "plcCd": "02",
+   "seats": {
+    "t": "휠체어석: 2층 C블록(5~11구역) 뒤편",
+    "s": "석 수는 공식 안내에 없음. 관람 후기에는 '1층 5~11구역 뒤 통로'로 적혀 층 표기가 다름",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301030800"
+   },
+   "view": {
+    "t": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+    "src": "기사",
+    "url": "https://www.beminor.com/news/articleView.html?idxno=30041"
+   },
    "bf": null,
    "bf_text": "장애물 없는 생활환경(BF) 인증 목록에 없음",
-   "lot": "P5", "lot_gates": "북2문·동2문·남2문", "lot_key": "체조경기장(KSPO DOME)", "walk": "주차장에서 1분",
-   "route_review": {"t": "9호선 올림픽공원역 3·4번 출구 엘리베이터에서 전동휠체어 약 8분, 수동휠체어 약 15분", "s": "아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기", "src": "후기", "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"},
-   "entry": {"t": "후기: 2-2 게이트로 들어갔음 (공연마다 다를 수 있음)", "src": "후기", "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"}
+   "lot": "P5",
+   "lot_gates": "북2문·동2문·남2문",
+   "lot_key": "체조경기장(KSPO DOME)",
+   "walk": "주차장에서 1분",
+   "route_review": {
+    "t": "9호선 올림픽공원역 3·4번 출구 엘리베이터에서 전동휠체어 약 8분, 수동휠체어 약 15분",
+    "s": "아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
+    "src": "후기",
+    "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+   },
+   "entry": {
+    "t": "후기: 2-2 게이트로 들어갔음 (공연마다 다를 수 있음)",
+    "src": "후기",
+    "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+   }
   },
   "olympic_hall": {
-   "name": "올림픽홀", "short": "올림픽홀", "plcCd": "01",
-   "seats": {"t": "장애인석 22석: B1·D1구역 위쪽 일부, F1~F3 앞쪽", "s": "기사: 대부분 공연에서 옆쪽 6석만 운영 (무대 배치에 따라 줄어듦)", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000"},
+   "name": "올림픽홀",
+   "short": "올림픽홀",
+   "plcCd": "01",
+   "seats": {
+    "t": "장애인석 22석: B1·D1구역 위쪽 일부, F1~F3 앞쪽",
+    "s": "기사: 대부분 공연에서 옆쪽 6석만 운영 (무대 배치에 따라 줄어듦)",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000"
+   },
    "bf": "우수 (~2029-10-29)",
-   "lot": "P2·올림픽홀 지하", "lot_gates": "동2문", "lot_key": "올림픽홀", "walk": "1~2분"
+   "lot": "P2·올림픽홀 지하",
+   "lot_gates": "동2문",
+   "lot_key": "올림픽홀",
+   "walk": "1~2분"
   },
   "handball": {
-   "name": "티켓링크 라이브 아레나(핸드볼경기장)", "short": "라이브 아레나", "plcCd": "03",
-   "seats": {"t": "휠체어석 수·위치: 공식 안내 없음", "s": "후기: 2층 24~26·32~34·39~41·47~49 통로. 기사: 기본 32석인데 무대를 세우면 16석", "src": "후기", "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/", "kind": "gap"},
+   "name": "티켓링크 라이브 아레나(핸드볼경기장)",
+   "short": "라이브 아레나",
+   "plcCd": "03",
+   "seats": {
+    "t": "휠체어석 수·위치: 공식 안내 없음",
+    "s": "후기: 2층 24~26·32~34·39~41·47~49 통로. 기사: 기본 32석인데 무대를 세우면 16석",
+    "src": "후기",
+    "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+    "kind": "gap"
+   },
    "bf": "우수 (~2028-11-27)",
-   "lot": "P6", "lot_gates": "동2문·남2문", "lot_key": "티켓링크 라이브아레나", "walk": "1~2분",
-   "entry": {"t": "후기: 2·3번 출입구가 편했음 (공연마다 다를 수 있음)", "src": "후기", "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/"}
+   "lot": "P6",
+   "lot_gates": "동2문·남2문",
+   "lot_key": "티켓링크 라이브아레나",
+   "walk": "1~2분",
+   "entry": {
+    "t": "후기: 2·3번 출입구가 편했음 (공연마다 다를 수 있음)",
+    "src": "후기",
+    "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/"
+   }
   },
   "woori_art_hall": {
-   "name": "우리금융아트홀", "short": "우리금융아트홀", "plcCd": "04",
-   "seats": {"t": "휠체어석 12석: 1층 A·C구역 22열 뒤에 6석씩", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"},
-   "caption": {"t": "영상자막기 보유 (공연마다 쓰는지는 주최 측에 문의)", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"},
+   "name": "우리금융아트홀",
+   "short": "우리금융아트홀",
+   "plcCd": "04",
+   "seats": {
+    "t": "휠체어석 12석: 1층 A·C구역 22열 뒤에 6석씩",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"
+   },
+   "caption": {
+    "t": "영상자막기 보유 (공연마다 쓰는지는 주최 측에 문의)",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100"
+   },
    "bf": "우수 (옛 역도경기장, ~2029-12-25)",
-   "lot": "P7", "lot_gates": "", "lot_key": "역도경기장", "walk": "1~2분"
+   "lot": "P7",
+   "lot_gates": "",
+   "lot_key": "역도경기장",
+   "walk": "1~2분"
   },
   "lawn88": {
-   "name": "88잔디마당", "short": "88잔디마당", "plcCd": "06",
-   "seats": {"t": "야외 공연장: 지정 장애인석·장애인 주차 안내 없음", "src": "공식", "kind": "gap"},
-   "notice": {"t": "잔디 공사 2026년 11월~2027년 3월", "src": "공식", "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=83219", "kind": "warn"},
-   "bf": null, "bf_text": "BF 인증 대상 건물 아님",
-   "lot": "동2문 쪽 주차장", "lot_gates": "동2문", "lot_key": null, "walk": ""
+   "name": "88잔디마당",
+   "short": "88잔디마당",
+   "plcCd": "06",
+   "seats": {
+    "t": "야외 공연장: 지정 장애인석·장애인 주차 안내 없음",
+    "src": "공식",
+    "kind": "gap"
+   },
+   "notice": {
+    "t": "잔디 공사 2026년 11월~2027년 3월",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=83219",
+    "kind": "warn"
+   },
+   "bf": null,
+   "bf_text": "BF 인증 대상 건물 아님",
+   "lot": "동2문 쪽 주차장",
+   "lot_gates": "동2문",
+   "lot_key": null,
+   "walk": ""
   },
   "muse_live": {
-   "name": "뮤즈라이브", "short": "뮤즈라이브", "plcCd": "07",
-   "seats": {"t": "휠체어석·편의시설: 공개된 안내를 찾지 못함 → 공연 문의처에 확인", "src": "공식", "kind": "gap"},
-   "bf": null, "bf_text": "BF 인증 기록 확인 못 함",
-   "lot": null, "lot_gates": "", "lot_key": null, "walk": ""
+   "name": "뮤즈라이브",
+   "short": "뮤즈라이브",
+   "plcCd": "07",
+   "seats": {
+    "t": "휠체어석·편의시설: 공개된 안내를 찾지 못함 → 공연 문의처에 확인",
+    "src": "공식",
+    "kind": "gap"
+   },
+   "bf": null,
+   "bf_text": "BF 인증 기록 확인 못 함",
+   "lot": null,
+   "lot_gates": "",
+   "lot_key": null,
+   "walk": ""
   }
  },
  "ticketing": {
-  "nol": {"name": "NOL 티켓(인터파크)", "match": ["nol.yanolja.com", "interpark.com"], "phone": "1544-1555", "hours": "09:00~18:00", "how": "휠체어석은 고객센터 전화 예매", "src": "공연 공지 사례"},
-  "yes24": {"name": "YES24 티켓", "match": ["yes24.com"], "phone": "1544-6399", "hours": null, "how": "휠체어석 예매 방법을 공개 자료로 확인 못 함 → 공연 공지·고객센터 확인", "src": "확인 못 함", "kind": "gap"},
-  "melon": {"name": "멜론티켓", "match": ["melon.com"], "phone": "1899-0042", "hours": null, "how": "휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례)", "src": "공연 공지 사례"},
-  "ticketlink": {"name": "티켓링크", "match": ["ticketlink.co.kr"], "phone": "1588-7890", "hours": "10:00~19:00", "how": "휠체어석은 고객센터 전화 예매, 2매 (공연 공지 사례)", "src": "공연 공지 사례", "url": "https://www.ticketlink.co.kr/help/notice/64629"}
+  "nol": {
+   "name": "NOL 티켓(인터파크)",
+   "match": [
+    "nol.yanolja.com",
+    "interpark.com"
+   ],
+   "phone": "1544-1555",
+   "hours": "09:00~18:00",
+   "how": "휠체어석은 고객센터 전화 예매",
+   "src": "공연 공지 사례"
+  },
+  "yes24": {
+   "name": "YES24 티켓",
+   "match": [
+    "yes24.com"
+   ],
+   "phone": "1544-6399",
+   "hours": null,
+   "how": "휠체어석 예매 방법을 공개 자료로 확인 못 함 → 공연 공지·고객센터 확인",
+   "src": "확인 못 함",
+   "kind": "gap"
+  },
+  "melon": {
+   "name": "멜론티켓",
+   "match": [
+    "melon.com"
+   ],
+   "phone": "1899-0042",
+   "hours": null,
+   "how": "휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례)",
+   "src": "공연 공지 사례"
+  },
+  "ticketlink": {
+   "name": "티켓링크",
+   "match": [
+    "ticketlink.co.kr"
+   ],
+   "phone": "1588-7890",
+   "hours": "10:00~19:00",
+   "how": "휠체어석은 고객센터 전화 예매, 2매 (공연 공지 사례)",
+   "src": "공연 공지 사례",
+   "url": "https://www.ticketlink.co.kr/help/notice/64629"
+  }
  },
  "subway": {
   "exits": [
-   {"line": "5호선", "station": "올림픽공원", "exits": ["2"], "src": "공공데이터", "note": "지상으로 나가는 엘리베이터는 2번 출입구 1대"},
-   {"line": "9호선", "station": "올림픽공원", "exits": ["3", "4"], "src": "공공데이터", "note": "3·4번 출구 엘리베이터 (9호선 2·3단계 승강기 현황)"},
-   {"line": "8호선", "station": "몽촌토성", "exits": ["4"], "src": "공공데이터", "note": "지상 엘리베이터는 4번 출입구 하나뿐"},
-   {"line": "9호선", "station": "한성백제", "exits": ["1", "2"], "src": "공공데이터", "note": "2번 출구로 나오면 남4문 쪽"}
+   {
+    "line": "5호선",
+    "station": "올림픽공원",
+    "exits": [
+     "2"
+    ],
+    "src": "공공데이터",
+    "note": "지상으로 나가는 엘리베이터는 2번 출입구 1대"
+   },
+   {
+    "line": "9호선",
+    "station": "올림픽공원",
+    "exits": [
+     "3",
+     "4"
+    ],
+    "src": "공공데이터",
+    "note": "3·4번 출구 엘리베이터 (9호선 2·3단계 승강기 현황)"
+   },
+   {
+    "line": "8호선",
+    "station": "몽촌토성",
+    "exits": [
+     "4"
+    ],
+    "src": "공공데이터",
+    "note": "지상 엘리베이터는 4번 출입구 하나뿐"
+   },
+   {
+    "line": "9호선",
+    "station": "한성백제",
+    "exits": [
+     "1",
+     "2"
+    ],
+    "src": "공공데이터",
+    "note": "2번 출구로 나오면 남4문 쪽"
+   }
   ],
   "park_guidance": "공원 공식 안내 출구: 5·9호선 올림픽공원역 3·4번, 8호선 몽촌토성역 1번, 9호선 한성백제역 2번"
  },
  "steps": [
-  {"key": "ticket", "title": "예매할 때", "icon": "ticket", "items": [
-   {"who": ["wheel"], "kind": "warn", "t": "휠체어석은 대부분 고객센터 전화로만 예매해요", "s": "예매 오픈 직후 매진되는 일이 많고, 동반인도 따로 전화 예매해야 했던 공연이 있어요", "src": "기사", "url": "https://www.beminor.com/news/articleView.html?idxno=30041"},
-   {"who": ["hearing"], "kind": "tip", "t": "전화 예매가 어렵다면 손말이음센터(국번 없이 107)로 문자·영상 통역 전화를 걸 수 있어요", "src": "공공 서비스"},
-   {"who": ["wheel"], "kind": "warn", "t": "현장 수령: 예매자 본인 명의 장애인등록증(복지카드) 실물과 신분증을 꼭 챙기세요", "s": "최근 공연 공지들에 공통: 안 가져오면 동반인까지 입장 못 하고 당일 환불도 안 됨. 등록증이 있어도 휠체어를 쓰지 않으면 휠체어석은 안 됨. 공연마다 조건이 다르니 그 공연 공지를 확인하세요", "src": "공연 공지 사례"},
-   {"who": [], "t": "장애인·동반인 할인은 공연마다 달라요 → 주최 측(공연 문의처)에 물어보세요", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20710000000"},
-   {"who": ["hearing", "vision"], "kind": "gap", "t": "수어통역·자막·음성해설 제공 여부는 공연 정보에 없어요 → 예매 전에 공연 문의처에 확인", "src": "공식"},
-   {"who": ["stroller"], "t": "관람 연령을 확인하세요: 대부분 공연이 7~8세 이상이에요", "src": "공식"}
-  ]},
-  {"key": "go", "title": "가는 길", "icon": "train", "items": [
-   {"who": ["wheel", "stroller", "slow"], "kind": "warn", "t": "공원이 안내하는 출구와 엘리베이터 출구가 달라요", "s": "몽촌토성역(8호선) 1번 출구는 에스컬레이터만 있어요 → 4번 출구. 5호선 올림픽공원역의 지상 엘리베이터는 2번 출구에만 있어요 (3·4번 출구 엘리베이터는 9호선 시설)", "src": "공공데이터", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
-   {"who": ["wheel", "stroller"], "kind": "gap", "t": "5호선 승강장에서 9호선 쪽 3·4번 출구까지 계단 없이 이어지는지는 공개 자료로 확인 못 했어요 → 5호선은 2번 출구가 확실해요", "src": "확인 못 함"},
-   {"who": ["wheel"], "t": "전동휠체어 충전: 올림픽공원역 지하1층 아이센터 옆, 몽촌토성역 지하2층 고객상담실 입구 왼쪽", "src": "공공데이터", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
-   {"who": ["wheel"], "t": "열차 틈 안전발판: 몽촌토성역 있음, 5호선 올림픽공원역 없음", "src": "공공데이터", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
-   {"who": ["wheel", "stroller", "slow"], "t": "역 안 교통약자 화장실: 5호선 올림픽공원역 지하1층 2번 출입구 앞, 몽촌토성역 지하1층 1·2·3번 출입구 쪽", "src": "공공데이터", "url": "https://www.data.go.kr/data/15143843/openapi.do"},
-   {"who": ["wheel"], "t": "장애인콜택시 1588-4388 (서울시설공단): 5km까지 1,500원, 시간 할증 없음", "s": "중증 보행장애인 등 등록한 사람만 이용", "src": "공식", "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"},
-   {"who": ["slow"], "kind": "warn", "t": "다리를 다쳐 잠시 못 걷는 경우 장애인콜택시는 진료·치료 목적만 돼요 → 공연 관람엔 못 써요", "src": "공식", "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"},
-   {"who": ["vision"], "t": "시각장애인은 원칙적으로 복지콜(1600-4477)을 이용해요", "src": "공식", "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"},
-   {"who": ["wheel", "stroller", "slow"], "kind": "gap", "t": "저상버스 실시간 도착 정보는 아직 이 안내에 없어요 (정류장별 노선은 공원 '오시는 길')", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20109000000"}
-  ]},
-  {"key": "park", "title": "주차", "icon": "park", "items": [
-   {"who": ["wheel", "slow", "stroller"], "t": "장애인 주차구역 합계 85면 (12곳)", "s": "체조경기장(KSPO DOME) 10 · 올림픽홀 5 · 라이브아레나 3 · 역도경기장(우리금융아트홀) 6 · 테니스장 10 · 수영장 7 · 남2문 P1A 6 · P1B 6 · 남3문 6 · 남4문 12 · 서1문 3 · 서2문 11. 공연일에 장애인 차량을 따로 운영한다는 안내는 없어요", "src": "공식", "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=82568"},
-   {"who": [], "t": "요금 10분 600원, 하루 최대 20,000원. 장애인 차량 50% 할인", "s": "2026년 4월부터 현금을 받지 않아요 (카드·삼성페이·QR). 무인정산기에서 할인받는 방법은 공식 안내에 없어요", "src": "공식", "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=83524"},
-   {"who": [], "kind": "warn", "t": "출차: 북2문·남2문은 22:30까지, 동2문은 24시간", "s": "입차는 06:00~22:00", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"}
-  ]},
-  {"key": "inpark", "title": "공원 안 이동", "icon": "ramp", "items": [
-   {"who": ["wheel", "stroller"], "t": "공식 휠체어 진입로: 동2문 입차 → 그래피티의 벽 주차장 → 올림픽공원역 쪽 경사로 → 만남의광장", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000"},
-   {"who": ["wheel", "slow"], "t": "휠체어 무료 대여: 평화의광장 안내센터 3대(09:00~19:00, 점심 12~13시, 02-2180-3564), 만남의광장 안내센터 3대(02-2180-3566)", "s": "신분증을 맡기고 3시간. 만남의광장 운영시간은 공식 안내에 없어요", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000"},
-   {"who": ["wheel", "stroller"], "t": "전동휠체어·전동 유모차는 공원에 들어갈 수 있어요 (전동 킥보드 등은 금지)", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"},
-   {"who": ["stroller"], "kind": "gap", "t": "유모차 대여: 공원 공식 안내에 없어요 (한국관광공사 자료엔 평화의광장 4대·동1문 3대) → 안내센터에 전화로 확인", "src": "공공데이터"},
-   {"who": ["stroller"], "t": "수유실: 평화의광장 안내센터 (유료 보관함도 운영시간 안에 이용)", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000"},
-   {"who": ["wheel", "stroller", "slow"], "kind": "gap", "t": "공원 화장실 14곳 중 어디가 장애인 화장실인지 공식 지도에 표시가 없어요", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/map?mid=a20102000000"},
-   {"who": ["vision", "slow"], "t": "남문~북문 길에 거리·소요시간·난이도를 적은 보행 안내판, 몽촌역사관 앞에 음성 안내 안내판이 있어요 (2023년 시범 설치)", "src": "기사", "url": "https://mediahub.seoul.go.kr/archives/2006860"},
-   {"who": [], "t": "공원 안 걸어서 다니기 05:00~22:00 (광장은 24:00까지)", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"}
-  ]},
-  {"key": "venue", "title": "공연장 안", "icon": "stage", "items": [
-   {"who": ["wheel"], "t": "현장 안내원을 따라 휠체어석으로 이동해요. 매표소는 보통 공연 1시간 30분 전에 열려요", "src": "공식", "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20710000000"},
-   {"who": ["vision"], "t": "장애인 보조견은 정당한 사유 없이 출입을 거부할 수 없어요 (장애인복지법 제40조)", "src": "법"}
-  ]},
-  {"key": "home", "title": "집에 갈 때", "icon": "home", "items": [
-   {"who": ["wheel"], "kind": "tip", "t": "장애인콜택시는 공연장 바로 앞보다 방이역 쪽이나 근처 실내(카페 등)에서 기다리는 편이 수월했다는 후기", "src": "후기", "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/"}
-  ]}
+  {
+   "key": "ticket",
+   "title": "예매할 때",
+   "icon": "ticket",
+   "items": [
+    {
+     "who": [
+      "wheel"
+     ],
+     "kind": "warn",
+     "t": "휠체어석은 대부분 고객센터 전화로만 예매해요",
+     "s": "예매 오픈 직후 매진되는 일이 많고, 동반인도 따로 전화 예매해야 했던 공연이 있어요",
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041"
+    },
+    {
+     "who": [
+      "hearing"
+     ],
+     "kind": "tip",
+     "t": "전화 예매가 어렵다면 손말이음센터(국번 없이 107)로 문자·영상 통역 전화를 걸 수 있어요",
+     "src": "공공 서비스"
+    },
+    {
+     "who": [
+      "wheel"
+     ],
+     "kind": "warn",
+     "t": "현장 수령: 예매자 본인 명의 장애인등록증(복지카드) 실물과 신분증을 꼭 챙기세요",
+     "s": "최근 공연 공지들에 공통: 안 가져오면 동반인까지 입장 못 하고 당일 환불도 안 됨. 등록증이 있어도 휠체어를 쓰지 않으면 휠체어석은 안 됨. 공연마다 조건이 다르니 그 공연 공지를 확인하세요",
+     "src": "공연 공지 사례"
+    },
+    {
+     "who": [],
+     "t": "장애인·동반인 할인은 공연마다 달라요 → 주최 측(공연 문의처)에 물어보세요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20710000000"
+    },
+    {
+     "who": [
+      "hearing",
+      "vision"
+     ],
+     "kind": "gap",
+     "t": "수어통역·자막·음성해설 제공 여부는 공연 정보에 없어요 → 예매 전에 공연 문의처에 확인",
+     "src": "공식"
+    },
+    {
+     "who": [
+      "stroller"
+     ],
+     "t": "관람 연령을 확인하세요: 대부분 공연이 7~8세 이상이에요",
+     "src": "공식"
+    }
+   ]
+  },
+  {
+   "key": "go",
+   "title": "지하철·콜택시로 가기",
+   "icon": "train",
+   "items": [
+    {
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "kind": "warn",
+     "t": "공원이 안내하는 출구와 엘리베이터 출구가 달라요",
+     "s": "몽촌토성역(8호선) 1번 출구는 에스컬레이터만 있어요 → 4번 출구. 5호선 올림픽공원역의 지상 엘리베이터는 2번 출구에만 있어요 (3·4번 출구 엘리베이터는 9호선 시설)",
+     "src": "공공데이터",
+     "url": "https://www.data.go.kr/data/15143843/openapi.do"
+    },
+    {
+     "who": [
+      "wheel",
+      "stroller"
+     ],
+     "kind": "gap",
+     "t": "5호선 승강장에서 9호선 쪽 3·4번 출구까지 계단 없이 이어지는지는 공개 자료로 확인 못 했어요 → 5호선은 2번 출구가 확실해요",
+     "src": "확인 못 함"
+    },
+    {
+     "who": [
+      "wheel"
+     ],
+     "t": "전동휠체어 충전: 올림픽공원역 지하1층 아이센터 옆, 몽촌토성역 지하2층 고객상담실 입구 왼쪽",
+     "src": "공공데이터",
+     "url": "https://www.data.go.kr/data/15143843/openapi.do"
+    },
+    {
+     "who": [
+      "wheel"
+     ],
+     "t": "열차 틈 안전발판: 몽촌토성역 있음, 5호선 올림픽공원역 없음",
+     "src": "공공데이터",
+     "url": "https://www.data.go.kr/data/15143843/openapi.do"
+    },
+    {
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "t": "역 안 교통약자 화장실: 5호선 올림픽공원역 지하1층 2번 출입구 앞, 몽촌토성역 지하1층 1·2·3번 출입구 쪽",
+     "src": "공공데이터",
+     "url": "https://www.data.go.kr/data/15143843/openapi.do"
+    },
+    {
+     "who": [
+      "wheel"
+     ],
+     "t": "장애인콜택시 1588-4388 (서울시설공단): 5km까지 1,500원, 시간 할증 없음",
+     "s": "중증 보행장애인 등 등록한 사람만 이용",
+     "src": "공식",
+     "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"
+    },
+    {
+     "who": [
+      "slow"
+     ],
+     "kind": "warn",
+     "t": "다리를 다쳐 잠시 못 걷는 경우 장애인콜택시는 진료·치료 목적만 돼요 → 공연 관람엔 못 써요",
+     "src": "공식",
+     "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"
+    },
+    {
+     "who": [
+      "vision"
+     ],
+     "t": "시각장애인은 원칙적으로 복지콜(1600-4477)을 이용해요",
+     "src": "공식",
+     "url": "https://sisul.or.kr/open_content/calltaxi/introduce/receipt.jsp"
+    },
+    {
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "kind": "gap",
+     "t": "저상버스 실시간 도착 정보는 아직 이 안내에 없어요 (정류장별 노선은 공원 '오시는 길')",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20109000000"
+    }
+   ]
+  },
+  {
+   "key": "park",
+   "title": "차로 가기 (주차)",
+   "icon": "park",
+   "items": [
+    {
+     "who": [
+      "wheel",
+      "slow",
+      "stroller"
+     ],
+     "t": "장애인 주차구역 합계 85면 (12곳)",
+     "s": "체조경기장(KSPO DOME) 10 · 올림픽홀 5 · 라이브아레나 3 · 역도경기장(우리금융아트홀) 6 · 테니스장 10 · 수영장 7 · 남2문 P1A 6 · P1B 6 · 남3문 6 · 남4문 12 · 서1문 3 · 서2문 11. 공연일에 장애인 차량을 따로 운영한다는 안내는 없어요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=82568"
+    },
+    {
+     "who": [],
+     "t": "요금 10분 600원, 하루 최대 20,000원. 장애인 차량 50% 할인",
+     "s": "2026년 4월부터 현금을 받지 않아요 (카드·삼성페이·QR). 무인정산기에서 할인받는 방법은 공식 안내에 없어요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/board.es?mid=a10301000000&bid=0046&act=view&list_no=83524"
+    },
+    {
+     "who": [],
+     "kind": "warn",
+     "t": "출차: 북2문·남2문은 22:30까지, 동2문은 24시간",
+     "s": "입차는 06:00~22:00",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"
+    }
+   ]
+  },
+  {
+   "key": "inpark",
+   "title": "공원 안 이동",
+   "icon": "ramp",
+   "items": [
+    {
+     "who": [
+      "wheel",
+      "stroller"
+     ],
+     "t": "공식 휠체어 진입로: 동2문 입차 → 그래피티의 벽 주차장 → 올림픽공원역 쪽 경사로 → 만남의광장",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000"
+    },
+    {
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "t": "휠체어 무료 대여: 평화의광장 안내센터 3대(09:00~19:00, 점심 12~13시, 02-2180-3564), 만남의광장 안내센터 3대(02-2180-3566)",
+     "s": "신분증을 맡기고 3시간. 만남의광장 운영시간은 공식 안내에 없어요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000"
+    },
+    {
+     "who": [
+      "wheel",
+      "stroller"
+     ],
+     "t": "전동휠체어·전동 유모차는 공원에 들어갈 수 있어요 (전동 킥보드 등은 금지)",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"
+    },
+    {
+     "who": [
+      "stroller"
+     ],
+     "kind": "gap",
+     "t": "유모차 대여: 공원 공식 안내에 없어요 (한국관광공사 자료엔 평화의광장 4대·동1문 3대) → 안내센터에 전화로 확인",
+     "src": "공공데이터"
+    },
+    {
+     "who": [
+      "stroller"
+     ],
+     "t": "수유실: 평화의광장 안내센터 (유료 보관함도 운영시간 안에 이용)",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000"
+    },
+    {
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "kind": "gap",
+     "t": "공원 화장실 14곳 중 어디가 장애인 화장실인지 공식 지도에 표시가 없어요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/map?mid=a20102000000"
+    },
+    {
+     "who": [
+      "vision",
+      "slow"
+     ],
+     "t": "남문~북문 길에 거리·소요시간·난이도를 적은 보행 안내판, 몽촌역사관 앞에 음성 안내 안내판이 있어요 (2023년 시범 설치)",
+     "src": "기사",
+     "url": "https://mediahub.seoul.go.kr/archives/2006860"
+    },
+    {
+     "who": [],
+     "t": "공원 안 걸어서 다니기 05:00~22:00 (광장은 24:00까지)",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000"
+    }
+   ]
+  },
+  {
+   "key": "venue",
+   "title": "공연장 안",
+   "icon": "stage",
+   "items": [
+    {
+     "who": [
+      "wheel"
+     ],
+     "t": "현장 안내원을 따라 휠체어석으로 이동해요. 매표소는 보통 공연 1시간 30분 전에 열려요",
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20710000000"
+    },
+    {
+     "who": [
+      "vision"
+     ],
+     "t": "장애인 보조견은 정당한 사유 없이 출입을 거부할 수 없어요 (장애인복지법 제40조)",
+     "src": "법"
+    }
+   ]
+  },
+  {
+   "key": "home",
+   "title": "집에 갈 때",
+   "icon": "home",
+   "items": [
+    {
+     "who": [
+      "wheel"
+     ],
+     "kind": "tip",
+     "t": "장애인콜택시는 공연장 바로 앞보다 방이역 쪽이나 근처 실내(카페 등)에서 기다리는 편이 수월했다는 후기",
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/"
+    }
+   ]
+  }
  ],
  "gaps": [
   "KSPO DOME·라이브 아레나·뮤즈라이브의 휠체어석 수, 무대 배치에 따라 남는 석 수",
@@ -118,5 +531,63 @@
   "역 엘리베이터 출구·주차장에서 각 공연장까지 계단 없는 길(경사·거리·단차)",
   "공원 화장실·수유실·안내센터 위치 좌표와 장애인 화장실 여부",
   "공연이 끝난 밤 장애인콜택시 승하차 지점과 실내 대기 공간"
- ]
+ ],
+ "live": {
+  "notice_board": "https://www.ksponco.or.kr/olympicpark/board.es?mid=a20601000000&bid=0045",
+  "notice_keywords": "공사|통제|폐쇄|보수|정비|운휴|중단|휴장|휴관|승강기|엘리베이터|우회|출입 제한|출입제한",
+  "venue_alias": {
+   "kspo_dome": [
+    "케이스포돔",
+    "KSPO",
+    "체조경기장"
+   ],
+   "handball": [
+    "핸드볼",
+    "티켓링크 라이브"
+   ],
+   "olympic_hall": [
+    "올림픽홀"
+   ],
+   "woori_art_hall": [
+    "우리금융아트홀",
+    "역도경기장"
+   ],
+   "lawn88": [
+    "88잔디마당",
+    "잔디마당"
+   ],
+   "muse_live": [
+    "뮤즈라이브",
+    "뮤즈 라이브"
+   ]
+  },
+  "status_url": "https://raw.githubusercontent.com/lee2017-bit/olpark-easy-visit/status/status.json",
+  "stale_min": 40,
+  "fallback": {
+   "5호선 올림픽공원 exit": "2번 출구 엘리베이터가 멈췄으면: 9호선 쪽 3·4번 출구 엘리베이터로 가는 길을 역 고객안전실(역무실)에 물어 도움을 받으세요. 5·9호선 사이가 계단 없이 이어지는지는 공개 자료로 확인하지 못했어요.",
+   "5호선 올림픽공원 inside": "승강장과 대합실 사이 엘리베이터가 멈췄으면: 내리기 전에 역 고객안전실에 연락해 도움을 받거나, 8호선 몽촌토성역(4번 출구)으로 가세요.",
+   "8호선 몽촌토성 exit": "4번 출구 엘리베이터가 멈췄으면: 몽촌토성역엔 다른 지상 엘리베이터가 없어요 → 5·9호선 올림픽공원역(5호선 2번, 9호선 3·4번 출구)으로 가세요.",
+   "8호선 몽촌토성 inside": "역 안 엘리베이터가 멈췄으면: 내리기 전에 역 고객안전실에 연락해 도움을 받거나 5·9호선 올림픽공원역으로 가세요."
+  },
+  "help": [
+   {
+    "t": "지하철에서 막히면 역 고객안전실(역무실)에 도움을 요청하세요",
+    "s": "휠체어 이용자는 고객센터나 고객안전실에 전화로 요청하면 역 직원이 승하차를 도와요. 또타지하철 앱에서 승강기 고장 알림과 직원 도움 요청을 할 수 있어요.",
+    "src": "공식",
+    "url": "https://mediahub.seoul.go.kr/archives/2017888"
+   },
+   {
+    "t": "공원 안에서 길이 막히면 올림픽공원 대표전화 02-410-1114",
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/"
+   }
+  ],
+  "construction_by_who": {
+   "wheel": "통제 구간 때문에 평소 다니던 경사로·보도가 막힐 수 있어요. 막혔으면 혼자 다른 길을 찾기보다 현장 안내 요원이나 공원(02-410-1114)에 물어보세요.",
+   "stroller": "통제 구간 때문에 평소 다니던 보도가 막힐 수 있어요. 막혔으면 현장 안내 요원에게 다른 길을 물어보세요.",
+   "slow": "공사 구간은 바닥이 고르지 않을 수 있어요. 시간을 넉넉히 잡으세요.",
+   "vision": "공사 구간은 임시 펜스·자재가 있고 점자블록이 끊기거나 길이 바뀔 수 있어요. 동행인과 함께 가거나 공원(02-410-1114)에 도움을 요청하세요.",
+   "hearing": "공사 구간 안내 방송을 못 들을 수 있어요. 현장 안내판·안내 요원의 손짓을 확인하세요."
+  }
+ }
 }

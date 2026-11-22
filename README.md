@@ -18,6 +18,8 @@
 - `data/static/map_points.json` 지도 좌표: 공연장·지하철 출구의 OpenStreetMap 요소 좌표(© OpenStreetMap contributors, ODbL). 추정 좌표 없음
 - `build/build_site.py` site.json 생성: 공연 일정 + 늘 같은 안내 + 날짜별 항목(예매처, 가까운 엘리베이터 출구, 끝나는 시각, 출차 몰림 시간대, 콜택시 대기, 비 예보 등)
 - `.github/workflows/site.yml` 매주 월·목 06:17(KST) 데이터 갱신 → 커밋 → 배포. 수집이 실패해도 기존 데이터로 배포
+- `.github/workflows/status.yml` 06~24시 10분마다 5호선 올림픽공원·8호선 몽촌토성 엘리베이터 가동현황(`collectors/live_status.py`)을 `status` 브랜치의 `status.json` 하나로 올림. 사이트가 raw.githubusercontent.com 에서 읽음(키는 Actions 안에서만)
+- 실시간 주차대수·기관 예상 이용률, 올팍소식 공사·통제 공지는 방문자 브라우저가 기관 홈페이지에서 바로 읽음(Access-Control-Allow-Origin: *)
 - 저장소 Secrets: `DATA_GO_KR_KEY` (자동 갱신용, 이것 하나만 필요)
 
 로컬 미리보기: `python3 -m build.build_site && cd site && python3 -m http.server`
