@@ -19,7 +19,7 @@
   };
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const WHO_ICON = { wheel: "wheel", stroller: "stroller", slow: "cane", vision: "eye", hearing: "ear" };
-  const KIND = { warn: ["alert", "주의"], tip: ["info", "도움말"], gap: ["question", "공개 자료 없음"], ok: ["check", "확인됨"] };
+  const KIND = { warn: ["alert", "주의"], tip: ["info", "도움말"], gap: ["question", "공개 자료 없음"], ok: ["check", "이상 표시 없음"] };
   const FIRST = 10;
   const LABEL_SIDE = { kspo_dome: "right", lawn88: "left", woori_art_hall: "left" };
   const store = {
@@ -253,23 +253,26 @@
       return out;
     }
     const ageMin = (Date.now() - st.at.getTime()) / 60000;
-    const when = `${hm(st.at)} 확인` + (today ? "" : " · 가는 날 다시 확인하세요");
+    const when = `서울교통공사 자료 ${hm(st.at)}에 불러옴` + (today ? "" : " · 가는 날 다시 확인하세요");
     const groups = {};
     for (const e of st.data.elevators) (groups[`${e.line} ${e.station}`] ||= []).push(e);
     for (const [name, es] of Object.entries(groups)) {
       const exits = es.filter((e) => e.kind === "exit"), inside = es.filter((e) => e.kind === "inside");
       const stop = es.filter((e) => e.state !== "ok");
       const parts = [
-        ...exits.map((e) => `${e.exit}번 출구 지상 엘리베이터 ${e.state === "ok" ? "운행 중" : e.state === "stop" ? "중지로 표시" : "상태 불명"}`),
-        inside.length ? `역 안 엘리베이터 ${inside.length}대 중 ${inside.filter((e) => e.state === "ok").length}대 운행 중` : null,
+        ...exits.map((e) => `${e.exit}번 출구 지상 엘리베이터 ${e.state === "ok" ? "운행 중으로 표시" : e.state === "stop" ? "중지로 표시" : "상태 불명"}`),
+        inside.length ? `역 안 엘리베이터 ${inside.length}대 중 ${inside.filter((e) => e.state === "ok").length}대 운행 중으로 표시` : null,
       ].filter(Boolean).join(" · ");
       if (!stop.length) {
-        out.push({ kind: "ok", t: `${name}역: ${parts}`, s: when, src: "공공데이터", url: st.data.source.url });
+        // 자료상 정상이어도 고장이 늦게 반영될 수 있으니, 가서 멈춰 있을 때 갈 길을 늘 함께 보여 준다
+        const fb = exits.length ? cfg.fallback[`${name} exit`] : "";
+        out.push({ kind: "ok", t: `${name}역: ${parts}`, s: [when, fb].filter(Boolean).join(" · "), src: "공공데이터", url: st.data.source.url });
       } else {
         const fb = [...new Set(stop.map((e) => cfg.fallback[`${name} ${e.kind}`]).filter(Boolean))].join(" ");
         out.push({ kind: "warn", t: `${name}역: ${parts}`, s: fb + " (" + when + ")", src: "공공데이터", url: st.data.source.url });
       }
     }
+    out.push({ kind: "gap", t: cfg.elev_lag });
     out.push({ kind: "gap", t: st.data.not_covered });
     if (ageMin > cfg.stale_min) out.unshift({ kind: "warn", t: `엘리베이터 상태 확인이 늦어지고 있어요 (마지막 ${hm(st.at)})`, s: "또타지하철 앱이나 역에 직접 확인하세요." });
     return out;
