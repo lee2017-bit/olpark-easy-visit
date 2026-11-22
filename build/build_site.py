@@ -129,6 +129,9 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
     """그날·그 공연에 따라 바뀌는 안내. 각 항목에 venue가 있으면 그 공연장 공연을 고를 때만 보임."""
     G = guide["venues"]
     it = {k: [] for k in ("ticket", "go", "park", "inpark", "venue", "home")}
+    # 「이 날 꼭 알아야 할 것」 후보: 판단을 바꾸는 것만, rank가 클수록 위. 브라우저가 실시간 항목과 합쳐 3개만 보여 줌.
+    # group이 같으면 하나만, when="before"는 공연 당일이 지나면(당일 포함) 빠짐.
+    must: list[dict] = []
     W, ALL_MOVE = ["wheel"], ["wheel", "stroller", "slow"]
     seen_v, seen_vendor = set(), set()
     for e in evs.itertuples():
@@ -140,9 +143,21 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
                                  "t": f"{g['short']} 예매처 {vd['name']}: {vd['how']}",
                                  "s": f"고객센터 {vd['phone']}" + (f" ({vd['hours']})" if vd.get("hours") else "")
                                       + (f" · 공연 문의 {e.inquiry}" if isinstance(e.inquiry, str) else "")})
+            gap = vd.get("kind") == "gap"
+            must.append({"rank": 70 if gap else 76, "group": "ticket", "when": "before", "who": W, "src": vd["src"],
+                        "url": vd.get("url"), "kind": "gap" if gap else "warn", "venue": e.venue,
+                        "t": f"{vd['name']}의 휠체어석 예매 방법은 공개돼 있지 않아요" if gap
+                             else f"{g['short']} 휠체어석은 온라인이 아니라 {vd['name']} 고객센터 전화로 예매해요",
+                        "do": f"공연 공지를 보거나 고객센터 {vd['phone']}에 물어보세요" if gap
+                              else f"{vd['phone']}" + (f" ({vd['hours']})" if vd.get("hours") else "")
+                                   + (" · " + vd["how"].split(",", 1)[1].strip() if "," in vd["how"] else "")})
         if e.venue in seen_v:
             continue
         seen_v.add(e.venue)
+        if g.get("key"):
+            inq = e.inquiry if isinstance(e.inquiry, str) else "공연 공지의 문의처"
+            must.append({**g["key"], "group": f"venue:{e.venue}", "venue": e.venue,
+                        "do": g["key"]["do"].replace("{inquiry}", inq)})
         # 가는 길: 가까운 엘리베이터 출구
         if e.venue in venues_xy:
             grp: dict = {}
@@ -196,6 +211,10 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
                                "s": f"2025년 KSPO DOME 저녁 공연 {wave['n']}일, 시작 {_hm(wave['q25'])}~{_hm(wave['q75'])} 뒤에 "
                                     f"가장 많이 나갔어요" + (f" (가장 붐빈 30분에 약 {wave['peak30']}대)" if wave.get("peak30") else "")
                                     + ". 휠체어 승하차에 시간이 걸리면 이때를 피하세요"})
+            must.append({"rank": 50, "group": "exit_peak", "who": ALL_MOVE, "src": "분석", "kind": "warn", "venue": e.venue,
+                        "url": "https://www.data.go.kr/data/15159093/openapi.do",
+                        "t": f"차로 왔다면: 공연 뒤 출차는 {_fmt_h(a)}~{_fmt_h(b)}에 가장 몰려요",
+                        "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"})
         elif end_h:
             late |= end_h >= 21.5
     if taxi and any(v in CALLTAXI_VENUES and (h or 0) >= 16 for v, h in zip(evs.venue, evs.start_h)):
@@ -203,19 +222,36 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
                            "t": f"공연 끝난 밤 공원에서 장애인콜택시 대기: 중간값 {taxi['median']}분 (공연 없는 밤 {taxi['median_other']}분)",
                            "s": f"4건 중 1건은 {taxi['p75']}분 넘게 기다렸고 {taxi['cancel']}%는 취소됐어요 "
                                 f"(2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 {taxi['n']}건)"})
+        must.append({"rank": 80, "group": "taxi", "who": ["wheel"], "src": "분석", "kind": "warn",
+                    "url": "https://www.data.go.kr/data/15115859/fileData.do",
+                    "t": f"공연 끝난 밤 장애인콜택시는 보통 {taxi['median']}분 기다려요 (공연 없는 밤 {taxi['median_other']}분)",
+                    "do": f"4건 중 1건은 {taxi['p75']}분 넘게 기다렸고 {taxi['cancel']}%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"})
     if late:
         it["home"].append({"who": [], "kind": "warn", "src": "공식",
                            "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
                            "t": "늦게 끝나면: 북2문·남2문 출차는 22:30까지, 동2문은 24시간",
                            "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"})
+        must.append({"rank": 74, "group": "late", "who": [], "src": "공식", "kind": "warn",
+                    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+                    "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+                    "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"})
     if any((h or 0) >= 16 for h in evs.start_h.fillna(0)):
         it["inpark"].append({"who": ["wheel", "slow"], "kind": "warn", "src": "공식",
                              "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
                              "t": "저녁 공연이면 공원 휠체어를 빌리기 어려워요",
                              "s": "대여는 19:00까지, 한 번에 3시간이라 공연 중에 반납할 수 없어요 → 개인 휠체어를 권해요"})
+        must.append({"rank": 70, "group": "rent", "who": ["wheel", "slow"], "src": "공식", "kind": "warn",
+                    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+                    "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+                    "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"})
     # 주차: 2025 기록과 기관 안내
     it["park"].append({"who": [], "src": "분석", "url": "https://www.data.go.kr/data/15164156/fileData.do",
                        "t": "주차 기록 — " + r.basis})
+    if r.offday and r.n and r.m / r.n >= 0.3:
+        must.append({"rank": 56, "group": "full", "who": [], "src": "분석", "kind": "warn",
+                    "url": "https://www.data.go.kr/data/15164156/fileData.do",
+                    "t": f"차로 가면 일찍: 2025년 {r.date.month}월 공연 있는 주말·공휴일 {int(r.n)}일 중 {int(r.m)}일 주차장이 찼어요",
+                    "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"})
     near_weekend = r.offday and (r.date.date() - today).days <= 7
     it["park"].append({"who": [], "kind": "tip", "src": "공식", "url": PARKING_PAGE,
                        "t": "출발 직전엔 맨 위 「지금 주차장」에서 실시간 주차대수를 보세요",
@@ -227,7 +263,11 @@ def day_items(r, evs: pd.DataFrame, guide: dict, exits: list, venues_xy: dict, w
         it["go"].append({"who": [], "kind": "tip", "src": "공공데이터",
                          "t": f"강수확률 {int(r.pop_max)}%: 우비·휠체어 덮개를 챙기세요",
                          "s": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"})
-    return {k: v for k, v in it.items() if v}
+        must.append({"rank": 62 if r.pop_max >= 60 else 52, "group": "rain", "who": [], "src": "공공데이터", "kind": "tip",
+                    "url": "https://www.data.go.kr/data/15084084/openapi.do",
+                    "t": f"비 예보: 강수확률 {int(r.pop_max)}%",
+                    "do": "우비·휠체어 덮개를 챙기세요. 티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"})
+    return {k: v for k, v in it.items() if v}, sorted(must, key=lambda x: -x["rank"])
 
 
 def build(days_ahead: int = 60) -> dict:
@@ -254,8 +294,8 @@ def build(days_ahead: int = 60) -> dict:
                        and not pd.isna(e.start_h) else None, "run": int(e.run) or None, "tm": e.tm, "age": e.age,
                        "inquiry": e.inquiry if isinstance(e.inquiry, str) else None, "link": e.link,
                        "vendor": (e.vendor or {}).get("name") if isinstance(e.vendor, dict) else None} for e in evs.itertuples()],
-            "items": day_items(r, evs, guide, exits, venues_xy, wave, taxi, today),
         })
+        days[-1]["items"], days[-1]["key"] = day_items(r, evs, guide, exits, venues_xy, wave, taxi, today)
     steps = [{k: s[k] for k in ("key", "title", "icon", "items")} for s in guide["steps"]]
     map_venues = [{"key": k, "name": guide["venues"][k]["name"], "short": guide["venues"][k]["short"], **v}
                   for k, v in venues_xy.items() if k in guide["venues"]]

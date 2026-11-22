@@ -40,6 +40,16 @@
     "t": "후기: 2-2 게이트로 들어갔음 (공연마다 다를 수 있음)",
     "src": "후기",
     "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+   },
+   "key": {
+    "rank": 45,
+    "who": [
+     "wheel"
+    ],
+    "src": "기사",
+    "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+    "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+    "do": "예매 전화 때 휠체어석 시야를 물어보세요"
    }
   },
   "olympic_hall": {
@@ -56,7 +66,17 @@
    "lot": "P2·올림픽홀 지하",
    "lot_gates": "동2문",
    "lot_key": "올림픽홀",
-   "walk": "1~2분"
+   "walk": "1~2분",
+   "key": {
+    "rank": 72,
+    "who": [
+     "wheel"
+    ],
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+    "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+    "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요"
+   }
   },
   "handball": {
    "name": "티켓링크 라이브 아레나(핸드볼경기장)",
@@ -78,6 +98,16 @@
     "t": "후기: 2·3번 출입구가 편했음 (공연마다 다를 수 있음)",
     "src": "후기",
     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/"
+   },
+   "key": {
+    "rank": 68,
+    "who": [
+     "wheel"
+    ],
+    "src": "후기",
+    "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+    "t": "라이브 아레나 휠체어석은 무대를 세우면 32석에서 16석으로 줄어든다는 기사가 있어요",
+    "do": "예매 전화 때 이 공연에 휠체어석이 몇 석인지 물어보세요"
    }
   },
   "woori_art_hall": {
@@ -98,7 +128,17 @@
    "lot": "P7",
    "lot_gates": "",
    "lot_key": "역도경기장",
-   "walk": "1~2분"
+   "walk": "1~2분",
+   "key": {
+    "rank": 40,
+    "who": [
+     "wheel"
+    ],
+    "src": "공식",
+    "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+    "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+    "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요"
+   }
   },
   "lawn88": {
    "name": "88잔디마당",
@@ -120,7 +160,19 @@
    "lot": "동2문 쪽 주차장",
    "lot_gates": "동2문",
    "lot_key": null,
-   "walk": ""
+   "walk": "",
+   "key": {
+    "rank": 80,
+    "who": [
+     "wheel",
+     "stroller",
+     "slow"
+    ],
+    "src": "공식",
+    "kind": "gap",
+    "t": "88잔디마당은 야외 공연장이고, 지정 장애인석·장애인 주차 안내가 없어요",
+    "do": "공연 문의처({inquiry})에 휠체어로 볼 수 있는 자리와 내릴 곳을 미리 물어보세요"
+   }
   },
   "muse_live": {
    "name": "뮤즈라이브",
@@ -136,7 +188,19 @@
    "lot": null,
    "lot_gates": "",
    "lot_key": null,
-   "walk": ""
+   "walk": "",
+   "key": {
+    "rank": 85,
+    "who": [
+     "wheel",
+     "stroller",
+     "slow"
+    ],
+    "src": "공식",
+    "kind": "gap",
+    "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+    "do": "예매 전에 공연 문의처({inquiry})에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요"
+   }
   }
  },
  "ticketing": {

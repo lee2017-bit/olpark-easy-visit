@@ -213,3 +213,19 @@ footer ul { padding-left: 1.1em; }
 .case[open] .case-open::after { content: "접기"; }
 .case-body { border-top: 1px solid var(--line); }
 .live-step h3 .num { background: var(--accent); }
+
+/* 이 날 꼭 알아야 할 것 (오늘 공연 배너·선택한 날 패널) */
+.key { margin: 10px 0 8px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 8px; }
+.panel .key { margin: 10px 16px; }
+.key-h { margin: 0 0 8px; font-size: 1.05rem; font-weight: 800; }
+.key-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.key-item { display: grid; grid-template-columns: 1.8em 1fr; gap: 8px; align-items: start; }
+.key-n { display: inline-flex; align-items: center; justify-content: center; width: 1.8em; height: 1.8em; border-radius: 50%;
+  font-weight: 800; background: var(--accent-bg); color: var(--accent); }
+.key-item.k-warn .key-n { background: var(--high-bg); color: var(--high); }
+.key-item.k-gap .key-n { background: var(--mid-bg); color: var(--mid); }
+.key-t { display: block; line-height: 1.4; }
+.key-do { display: block; margin-top: 2px; color: var(--fg); font-size: .92rem; line-height: 1.45; }
+.key-who { font-weight: 700; }
+.key .key-foot { margin: 8px 0 0; font-size: .8rem; color: var(--muted); display: flex; gap: 6px; align-items: flex-start; }
+.key .key-foot.bad { color: var(--fg); background: var(--warn-bg); border-radius: 6px; padding: 4px 6px; font-weight: 700; }

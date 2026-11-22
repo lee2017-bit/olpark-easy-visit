@@ -210,6 +210,94 @@
     renderDay(state.d.days[state.sel]);
   }
 
+
+  // ---------- 이 날 꼭 알아야 할 것 ----------
+  // 날짜별 후보(day.key, 빌드할 때 만듦)에 지금 확인한 것(공연장 근처 공사·엘리베이터 중지·만차)을 더해 순위가 높은 3개만.
+  const KEY_N = 3;
+  const bannerIndex = () => state.d.days.findIndex((x) => x.date >= kstDate());
+  const mmdd = (iso) => iso ? `${+iso.slice(5, 7)}/${+iso.slice(8, 10)}` : "";
+
+  function liveKey(day) {
+    const out = [];
+    const cfg = state.d.live;
+    const isToday = kstDate() === day.date;
+    if (chk.notices && chk.notices.ok) {
+      const shortOf = Object.fromEntries(state.d.map.venues.map((v) => [v.key, v.short]));
+      for (const h of noticesFor(day)) {
+        for (const g of (h.segs.length ? h.segs : [null])) {
+          const vs = venueHit(g ? segText(g) : hitTexts(h)[0], day);
+          if (!vs.length) continue;
+          out.push({ rank: 90, group: "construction", kind: "warn", who: [], src: "공식", url: h.n.url, venue: vs[0],
+            t: `${vs.map((v) => shortOf[v] || v).join("·")} 주변 공사 중${g && g.to ? ` (${mmdd(g.to)}까지)` : ""}: ${g ? g.name || h.n.title : h.n.title}`,
+            do: (g && g.ctrl ? g.ctrl + ". " : "") + "평소 다니던 경사로·보도가 막힐 수 있어요 → 막혔으면 현장 안내 요원이나 공원(02-410-1114)에 물어보세요" });
+        }
+      }
+    }
+    const st = chk.status;
+    if (isToday && st && st.ok && (Date.now() - st.at.getTime()) / 60000 <= cfg.stale_min) {
+      for (const e of st.data.elevators.filter((x) => x.state === "stop")) {
+        const name = `${e.line} ${e.station}`;
+        out.push({ rank: 95, group: `elev:${name}:${e.kind}`, kind: "warn", who: ["wheel", "stroller", "slow"], src: "공공데이터",
+          url: st.data.source.url,
+          t: `${e.line} ${e.station}역 ${e.kind === "exit" ? e.exit + "번 출구 지상" : "역 안"} 엘리베이터가 중지로 표시돼요 (${hm(st.at)})`,
+          do: cfg.fallback[`${name} ${e.kind}`] || "역 고객안전실(역무실)에 도움을 요청하세요" });
+      }
+    }
+    if (isToday && live.last && live.last.r.parked / live.last.r.cap * 100 >= FULL_PCT) {
+      const r = live.last.r;
+      out.push({ rank: 85, group: "full", kind: "warn", who: [], src: "공식", url: PARKING_URL,
+        t: `지금 주차장이 찼어요: ${fmt(r.parked)}대 / ${fmt(r.cap)}대 (${kstTime(live.last.at)})`,
+        do: "지하철·장애인콜택시를 생각해 보세요. 장애인 주차구역 빈자리는 따로 공개되지 않아요" });
+    }
+    return out;
+  }
+
+  function keyFoot(day) {
+    const isToday = kstDate() === day.date;
+    const n = chk.notices, st = chk.status;
+    const bad = [];
+    const parts = [];
+    if (n === null) parts.push("공원 공지 확인 중…");
+    else if (!n.ok) bad.push("공원 공지를 불러오지 못해 공사 정보가 빠졌을 수 있어요");
+    else parts.push(`공원 공지 ${hm(n.at)}`);
+    if (isToday) {
+      if (st === null) parts.push("엘리베이터 확인 중…");
+      else if (!st.ok) bad.push("엘리베이터 상태를 불러오지 못했어요");
+      else if ((Date.now() - st.at.getTime()) / 60000 > state.d.live.stale_min) bad.push(`엘리베이터 상태가 ${hm(st.at)} 뒤로 갱신되지 않았어요`);
+      else parts.push(`엘리베이터 ${hm(st.at)}`);
+    }
+    const f = el("p", { class: "key-foot" + (bad.length ? " bad" : "") });
+    if (bad.length) f.append(icon("alert", "ic sm"), el("span", {}, bad.join(" · ") + (parts.length ? " · " + parts.join(" · ") + " 반영" : "")));
+    else f.append(el("span", {}, (parts.length ? "지금 확인: " + parts.join(" · ") + " 반영. " : "") + "나머지는 아래 「누구와 가세요?」에서 유형별로 볼 수 있어요."));
+    return f;
+  }
+
+  function keyBox(day, venue) {
+    const today = kstDate();
+    const cands = [...(day.key || []), ...liveKey(day)]
+      .filter((k) => !(k.when === "before" && day.date <= today))
+      .filter((k) => !venue || venue === "all" || !k.venue || k.venue === venue)
+      .sort((a, b) => b.rank - a.rank);
+    const seen = new Set(), top = [];
+    for (const k of cands) {
+      if (seen.has(k.group)) continue;
+      seen.add(k.group);
+      top.push(k);
+      if (top.length === KEY_N) break;
+    }
+    if (!top.length) return null;
+    const ol = el("ol", { class: "key-list" });
+    top.forEach((k, i) => {
+      const who = k.who && k.who.length ? k.who.map((w) => state.d.who[w]).join(" · ") : "모두";
+      ol.append(el("li", { class: "key-item k-" + (k.kind || "tip") },
+        el("span", { class: "key-n", "aria-hidden": "true" }, String(i + 1)),
+        el("div", {}, el("b", { class: "key-t" }, k.t), k.do ? el("span", { class: "key-do" }, k.do) : null,
+          el("span", { class: "meta" }, el("span", { class: "key-who" }, who), srcBadge(k)))));
+    });
+    const head = (day.date === today ? "오늘" : "이 날") + ` 꼭 알아야 할 ${top.length}가지`;
+    return el("div", { class: "key" }, el("h3", { class: "key-h" }, head), ol, keyFoot(day));
+  }
+
   // ---------- 오늘 공연 ----------
   function renderToday() {
     const box = $("today");
@@ -230,13 +318,14 @@
           el("span", { class: "today-title" }, s.title))));
     }
     box.append(ul);
-    const hits = noticesFor(day).filter((h) => hitTexts(h).some((x) => venueHit(x, day).length));
-    if (hits.length) box.append(el("p", { class: "today-alert" }, icon("alert", "ic sm"), el("span", {}, "공연장 주변에 공사 안내가 있어요. 아래에서 확인하세요.")));
-    if (i !== state.sel) {
-      const go = el("button", { type: "button", class: "live-btn" }, "이 날 안내 보기");
-      go.addEventListener("click", () => { select(i); $("day").scrollIntoView({ behavior: "smooth", block: "start" }); });
-      box.append(go);
-    }
+    const v0 = state.venue;
+    state.venue = "all"; // 맨 위는 그날 모든 공연장 기준
+    const kb = keyBox(day, "all");
+    state.venue = v0;
+    if (kb) box.append(kb);
+    const go = el("button", { type: "button", class: "live-btn" }, "휠체어·유모차·시각 등 유형별 안내 보기");
+    go.addEventListener("click", () => { if (i !== state.sel) select(i); $("day").scrollIntoView({ behavior: "smooth", block: "start" }); });
+    box.append(go);
   }
 
   // ---------- 선택한 날 ----------
@@ -357,6 +446,12 @@
         g.append(b);
       }
       p.append(g);
+    }
+
+    // 맨 위 「오늘 공연」과 다른 날을 골랐으면 그날의 꼭 알 것을 여기에
+    if (state.sel !== bannerIndex()) {
+      const kb = keyBox(day, state.venue);
+      if (kb) p.append(kb);
     }
 
     // 모두에게: 이 날 공사·통제 (열지 않아도 보이게)
@@ -561,6 +656,7 @@
       if (!r) throw new Error("parse");
       live.last = { r, at: new Date() };
       renderLive(r, live.last.at);
+      if (state.d) renderToday(); // 만차가 되면 맨 위 「꼭 알아야 할 것」에도 반영
     } catch (e) {
       if (live.last) renderLive(live.last.r, live.last.at, true); else renderLive(null);
     } finally {

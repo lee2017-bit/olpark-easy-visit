@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22 13:42",
+ "generated_at": "2026-11-22 14:06",
  "who": {
   "wheel": "휠체어",
   "stroller": "유모차",
@@ -481,7 +481,85 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 11월 공연 있는 주말·공휴일 10일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    }
+   ]
   },
   {
    "date": "2026-11-27",
@@ -736,7 +814,111 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    }
+   ]
   },
   {
    "date": "2026-11-28",
@@ -1077,7 +1259,147 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 11월 공연 있는 주말·공휴일 10일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 20:45~21:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-11-29",
@@ -1410,7 +1732,137 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 11월 공연 있는 주말·공휴일 10일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-11-30",
@@ -1543,7 +1995,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-01",
@@ -1676,7 +2169,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-02",
@@ -1809,7 +2343,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-03",
@@ -1942,7 +2517,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-04",
@@ -2212,7 +2828,111 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-05",
@@ -2552,7 +3272,127 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "olympic_hall",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 18:45~19:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-06",
@@ -2892,7 +3732,127 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "kspo_dome",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "olympic_hall",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 18:45~19:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-07",
@@ -3025,7 +3985,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-08",
@@ -3158,7 +4159,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-09",
@@ -3291,7 +4333,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-10",
@@ -3424,7 +4507,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-11",
@@ -3645,7 +4769,86 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "olympic_hall",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-12",
@@ -3985,7 +5188,127 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "olympic_hall",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-13",
@@ -4325,7 +5648,127 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "확인 못 함",
+     "url": null,
+     "kind": "gap",
+     "venue": "olympic_hall",
+     "t": "YES24 티켓의 휠체어석 예매 방법은 공개돼 있지 않아요",
+     "do": "공연 공지를 보거나 고객센터 1544-6399에 물어보세요"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-14",
@@ -4458,7 +5901,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-15",
@@ -4591,7 +6075,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-16",
@@ -4724,7 +6249,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-17",
@@ -4857,7 +6423,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-18",
@@ -5198,7 +6805,137 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-19",
@@ -5539,7 +7276,137 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 20:45~21:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-20",
@@ -5872,7 +7739,127 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-21",
@@ -6005,7 +7992,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-22",
@@ -6138,7 +8166,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-23",
@@ -6271,7 +8340,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-24",
@@ -6612,7 +8722,137 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-25",
@@ -7041,7 +9281,163 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": "https://www.ticketlink.co.kr/help/notice/64629",
+     "kind": "warn",
+     "venue": "handball",
+     "t": "라이브 아레나 휠체어석은 온라인이 아니라 티켓링크 고객센터 전화로 예매해요",
+     "do": "1588-7890 (10:00~19:00) · 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 68,
+     "who": [
+      "wheel"
+     ],
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+     "t": "라이브 아레나 휠체어석은 무대를 세우면 32석에서 16석으로 줄어든다는 기사가 있어요",
+     "do": "예매 전화 때 이 공연에 휠체어석이 몇 석인지 물어보세요",
+     "group": "venue:handball",
+     "venue": "handball"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 20:45~21:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-26",
@@ -7462,7 +9858,153 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": "https://www.ticketlink.co.kr/help/notice/64629",
+     "kind": "warn",
+     "venue": "handball",
+     "t": "라이브 아레나 휠체어석은 온라인이 아니라 티켓링크 고객센터 전화로 예매해요",
+     "do": "1588-7890 (10:00~19:00) · 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 68,
+     "who": [
+      "wheel"
+     ],
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+     "t": "라이브 아레나 휠체어석은 무대를 세우면 32석에서 16석으로 줄어든다는 기사가 있어요",
+     "do": "예매 전화 때 이 공연에 휠체어석이 몇 석인지 물어보세요",
+     "group": "venue:handball",
+     "venue": "handball"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-27",
@@ -7724,7 +10266,101 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 18:45~19:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-28",
@@ -7857,7 +10493,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-29",
@@ -7990,7 +10667,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-30",
@@ -8123,7 +10841,48 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2026-12-31",
@@ -8393,7 +11152,111 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 23:45~00:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-01",
@@ -8663,7 +11526,121 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-02",
@@ -8986,7 +11963,149 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 20:45~21:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-03",
@@ -9309,7 +12428,149 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 20:45~21:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-04",
@@ -9394,7 +12655,37 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    }
+   ]
   },
   {
    "date": "2027-01-05",
@@ -9479,7 +12770,37 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    }
+   ]
   },
   {
    "date": "2027-01-06",
@@ -9564,7 +12885,37 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    }
+   ]
   },
   {
    "date": "2027-01-07",
@@ -9649,7 +13000,37 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    }
+   ]
   },
   {
    "date": "2027-01-08",
@@ -9734,7 +13115,37 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    }
+   ]
   },
   {
    "date": "2027-01-09",
@@ -10008,7 +13419,124 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-10",
@@ -10282,7 +13810,124 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-11",
@@ -10455,7 +14100,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-12",
@@ -10628,7 +14329,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-13",
@@ -10801,7 +14558,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-14",
@@ -10974,7 +14787,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-15",
@@ -11290,7 +15159,139 @@
       "s": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "늦게 끝나요: 북2문·남2문 주차장은 22:30이 지나면 나갈 수 없어요",
+     "do": "그 뒤엔 24시간 여는 동2문으로 나오세요. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 21:45~22:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-16",
@@ -11669,7 +15670,165 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-17",
@@ -12048,7 +16207,165 @@
       "s": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 끝난 밤 장애인콜택시는 보통 59분 기다려요 (공연 없는 밤 30분)",
+     "do": "4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 → 돌아갈 방법을 출발 전에 정해 두세요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "KSPO DOME 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "olympic_hall",
+     "t": "올림픽홀 휠체어석은 온라인이 아니라 멜론티켓 고객센터 전화로 예매해요",
+     "do": "1899-0042 · 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 72,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031000",
+     "t": "올림픽홀 장애인석은 22석이지만, 대부분 공연에서 6석만 열렸다는 기사가 있어요",
+     "do": "휠체어석이 금방 찰 수 있어요 → 예매가 열리면 바로 전화하세요",
+     "group": "venue:olympic_hall",
+     "venue": "olympic_hall"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여는 19:00까지, 한 번에 3시간이에요",
+     "do": "저녁 공연은 끝나기 전에 반납해야 해서 빌리기 어려워요 → 개인 휠체어를 가져가세요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "차로 가면 일찍: 2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요",
+     "do": "일찍 도착하거나 지하철을 생각해 두세요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "차로 왔다면: 공연 뒤 출차는 19:45~20:45에 가장 몰려요",
+     "do": "휠체어 승하차에 시간이 걸리면 이 시간을 피해 나오세요 (2025년 KSPO DOME 저녁 공연 기록)"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "KSPO DOME 휠체어석은 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "do": "예매 전화 때 휠체어석 시야를 물어보세요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-18",
@@ -12221,7 +16538,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-19",
@@ -12394,7 +16767,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-20",
@@ -12567,7 +16996,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   },
   {
    "date": "2027-01-21",
@@ -12740,7 +17225,63 @@
       "s": "앙코르 등으로 늦어질 수 있어요. 시간표는 그날 가장 이른 회차 기준"
      }
     ]
-   }
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "뮤즈라이브는 휠체어석·편의시설 공개 안내가 없어요",
+     "do": "예매 전에 공연 문의처(02-558-5738)에 휠체어·유모차로 들어갈 수 있는지 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "우리금융아트홀 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "뮤즈라이브 휠체어석은 온라인이 아니라 NOL 티켓(인터파크) 고객센터 전화로 예매해요",
+     "do": "1544-1555 (09:00~18:00)"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "우리금융아트홀 휠체어석은 12석 (1층 A·C구역 22열 뒤 6석씩)",
+     "do": "석 수가 정해져 있으니 일찍 전화로 예매하세요",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
   }
  ],
  "live": {
