@@ -44,6 +44,7 @@ python3 -m collectors.datago_files                    # 입출차 2024-07, 혼�
 python3 -m collectors.kcisa_parking all               # 2025 연계·입출차
 python3 -m collectors.agency_prediction               # 기관 예상 이용률 스냅샷 (주말 전 실행)
 python3 -m collectors.agency_live --every 10          # 기관 실시간 주차대수 기록 (검증용)
+python3 -m collectors.elevator_snapshots record       # 서울 지하철 엘리베이터 전체 상태 10분마다 기록 (검증용)
 python3 -m collectors.accessibility                   # 지하철 엘리베이터, 무장애 정보
 python3 -m collectors.calendar_weather                # 공휴일, 단기예보
 python3 -m collectors.osm_points                      # 지도 좌표 (OSM, 필요할 때만)
