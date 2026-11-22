@@ -229,3 +229,62 @@ footer ul { padding-left: 1.1em; }
 .key-who { font-weight: 700; }
 .key .key-foot { margin: 8px 0 0; font-size: .8rem; color: var(--muted); display: flex; gap: 6px; align-items: flex-start; }
 .key .key-foot.bad { color: var(--fg); background: var(--warn-bg); border-radius: 6px; padding: 4px 6px; font-weight: 700; }
+
+/* ---- 글자 줄이기 개편: 포스터 카드, 접히는 항목 ---- */
+.shows-row { display: flex; gap: 10px; overflow-x: auto; padding: 4px 0 8px; scroll-snap-type: x mandatory; }
+.shows-row.in-panel { padding: 12px 16px 4px; border-top: 1px solid var(--line); }
+.show { flex: 0 0 auto; width: 120px; scroll-snap-align: start; display: grid; gap: 2px; color: var(--fg); text-decoration: none; }
+.show.big { width: 132px; }
+.show img, .show .poster-none { width: 100%; aspect-ratio: 120 / 170; height: auto; object-fit: cover; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--card); display: block; }
+.show .poster-none { display: grid; place-items: center; color: var(--muted); }
+.show-v { font-weight: 800; font-size: 1.02rem; line-height: 1.25; margin-top: 4px; }
+.show-w { font-weight: 700; color: var(--accent); }
+.show-t { font-size: .78rem; color: var(--muted); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.show:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 10px; }
+
+.item { display: block; padding: 6px 0; }
+.item-row { display: grid; grid-template-columns: 36px 1fr auto; gap: 10px; align-items: center; }
+.item-row b { display: inline; font-size: 1rem; font-weight: 700; line-height: 1.35; }
+.item-row .vtag { font-size: .72rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 0 6px; }
+details.item-more > summary { list-style: none; cursor: pointer; }
+details.item-more > summary::-webkit-details-marker { display: none; }
+details.item-more > summary::after { content: "＋"; color: var(--muted); font-weight: 700; grid-column: 3; }
+details.item-more[open] > summary::after { content: "－"; }
+details.item-more > summary.item-row { grid-template-columns: 36px 1fr auto; }
+details.item-more > summary .vtag { grid-column: 2; justify-self: start; }
+.item-body { padding: 4px 0 2px 46px; }
+.item.k-warn { padding: 6px 8px 6px 6px; }
+
+.key-item details > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1.8em 1fr auto; gap: 8px; align-items: start; }
+.key-item details > summary::-webkit-details-marker { display: none; }
+.key-item details > summary::after { content: "＋"; color: var(--muted); font-weight: 700; }
+.key-item details[open] > summary::after { content: "－"; }
+.key-item { display: block; }
+.key-txt { display: grid; }
+.key-more { padding: 4px 0 0 calc(1.8em + 8px); }
+.key-more p { margin: 0 0 4px; font-size: .88rem; color: var(--muted); }
+
+.live-left { font-weight: 700; margin: 4px 0 0; }
+.live-btn.sm { padding: 2px 8px; font-size: .8rem; }
+.live-about > summary, .map-more > summary, .sources-box > summary { cursor: pointer; color: var(--muted); font-size: .85rem; }
+.map-more { margin-top: 8px; }
+.sources-box { margin-bottom: 8px; }
+footer .sources-box ul { margin-top: 6px; }
+
+/* 오늘 공연: 포스터 왼쪽 + 공연장·시각 오른쪽 */
+.show.big { width: auto; flex: 1 0 250px; max-width: 100%; grid-template-columns: 96px 1fr; grid-template-rows: auto auto 1fr;
+  column-gap: 12px; align-items: start; }
+.show.big img, .show.big .poster-none { grid-row: 1 / span 3; }
+.show.big .show-v { margin-top: 2px; font-size: 1.3rem; }
+.show.big .show-w { font-size: 1.15rem; }
+.show.big .show-t { -webkit-line-clamp: 2; font-size: .82rem; }
+.shows-row:has(.show.big:only-child) { overflow: visible; }
+
+/* 글자 크기: 한 줄로 작게 (누르는 영역 44px 유지) */
+.fontsize { border: 0; padding: 0; background: none; justify-content: flex-end; flex-wrap: nowrap; gap: 6px; margin: 0 0 6px; }
+.fontsize-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fs-btn { min-height: 44px; padding: 2px 10px; border-width: 1.5px; }
+
+/* 한국어는 낱말 단위로 줄바꿈 */
+html { word-break: keep-all; overflow-wrap: break-word; }

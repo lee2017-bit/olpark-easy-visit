@@ -16,7 +16,7 @@ URL = "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoListAjax.es"
 VENUE = {"01": "올림픽홀", "02": "KSPO DOME", "03": "핸드볼경기장", "04": "우리금융아트홀",
          "05": "기타", "06": "88잔디마당", "07": "뮤즈라이브"}
 FIELDS = ["evtSeq", "title", "beginDt", "endDt", "tm", "plc", "plcCd", "tktPrc", "seeAge",
-          "ndTm", "muf", "spns", "nqry", "regDate", "evtLink"]
+          "ndTm", "muf", "spns", "nqry", "regDate", "evtLink", "fileNm"]
 # plcCd가 비어 오는 공연이 있음(예: 2026-11 다이나믹 듀오, 올림픽홀) → 장소 이름(plc)으로 채움
 PLC_NAME = [("우리금융", "04"), ("올림픽홀", "01"), ("KSPO", "02"), ("체조", "02"), ("핸드볼", "03"),
             ("티켓링크", "03"), ("잔디마당", "06"), ("뮤즈", "07")]

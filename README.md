@@ -17,6 +17,7 @@
 - `data/static/line9_elevators.csv` 9호선 올림픽공원·한성백제역 엘리베이터 출구 (공공데이터포털 15118716)
 - `data/static/map_points.json` 지도 좌표: 공연장·지하철 출구의 OpenStreetMap 요소 좌표(© OpenStreetMap contributors, ODbL). 추정 좌표 없음
 - `build/build_site.py` site.json 생성: 공연 일정 + 늘 같은 안내 + 날짜별 항목(예매처, 가까운 엘리베이터 출구, 끝나는 시각, 출차 몰림 시간대, 콜택시 대기, 비 예보 등)
+  + 공연 포스터 썸네일(`build/posters.py`: 올림픽공원 홈페이지 공연 목록 이미지를 폭 240px로 줄여 `site/data/posters/`에 둠. 누르면 기관 공연 페이지)
   + 날짜별 「꼭 알아야 할 것」 후보(`key`, rank 순). 사이트가 여기에 지금 확인한 것(엘리베이터 중지·공연장 근처 공사·만차)을 더해 맨 위에 3개만 보여 줌
 - `.github/workflows/site.yml` 매주 월·목 06:17(KST) 데이터 갱신 → 커밋 → 배포. 수집이 실패해도 기존 데이터로 배포
 - `.github/workflows/status.yml` 5호선 올림픽공원·8호선 몽촌토성 엘리베이터 가동현황(`collectors/live_status.py`)을 10분마다 `status` 브랜치의 `status.json` 하나로 올림. GitHub 예약 실행이 몇 시간씩 밀리는 일이 있어, 한 번 시작하면 최대 약 5시간 40분 동안 안에서 10분마다 갱신(매시 예약 + 이 파일을 main에 올릴 때 시작, 01~05시 휴식). 사이트가 raw.githubusercontent.com 에서 읽음(키는 Actions 안에서만)
