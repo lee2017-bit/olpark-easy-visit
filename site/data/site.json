@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 10:44",
+ "generated_at": "2026-11-26 12:38",
  "who": {
   "wheel": "휠체어",
   "stroller": "유모차",
@@ -430,6 +430,13 @@
       "kind": "tip",
       "t": "엘리베이터 출구: 9호선 3·4번 · 5호선 2번",
       "s": "올림픽홀에서 가까운 순: 9호선 올림픽공원역 직선 0.3km, 5호선 올림픽공원역 직선 0.4km (걷는 길은 더 길어요)"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공공데이터",
+      "t": "비 60%: 우비·휠체어 덮개",
+      "s": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"
      }
     ],
     "park": [
@@ -667,6 +674,17 @@
      "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
     },
     {
+     "rank": 62,
+     "group": "rain",
+     "who": [],
+     "src": "공공데이터",
+     "kind": "tip",
+     "url": "https://www.data.go.kr/data/15084084/openapi.do",
+     "t": "비 예보 60%",
+     "do": "우비·휠체어 덮개 챙기기",
+     "more": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"
+    },
+    {
      "rank": 50,
      "group": "exit_peak",
      "who": [
@@ -831,6 +849,13 @@
       "s": "전동휠체어 약 8분, 수동휠체어 약 15분. 아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
       "src": "후기",
       "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공공데이터",
+      "t": "비 30%: 우비·휠체어 덮개",
+      "s": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"
      }
     ],
     "park": [
@@ -1145,6 +1170,17 @@
      "t": "주차장 찰 수 있어요 (4/10일)",
      "do": "일찍 오거나 지하철로",
      "more": "2025년 11월 공연 있는 주말·공휴일 10일 중 4일 주차장이 찼어요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 52,
+     "group": "rain",
+     "who": [],
+     "src": "공공데이터",
+     "kind": "tip",
+     "url": "https://www.data.go.kr/data/15084084/openapi.do",
+     "t": "비 예보 30%",
+     "do": "우비·휠체어 덮개 챙기기",
+     "more": "티켓·굿즈 부스가 야외에 있었다는 후기가 있어요"
     },
     {
      "rank": 50,
@@ -6303,6 +6339,21 @@
      "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5178"
     },
     {
+     "title": "2026 XIA Musical Concert with Orchestra Vol.9",
+     "venue_key": "handball",
+     "venue": "라이브 아레나",
+     "start": "19:30",
+     "end": null,
+     "run": null,
+     "tm": "2026년 12월 18일(금) 7:30PM(KST) 2026년 12월 19일(토) 6PM(KST) 2026년 12월 20일(일) 5PM(KST)",
+     "age": "8세이상 관람가능",
+     "inquiry": "1544-1555",
+     "link": "https://nol.yanolja.com/ticket/products/26016270",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5186.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5186"
+    },
+    {
      "title": "자우림 단독 콘서트 ［ MIDNIGHT EXPRESS 2026-2027 ］ - 서울",
      "venue_key": "olympic_hall",
      "venue": "올림픽홀",
@@ -6341,6 +6392,17 @@
       "url": null,
       "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
       "s": "KSPO DOME · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
      },
      {
       "venue": "olympic_hall",
@@ -6390,6 +6452,18 @@
       "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
      },
      {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "라이브 아레나에서 가까운 순: 5호선 올림픽공원역 직선 0.4km, 9호선 올림픽공원역 직선 0.4km (걷는 길은 더 길어요)"
+     },
+     {
       "venue": "olympic_hall",
       "who": [
        "wheel",
@@ -6426,6 +6500,18 @@
       "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
       "t": "가까운 주차장 P5 · 장애인 10면",
       "s": "KSPO DOME 기준 · 북2문·동2문·남2문 · 공연장까지 주차장에서 1분"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P6 · 장애인 3면",
+      "s": "라이브 아레나 기준 · 동2문·남2문 · 공연장까지 1~2분"
      },
      {
       "venue": "olympic_hall",
@@ -6533,6 +6619,41 @@
       "kind": "gap",
       "t": "무장애(BF) 인증 없음",
       "s": "KSPO DOME · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 공식 안내 없음",
+      "s": "후기: 2층 24~26·32~34·39~41·47~49 통로. 기사: 기본 32석인데 무대를 세우면 16석",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "kind": "gap"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "후기: 2·3번 출입구가 편함",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "s": "공연마다 다를 수 있어요"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "라이브 아레나 · 장애물 없는 생활환경(BF) 인증 우수 (~2028-11-27)"
      },
      {
       "venue": "olympic_hall",
@@ -6661,6 +6782,21 @@
      "src": "공연 공지 사례",
      "url": null,
      "kind": "warn",
+     "venue": "handball",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
      "venue": "olympic_hall",
      "t": "휠체어석은 전화로 예매",
      "do": "NOL 티켓(인터파크) 1544-1555",
@@ -6703,6 +6839,19 @@
      "t": "공원 휠체어 대여 19시 마감",
      "do": "개인 휠체어 챙기기",
      "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
+    },
+    {
+     "rank": 68,
+     "who": [
+      "wheel"
+     ],
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+     "t": "휠체어석 16석으로 줄 수 있어요",
+     "do": "예매 때 석 수 확인",
+     "more": "라이브 아레나 휠체어석은 기본 32석인데 무대를 세우면 16석이라는 기사가 있어요",
+     "group": "venue:handball",
+     "venue": "handball"
     },
     {
      "rank": 50,
@@ -6798,6 +6947,21 @@
      "vendor": "NOL 티켓(인터파크)",
      "poster": "data/posters/5178.jpg",
      "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5178"
+    },
+    {
+     "title": "2026 XIA Musical Concert with Orchestra Vol.9",
+     "venue_key": "handball",
+     "venue": "라이브 아레나",
+     "start": "18:00",
+     "end": null,
+     "run": null,
+     "tm": "2026년 12월 18일(금) 7:30PM(KST) 2026년 12월 19일(토) 6PM(KST) 2026년 12월 20일(일) 5PM(KST)",
+     "age": "8세이상 관람가능",
+     "inquiry": "1544-1555",
+     "link": "https://nol.yanolja.com/ticket/products/26016270",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5186.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5186"
     }
    ],
    "items": {
@@ -6834,6 +6998,17 @@
       "url": null,
       "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
       "s": "KSPO DOME · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
      }
     ],
     "go": [
@@ -6882,6 +7057,18 @@
       "s": "전동휠체어 약 8분, 수동휠체어 약 15분. 아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
       "src": "후기",
       "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "라이브 아레나에서 가까운 순: 5호선 올림픽공원역 직선 0.4km, 9호선 올림픽공원역 직선 0.4km (걷는 길은 더 길어요)"
      }
     ],
     "park": [
@@ -6920,6 +7107,18 @@
       "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
       "t": "가까운 주차장 P5 · 장애인 10면",
       "s": "KSPO DOME 기준 · 북2문·동2문·남2문 · 공연장까지 주차장에서 1분"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P6 · 장애인 3면",
+      "s": "라이브 아레나 기준 · 동2문·남2문 · 공연장까지 1~2분"
      },
      {
       "who": [],
@@ -7039,6 +7238,41 @@
       "kind": "gap",
       "t": "무장애(BF) 인증 없음",
       "s": "KSPO DOME · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 공식 안내 없음",
+      "s": "후기: 2층 24~26·32~34·39~41·47~49 통로. 기사: 기본 32석인데 무대를 세우면 16석",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "kind": "gap"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "후기: 2·3번 출입구가 편함",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "s": "공연마다 다를 수 있어요"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "라이브 아레나 · 장애물 없는 생활환경(BF) 인증 우수 (~2028-11-27)"
      }
     ],
     "home": [
@@ -7149,6 +7383,21 @@
      "more": "KSPO DOME · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
     },
     {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "handball",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
      "rank": 74,
      "group": "late",
      "who": [],
@@ -7185,6 +7434,19 @@
      "t": "공원 휠체어 대여 19시 마감",
      "do": "개인 휠체어 챙기기",
      "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
+    },
+    {
+     "rank": 68,
+     "who": [
+      "wheel"
+     ],
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+     "t": "휠체어석 16석으로 줄 수 있어요",
+     "do": "예매 때 석 수 확인",
+     "more": "라이브 아레나 휠체어석은 기본 32석인데 무대를 세우면 16석이라는 기사가 있어요",
+     "group": "venue:handball",
+     "venue": "handball"
     },
     {
      "rank": 50,
@@ -7267,6 +7529,21 @@
      "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5178"
     },
     {
+     "title": "2026 XIA Musical Concert with Orchestra Vol.9",
+     "venue_key": "handball",
+     "venue": "라이브 아레나",
+     "start": "17:00",
+     "end": null,
+     "run": null,
+     "tm": "2026년 12월 18일(금) 7:30PM(KST) 2026년 12월 19일(토) 6PM(KST) 2026년 12월 20일(일) 5PM(KST)",
+     "age": "8세이상 관람가능",
+     "inquiry": "1544-1555",
+     "link": "https://nol.yanolja.com/ticket/products/26016270",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5186.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5186"
+    },
+    {
      "title": "자우림 단독 콘서트 ［ MIDNIGHT EXPRESS 2026-2027 ］ - 서울",
      "venue_key": "olympic_hall",
      "venue": "올림픽홀",
@@ -7305,6 +7582,17 @@
       "url": null,
       "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
       "s": "KSPO DOME · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1544-1555"
      },
      {
       "venue": "olympic_hall",
@@ -7354,6 +7642,18 @@
       "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
      },
      {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "라이브 아레나에서 가까운 순: 5호선 올림픽공원역 직선 0.4km, 9호선 올림픽공원역 직선 0.4km (걷는 길은 더 길어요)"
+     },
+     {
       "venue": "olympic_hall",
       "who": [
        "wheel",
@@ -7390,6 +7690,18 @@
       "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
       "t": "가까운 주차장 P5 · 장애인 10면",
       "s": "KSPO DOME 기준 · 북2문·동2문·남2문 · 공연장까지 주차장에서 1분"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P6 · 장애인 3면",
+      "s": "라이브 아레나 기준 · 동2문·남2문 · 공연장까지 1~2분"
      },
      {
       "venue": "olympic_hall",
@@ -7497,6 +7809,41 @@
       "kind": "gap",
       "t": "무장애(BF) 인증 없음",
       "s": "KSPO DOME · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 공식 안내 없음",
+      "s": "후기: 2층 24~26·32~34·39~41·47~49 통로. 기사: 기본 32석인데 무대를 세우면 16석",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "kind": "gap"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel"
+      ],
+      "t": "후기: 2·3번 출입구가 편함",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+      "s": "공연마다 다를 수 있어요"
+     },
+     {
+      "venue": "handball",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "라이브 아레나 · 장애물 없는 생활환경(BF) 인증 우수 (~2028-11-27)"
      },
      {
       "venue": "olympic_hall",
@@ -7617,6 +7964,21 @@
      "src": "공연 공지 사례",
      "url": null,
      "kind": "warn",
+     "venue": "handball",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "라이브 아레나 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
      "venue": "olympic_hall",
      "t": "휠체어석은 전화로 예매",
      "do": "NOL 티켓(인터파크) 1544-1555",
@@ -7648,6 +8010,19 @@
      "t": "공원 휠체어 대여 19시 마감",
      "do": "개인 휠체어 챙기기",
      "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
+    },
+    {
+     "rank": 68,
+     "who": [
+      "wheel"
+     ],
+     "src": "후기",
+     "url": "https://web.staircrusher.club/bbucle-road/ticketlink-live-arena/",
+     "t": "휠체어석 16석으로 줄 수 있어요",
+     "do": "예매 때 석 수 확인",
+     "more": "라이브 아레나 휠체어석은 기본 32석인데 무대를 세우면 16석이라는 기사가 있어요",
+     "group": "venue:handball",
+     "venue": "handball"
     },
     {
      "rank": 50,
@@ -17841,6 +18216,1186 @@
      "more": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
      "group": "venue:kspo_dome",
      "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "휠체어석 12석",
+     "do": "일찍 전화 예매",
+     "more": "1층 A·C구역 22열 뒤에 6석씩",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-23",
+   "weekday": "토",
+   "offday": true,
+   "holiday": false,
+   "shows": [
+    {
+     "title": "뮤지컬 〈사랑의 하츄핑: 고래보석의 전설〉",
+     "venue_key": "woori_art_hall",
+     "venue": "우리금융아트홀",
+     "start": "11:00",
+     "end": "12:10",
+     "run": 70,
+     "tm": "화, 수, 목, 금, 일 11시, 14시 / 토 11시, 14시, 16시30분(월 공연없음) / 1월 9일 14시, 16시 30분 / 1월 10일 11시, 14시, 16시 30분 / 2월 7일 14시, 16시30분 / 2월 8일 11시, 14시, 16시30분 / 2월 9일 11시, 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "1577-3363",
+     "link": "https://nol.yanolja.com/ticket/products/26016146",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5183.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5183"
+    },
+    {
+     "title": "뮤지컬 〈폭풍우 치는 밤에〉",
+     "venue_key": "muse_live",
+     "venue": "뮤즈라이브",
+     "start": "14:00",
+     "end": "15:10",
+     "run": 70,
+     "tm": "주말 및 공휴일 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "02-558-5738",
+     "link": "https://nol.yanolja.com/ticket/products/26015905",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5185.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5185"
+    },
+    {
+     "title": "2027 에픽하이 콘서트",
+     "venue_key": "kspo_dome",
+     "venue": "KSPO DOME",
+     "start": "18:00",
+     "end": "20:00",
+     "run": 120,
+     "tm": "금 오후 8시 / 토 오후 6시 / 일 오후 4시",
+     "age": "12세 이상",
+     "inquiry": "1899-0042",
+     "link": "https://ticket.melon.com/performance/index.htm?prodId=213943",
+     "vendor": "멜론티켓",
+     "poster": "data/posters/5176.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5176"
+    }
+   ],
+   "items": {
+    "ticket": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1577-3363"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 02-558-5738"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "멜론티켓: 휠체어석 전화 예매",
+      "s": "KSPO DOME · 휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례) · 고객센터 1899-0042 · 공연 문의 1899-0042"
+     }
+    ],
+    "go": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "우리금융아트홀에서 가까운 순: 5호선 올림픽공원역 직선 0.5km, 9호선 올림픽공원역 직선 0.5km (걷는 길은 더 길어요)"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 9호선 3·4번 · 5호선 2번",
+      "s": "KSPO DOME에서 가까운 순: 9호선 올림픽공원역 직선 0.4km, 5호선 올림픽공원역 직선 0.5km (걷는 길은 더 길어요)"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "9호선 3·4번 출구 → 휠체어 8~15분",
+      "s": "전동휠체어 약 8분, 수동휠체어 약 15분. 아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+     }
+    ],
+    "park": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P7 · 장애인 6면",
+      "s": "우리금융아트홀 기준 · 공연장까지 1~2분"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P5 · 장애인 10면",
+      "s": "KSPO DOME 기준 · 북2문·동2문·남2문 · 공연장까지 주차장에서 1분"
+     },
+     {
+      "who": [],
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15164156/fileData.do",
+      "t": "지난해 이맘때 9일 중 4일 만차",
+      "s": "2025년 1월 공연 있는 주말·공휴일: 실제 주차대수 90% 이상 9일 중 4일"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/online/main/parking.do",
+      "t": "실시간 주차는 맨 위 「지금 주차장」",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+     }
+    ],
+    "venue": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 12석",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "1층 A·C구역 22열 뒤에 6석씩"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "hearing"
+      ],
+      "t": "영상자막기 있음",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "공연마다 쓰는지는 주최 측에 문의"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "우리금융아트홀 · 장애물 없는 생활환경(BF) 인증 우수 (옛 역도경기장, ~2029-12-25)"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석·편의시설 안내 없음",
+      "src": "공식",
+      "kind": "gap",
+      "s": "공개된 안내를 찾지 못했어요 → 공연 문의처에 확인"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "무장애(BF) 인증 없음",
+      "s": "뮤즈라이브 · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석: 2층 C블록 뒤",
+      "s": "5~11구역 뒤편. 석 수는 공식 안내에 없음. 관람 후기에는 '1층 5~11구역 뒤 통로'로 적혀 층 표기가 다름",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301030800"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 시야 가림 후기",
+      "src": "기사",
+      "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+      "s": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "후기: 2-2 게이트로 입장",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/",
+      "s": "공연마다 다를 수 있어요"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "무장애(BF) 인증 없음",
+      "s": "KSPO DOME · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     }
+    ],
+    "home": [
+     {
+      "venue": "woori_art_hall",
+      "who": [],
+      "src": "공식",
+      "t": "12:10 무렵 끝나요",
+      "s": "우리금융아트홀 11:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "muse_live",
+      "who": [],
+      "src": "공식",
+      "t": "15:10 무렵 끝나요",
+      "s": "뮤즈라이브 14:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [],
+      "src": "공식",
+      "t": "20:00 무렵 끝나요",
+      "s": "KSPO DOME 18:00 시작 · 공연 120분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "kind": "warn",
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15159093/openapi.do",
+      "t": "출차 혼잡 20:45~21:45",
+      "s": "2025년 KSPO DOME 저녁 공연 43일, 시작 2시간 45분~3시간 45분 뒤에 가장 많이 나갔어요 (가장 붐빈 30분에 약 607대). 휠체어 승하차에 시간이 걸리면 이때를 피하세요"
+     },
+     {
+      "who": [
+       "wheel"
+      ],
+      "kind": "warn",
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15115859/fileData.do",
+      "t": "공연 뒤 콜택시 대기 59분",
+      "s": "중간값 (공연 없는 밤 30분). 4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
+     },
+     {
+      "who": [],
+      "kind": "warn",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+      "t": "22:30 넘으면 동2문으로 출차",
+      "s": "북2문·남2문 출차는 22:30까지, 동2문은 24시간. 공원 안 걷기는 22:00까지(광장은 24:00까지)"
+     }
+    ]
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "접근성 공개 안내가 없어요",
+     "do": "예매 전 문의처에 확인",
+     "more": "휠체어석·편의시설 공개 안내를 찾지 못했어요. 휠체어·유모차로 들어갈 수 있는지 공연 문의처(02-558-5738)에 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 뒤 콜택시 대기 59분",
+     "do": "35% 취소 · 귀가 방법 미리 정하기",
+     "more": "2025년 공연 있는 밤 20시 이후 공원 쪽 출발 133건의 중간값이에요 (공연 없는 밤 30분). 4건 중 1건은 82분 넘게 기다렸어요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "휠체어석은 전화로 예매",
+     "do": "멜론티켓 1899-0042",
+     "more": "KSPO DOME · 휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 74,
+     "group": "late",
+     "who": [],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20101000000",
+     "t": "북2·남2문 출차 22:30 마감",
+     "do": "늦으면 동2문(24시간)으로",
+     "more": "공원 안 걷기는 22:00까지(광장은 24:00까지)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여 19시 마감",
+     "do": "개인 휠체어 챙기기",
+     "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "주차장 찰 수 있어요 (4/9일)",
+     "do": "일찍 오거나 지하철로",
+     "more": "2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "공연 뒤 출차 혼잡 20:45~21:45",
+     "do": "차로 왔다면 이 시간 피해서",
+     "more": "2025년 KSPO DOME 저녁 공연 43일 기록. 휠체어 승하차에 시간이 걸리면 이때를 피하세요"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "휠체어석 시야 가림 후기",
+     "do": "예매 때 시야 물어보기",
+     "more": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "휠체어석 12석",
+     "do": "일찍 전화 예매",
+     "more": "1층 A·C구역 22열 뒤에 6석씩",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-24",
+   "weekday": "일",
+   "offday": true,
+   "holiday": false,
+   "shows": [
+    {
+     "title": "뮤지컬 〈사랑의 하츄핑: 고래보석의 전설〉",
+     "venue_key": "woori_art_hall",
+     "venue": "우리금융아트홀",
+     "start": "11:00",
+     "end": "12:10",
+     "run": 70,
+     "tm": "화, 수, 목, 금, 일 11시, 14시 / 토 11시, 14시, 16시30분(월 공연없음) / 1월 9일 14시, 16시 30분 / 1월 10일 11시, 14시, 16시 30분 / 2월 7일 14시, 16시30분 / 2월 8일 11시, 14시, 16시30분 / 2월 9일 11시, 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "1577-3363",
+     "link": "https://nol.yanolja.com/ticket/products/26016146",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5183.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5183"
+    },
+    {
+     "title": "뮤지컬 〈폭풍우 치는 밤에〉",
+     "venue_key": "muse_live",
+     "venue": "뮤즈라이브",
+     "start": "14:00",
+     "end": "15:10",
+     "run": 70,
+     "tm": "주말 및 공휴일 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "02-558-5738",
+     "link": "https://nol.yanolja.com/ticket/products/26015905",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5185.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5185"
+    },
+    {
+     "title": "2027 에픽하이 콘서트",
+     "venue_key": "kspo_dome",
+     "venue": "KSPO DOME",
+     "start": "16:00",
+     "end": "18:00",
+     "run": 120,
+     "tm": "금 오후 8시 / 토 오후 6시 / 일 오후 4시",
+     "age": "12세 이상",
+     "inquiry": "1899-0042",
+     "link": "https://ticket.melon.com/performance/index.htm?prodId=213943",
+     "vendor": "멜론티켓",
+     "poster": "data/posters/5176.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5176"
+    }
+   ],
+   "items": {
+    "ticket": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1577-3363"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 02-558-5738"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "멜론티켓: 휠체어석 전화 예매",
+      "s": "KSPO DOME · 휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례) · 고객센터 1899-0042 · 공연 문의 1899-0042"
+     }
+    ],
+    "go": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "우리금융아트홀에서 가까운 순: 5호선 올림픽공원역 직선 0.5km, 9호선 올림픽공원역 직선 0.5km (걷는 길은 더 길어요)"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 9호선 3·4번 · 5호선 2번",
+      "s": "KSPO DOME에서 가까운 순: 9호선 올림픽공원역 직선 0.4km, 5호선 올림픽공원역 직선 0.5km (걷는 길은 더 길어요)"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "9호선 3·4번 출구 → 휠체어 8~15분",
+      "s": "전동휠체어 약 8분, 수동휠체어 약 15분. 아치형 다리 경사는 심하지 않고, 보도블록이 들뜬 곳이 있었다는 후기",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/"
+     }
+    ],
+    "park": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P7 · 장애인 6면",
+      "s": "우리금융아트홀 기준 · 공연장까지 1~2분"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P5 · 장애인 10면",
+      "s": "KSPO DOME 기준 · 북2문·동2문·남2문 · 공연장까지 주차장에서 1분"
+     },
+     {
+      "who": [],
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15164156/fileData.do",
+      "t": "지난해 이맘때 9일 중 4일 만차",
+      "s": "2025년 1월 공연 있는 주말·공휴일: 실제 주차대수 90% 이상 9일 중 4일"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/online/main/parking.do",
+      "t": "실시간 주차는 맨 위 「지금 주차장」",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말 공연일에, 며칠 전부터 나와요"
+     }
+    ],
+    "venue": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 12석",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "1층 A·C구역 22열 뒤에 6석씩"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "hearing"
+      ],
+      "t": "영상자막기 있음",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "공연마다 쓰는지는 주최 측에 문의"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "우리금융아트홀 · 장애물 없는 생활환경(BF) 인증 우수 (옛 역도경기장, ~2029-12-25)"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석·편의시설 안내 없음",
+      "src": "공식",
+      "kind": "gap",
+      "s": "공개된 안내를 찾지 못했어요 → 공연 문의처에 확인"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "무장애(BF) 인증 없음",
+      "s": "뮤즈라이브 · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석: 2층 C블록 뒤",
+      "s": "5~11구역 뒤편. 석 수는 공식 안내에 없음. 관람 후기에는 '1층 5~11구역 뒤 통로'로 적혀 층 표기가 다름",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301030800"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 시야 가림 후기",
+      "src": "기사",
+      "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+      "s": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel"
+      ],
+      "t": "후기: 2-2 게이트로 입장",
+      "src": "후기",
+      "url": "https://web.staircrusher.club/bbucle-road/kspo-dome/",
+      "s": "공연마다 다를 수 있어요"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "무장애(BF) 인증 없음",
+      "s": "KSPO DOME · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     }
+    ],
+    "home": [
+     {
+      "venue": "woori_art_hall",
+      "who": [],
+      "src": "공식",
+      "t": "12:10 무렵 끝나요",
+      "s": "우리금융아트홀 11:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "muse_live",
+      "who": [],
+      "src": "공식",
+      "t": "15:10 무렵 끝나요",
+      "s": "뮤즈라이브 14:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [],
+      "src": "공식",
+      "t": "18:00 무렵 끝나요",
+      "s": "KSPO DOME 16:00 시작 · 공연 120분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "kspo_dome",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "kind": "warn",
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15159093/openapi.do",
+      "t": "출차 혼잡 18:45~19:45",
+      "s": "2025년 KSPO DOME 저녁 공연 43일, 시작 2시간 45분~3시간 45분 뒤에 가장 많이 나갔어요 (가장 붐빈 30분에 약 607대). 휠체어 승하차에 시간이 걸리면 이때를 피하세요"
+     },
+     {
+      "who": [
+       "wheel"
+      ],
+      "kind": "warn",
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15115859/fileData.do",
+      "t": "공연 뒤 콜택시 대기 59분",
+      "s": "중간값 (공연 없는 밤 30분). 4건 중 1건은 82분 넘게 기다렸고 35%는 취소됐어요 (2025년 탑승내역, 공연 있는 밤 20시 이후 공원 쪽 출발 133건)"
+     }
+    ]
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "접근성 공개 안내가 없어요",
+     "do": "예매 전 문의처에 확인",
+     "more": "휠체어석·편의시설 공개 안내를 찾지 못했어요. 휠체어·유모차로 들어갈 수 있는지 공연 문의처(02-558-5738)에 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 80,
+     "group": "taxi",
+     "who": [
+      "wheel"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15115859/fileData.do",
+     "t": "공연 뒤 콜택시 대기 59분",
+     "do": "35% 취소 · 귀가 방법 미리 정하기",
+     "more": "2025년 공연 있는 밤 20시 이후 공원 쪽 출발 133건의 중간값이에요 (공연 없는 밤 30분). 4건 중 1건은 82분 넘게 기다렸어요"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "t": "휠체어석은 전화로 예매",
+     "do": "멜론티켓 1899-0042",
+     "more": "KSPO DOME · 휠체어석은 고객센터 전화 예매, 본인과 보호자 1인 회당 2매 (공연 공지 사례)"
+    },
+    {
+     "rank": 70,
+     "group": "rent",
+     "who": [
+      "wheel",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "warn",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20106010000",
+     "t": "공원 휠체어 대여 19시 마감",
+     "do": "개인 휠체어 챙기기",
+     "more": "한 번에 3시간이라 저녁 공연 중엔 반납할 수 없어요"
+    },
+    {
+     "rank": 56,
+     "group": "full",
+     "who": [],
+     "src": "분석",
+     "kind": "warn",
+     "url": "https://www.data.go.kr/data/15164156/fileData.do",
+     "t": "주차장 찰 수 있어요 (4/9일)",
+     "do": "일찍 오거나 지하철로",
+     "more": "2025년 1월 공연 있는 주말·공휴일 9일 중 4일 주차장이 찼어요. 출발 직전엔 「지금 주차장」을 보세요"
+    },
+    {
+     "rank": 50,
+     "group": "exit_peak",
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "분석",
+     "kind": "warn",
+     "venue": "kspo_dome",
+     "url": "https://www.data.go.kr/data/15159093/openapi.do",
+     "t": "공연 뒤 출차 혼잡 18:45~19:45",
+     "do": "차로 왔다면 이 시간 피해서",
+     "more": "2025년 KSPO DOME 저녁 공연 43일 기록. 휠체어 승하차에 시간이 걸리면 이때를 피하세요"
+    },
+    {
+     "rank": 45,
+     "who": [
+      "wheel"
+     ],
+     "src": "기사",
+     "url": "https://www.beminor.com/news/articleView.html?idxno=30041",
+     "t": "휠체어석 시야 가림 후기",
+     "do": "예매 때 시야 물어보기",
+     "more": "휠체어석 앞에 펜스·표지판이 있고, 관객이 일어서면 무대가 안 보였다는 기사·후기가 있어요",
+     "group": "venue:kspo_dome",
+     "venue": "kspo_dome"
+    },
+    {
+     "rank": 40,
+     "who": [
+      "wheel"
+     ],
+     "src": "공식",
+     "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+     "t": "휠체어석 12석",
+     "do": "일찍 전화 예매",
+     "more": "1층 A·C구역 22열 뒤에 6석씩",
+     "group": "venue:woori_art_hall",
+     "venue": "woori_art_hall"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-25",
+   "weekday": "월",
+   "offday": false,
+   "holiday": false,
+   "shows": [
+    {
+     "title": "뮤지컬 〈사랑의 하츄핑: 고래보석의 전설〉",
+     "venue_key": "woori_art_hall",
+     "venue": "우리금융아트홀",
+     "start": "11:00",
+     "end": "12:10",
+     "run": 70,
+     "tm": "화, 수, 목, 금, 일 11시, 14시 / 토 11시, 14시, 16시30분(월 공연없음) / 1월 9일 14시, 16시 30분 / 1월 10일 11시, 14시, 16시 30분 / 2월 7일 14시, 16시30분 / 2월 8일 11시, 14시, 16시30분 / 2월 9일 11시, 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "1577-3363",
+     "link": "https://nol.yanolja.com/ticket/products/26016146",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5183.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5183"
+    },
+    {
+     "title": "뮤지컬 〈폭풍우 치는 밤에〉",
+     "venue_key": "muse_live",
+     "venue": "뮤즈라이브",
+     "start": "14:00",
+     "end": "15:10",
+     "run": 70,
+     "tm": "주말 및 공휴일 14시",
+     "age": "24개월이상 관람가능",
+     "inquiry": "02-558-5738",
+     "link": "https://nol.yanolja.com/ticket/products/26015905",
+     "vendor": "NOL 티켓(인터파크)",
+     "poster": "data/posters/5185.jpg",
+     "page": "https://www.ksponco.or.kr/olympicpark/eventInfo/eventInfoView.es?mid=a20301010100&evtSeq=5185"
+    }
+   ],
+   "items": {
+    "ticket": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 1577-3363"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "kind": null,
+      "src": "공연 공지 사례",
+      "url": null,
+      "t": "NOL 티켓(인터파크): 휠체어석 전화 예매",
+      "s": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 고객센터 1544-1555 (09:00~18:00) · 공연 문의 02-558-5738"
+     }
+    ],
+    "go": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공공데이터",
+      "kind": "tip",
+      "t": "엘리베이터 출구: 5호선 2번 · 9호선 3·4번",
+      "s": "우리금융아트홀에서 가까운 순: 5호선 올림픽공원역 직선 0.5km, 9호선 올림픽공원역 직선 0.5km (걷는 길은 더 길어요)"
+     }
+    ],
+    "park": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow"
+      ],
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/parkingInfo?mid=a20111000000",
+      "t": "가까운 주차장 P7 · 장애인 6면",
+      "s": "우리금융아트홀 기준 · 공연장까지 1~2분"
+     },
+     {
+      "who": [],
+      "src": "분석",
+      "url": "https://www.data.go.kr/data/15164156/fileData.do",
+      "t": "평일 만차는 드물어요 (2/219일)",
+      "s": "2025년 평일 219일 중 2일만 만차 기록"
+     },
+     {
+      "who": [],
+      "kind": "tip",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/online/main/parking.do",
+      "t": "실시간 주차는 맨 위 「지금 주차장」",
+      "s": "기관 홈페이지 숫자를 그대로 불러와요. 기관 예상 이용률은 주말에만 나와요"
+     }
+    ],
+    "venue": [
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석 12석",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "1층 A·C구역 22열 뒤에 6석씩"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "hearing"
+      ],
+      "t": "영상자막기 있음",
+      "src": "공식",
+      "url": "https://www.ksponco.or.kr/olympicpark/menu.es?mid=a20301031100",
+      "s": "공연마다 쓰는지는 주최 측에 문의"
+     },
+     {
+      "venue": "woori_art_hall",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": null,
+      "t": "무장애(BF) 인증: 우수",
+      "s": "우리금융아트홀 · 장애물 없는 생활환경(BF) 인증 우수 (옛 역도경기장, ~2029-12-25)"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel"
+      ],
+      "t": "휠체어석·편의시설 안내 없음",
+      "src": "공식",
+      "kind": "gap",
+      "s": "공개된 안내를 찾지 못했어요 → 공연 문의처에 확인"
+     },
+     {
+      "venue": "muse_live",
+      "who": [
+       "wheel",
+       "stroller",
+       "slow",
+       "vision"
+      ],
+      "src": "공공데이터",
+      "url": "https://www.data.go.kr/data/15014781/fileData.do",
+      "kind": "gap",
+      "t": "무장애(BF) 인증 없음",
+      "s": "뮤즈라이브 · 장애물 없는 생활환경(BF) 인증 목록에 없음"
+     }
+    ],
+    "home": [
+     {
+      "venue": "woori_art_hall",
+      "who": [],
+      "src": "공식",
+      "t": "12:10 무렵 끝나요",
+      "s": "우리금융아트홀 11:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     },
+     {
+      "venue": "muse_live",
+      "who": [],
+      "src": "공식",
+      "t": "15:10 무렵 끝나요",
+      "s": "뮤즈라이브 14:00 시작 · 공연 70분. 앙코르 등으로 늦어질 수 있어요. 그날 가장 이른 회차 기준"
+     }
+    ]
+   },
+   "key": [
+    {
+     "rank": 85,
+     "who": [
+      "wheel",
+      "stroller",
+      "slow"
+     ],
+     "src": "공식",
+     "kind": "gap",
+     "t": "접근성 공개 안내가 없어요",
+     "do": "예매 전 문의처에 확인",
+     "more": "휠체어석·편의시설 공개 안내를 찾지 못했어요. 휠체어·유모차로 들어갈 수 있는지 공연 문의처(02-558-5738)에 꼭 물어보세요",
+     "group": "venue:muse_live",
+     "venue": "muse_live"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "woori_art_hall",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "우리금융아트홀 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
+    },
+    {
+     "rank": 76,
+     "group": "ticket",
+     "when": "before",
+     "who": [
+      "wheel"
+     ],
+     "src": "공연 공지 사례",
+     "url": null,
+     "kind": "warn",
+     "venue": "muse_live",
+     "t": "휠체어석은 전화로 예매",
+     "do": "NOL 티켓(인터파크) 1544-1555",
+     "more": "뮤즈라이브 · 휠체어석은 고객센터 전화 예매 · 상담 09:00~18:00"
     },
     {
      "rank": 40,
