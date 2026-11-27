@@ -18,6 +18,9 @@ from analysis.calltaxi_wait import run as calltaxi_run
 from analysis.features import parse_start_times
 from analysis.risk import upcoming
 from build import posters
+
+# 공연 포스터 썸네일 사용 여부. 주최 측 저작물이라 기관 확인 전에는 끈다(끄면 기존 썸네일도 지움).
+USE_POSTERS = False
 from olpark.common import PROCESSED, ROOT
 
 SITE = ROOT / "site"
@@ -300,7 +303,7 @@ def build(days_ahead: int = 60) -> dict:
                        and not pd.isna(e.start_h) else None, "run": int(e.run) or None, "tm": e.tm, "age": e.age,
                        "inquiry": e.inquiry if isinstance(e.inquiry, str) else None, "link": e.link,
                        "vendor": (e.vendor or {}).get("name") if isinstance(e.vendor, dict) else None,
-                       "poster": posters.thumb(e.seq, e.file), "page": posters.VIEW_URL.format(e.seq)} for e in evs.itertuples()],
+                       "poster": posters.thumb(e.seq, e.file) if USE_POSTERS else None, "page": posters.VIEW_URL.format(e.seq)} for e in evs.itertuples()],
         })
         days[-1]["items"], days[-1]["key"] = day_items(r, evs, guide, exits, venues_xy, wave, taxi, today)
     posters.prune({s["poster"].rsplit("/", 1)[1][:-4] for d in days for s in d["shows"] if s.get("poster")})
