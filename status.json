@@ -1,0 +1,81 @@
+{
+ "checked_at": "2026-11-28T21:21+09:00",
+ "elevators": [
+  {
+   "line": "5호선",
+   "station": "올림픽공원",
+   "kind": "exit",
+   "exit": "2",
+   "where": "2번 출입구",
+   "floors": "B2~1",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "5호선",
+   "station": "올림픽공원",
+   "kind": "inside",
+   "exit": null,
+   "where": "둔촌동 방면3-2",
+   "floors": "B2~B3",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "5호선",
+   "station": "올림픽공원",
+   "kind": "inside",
+   "exit": null,
+   "where": "방이 방면6-3",
+   "floors": "B2~B3",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "8호선",
+   "station": "몽촌토성",
+   "kind": "exit",
+   "exit": "4",
+   "where": "대합실(B1, 4번 출입구 화장실 앞)",
+   "floors": "B1~1",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "8호선",
+   "station": "몽촌토성",
+   "kind": "inside",
+   "exit": null,
+   "where": "강동구청 방면3-4",
+   "floors": "B3~B2",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "8호선",
+   "station": "몽촌토성",
+   "kind": "inside",
+   "exit": null,
+   "where": "대합실",
+   "floors": "B2~B1",
+   "code": "M",
+   "state": "ok"
+  },
+  {
+   "line": "8호선",
+   "station": "몽촌토성",
+   "kind": "inside",
+   "exit": null,
+   "where": "잠실 방면3-4",
+   "floors": "B3~B2",
+   "code": "M",
+   "state": "ok"
+  }
+ ],
+ "ok": true,
+ "source": {
+  "name": "서울교통공사_교통약자이용정보 (엘리베이터 가동현황)",
+  "url": "https://www.data.go.kr/data/15143843/openapi.do"
+ },
+ "not_covered": "9호선 올림픽공원·한성백제역 엘리베이터는 실시간 가동현황이 공개되지 않아요"
+}
